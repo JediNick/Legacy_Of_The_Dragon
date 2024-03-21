@@ -1,0 +1,38 @@
+﻿blood.dds = { colors = 1 category = writing}
+cyclic.dds = { colors = 1 category = writing}
+dawn.dds = { colors = 1 category = writing}
+ember.dds = { colors = 2 category = writing}
+eye.dds = { colors = 1 category = writing}
+hammer.dds = { colors = 1 category = writing}
+heart.dds = { colors = 1 category = writing}
+iron.dds = { colors = 1 category = writing}
+mother.dds = { colors = 2 category = writing}
+owl.dds = { colors = 1 category = writing}
+preist.dds = { colors = 2 category = writing}
+scalp.dds = { colors = 2 category = writing}
+ship.dds = { colors = 1 category = writing}
+snow.dds = { colors = 2 category = writing}
+storm.dds = { colors = 1 category = writing}
+stone.dds = { colors = 1 category = writing}
+summit.dds = { colors = 1 category = writing}
+sword.dds = { colors = 1 category = writing}
+unknown1.dds = { colors = 1 category = writing}
+unknown2.dds = { colors = 1 category = writing}
+unknown3.dds = { colors = 1 category = writing}
+unknown4.dds = { colors = 1 category = writing}
+unknown5.dds = { colors = 1 category = writing}
+unknown6.dds = { colors = 1 category = writing}
+water.dds = { colors = 1 category = writing}
+
+deity.dds = { colors = 1 category = writing}
+dracarys.dds = { colors = 1 category = writing}
+dragon.dds = { colors = 1 category = writing}
+king.dds = { colors = 1 category = writing}
+new.dds = { colors = 1 category = writing}
+tyrant.dds = { colors = 1 category = writing}
+valyria.dds = { colors = 1 category = writing}
+
+
+velaryon.dds = { colors = 3 category = manmade }
+velaryon_2.dds = { colors = 1 category = manmade }
+targaryen_2.dds = { colors = 1 category = manmade }

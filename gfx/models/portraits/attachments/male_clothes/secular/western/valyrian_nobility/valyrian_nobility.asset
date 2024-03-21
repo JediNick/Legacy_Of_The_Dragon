@@ -1,0 +1,84 @@
+pdxmesh = {
+	name = "valyrian_nobility_mesh"
+	file = "valyrian_nobility.mesh"
+
+	blend_shape = { id = "valyrian_nobility_bs_muscle"			type = "valyrian_nobility_bs_muscular.mesh" }
+	blend_shape = { id = "valyrian_nobility_bs_fat"			type = "valyrian_nobility_bs_fat.mesh" }
+	#blend_shape = { id = "valyrian_nobility_bs_infant"		type = "valyrian_nobility_bs_infant.mesh" }
+	blend_shape = { id = "valyrian_nobility_bs_gaunt"		type = "valyrian_nobility_bs_gaunt.mesh" }
+	blend_shape = { id = "valyrian_nobility_bs_old"			type = "valyrian_nobility_bs_old.mesh" }
+	blend_shape = { id = "valyrian_nobility_bs_dwarf"		type = "valyrian_nobility_bs_dwarf.mesh" }
+	#blend_shape = { id = "valyrian_nobility_bs_seated"		type = "valyrian_nobility_bs_seated.mesh" }
+
+
+
+	meshsettings = {
+		name = "valyrian_nobility"
+		index = 0
+		texture_diffuse = "valyrian_nobility_diffuse.dds"
+		texture_normal = "valyrian_nobility_normal.dds"
+		texture_specular = "valyrian_nobility_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+		meshsettings = {
+		name = "valyrian_nobilityBelt"
+		index = 0
+		texture_diffuse = "valyrian_nobility_diffuse.dds"
+		texture_normal = "valyrian_nobility_normal.dds"
+		texture_specular = "valyrian_nobility_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "valyrian_nobility_entity"
+	pdxmesh = "valyrian_nobility_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_nobility_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_nobility_bs_fat" }
+	#attribute = { name = "bs_body_infant_1"							blend_shape = "valyrian_nobility_bs_infant" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_nobility_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_nobility_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_nobility_bs_dwarf" }
+	#attribute = { name = "bs_body_seated"								blend_shape = "valyrian_nobility_bs_seated" }
+
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_nobility/valyrian_nobility_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "valyrian_nobility_high_metal_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "valyrian_nobility_generic_entity"
+	pdxmesh = "valyrian_nobility_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_nobility_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_nobility_bs_fat" }
+	#attribute = { name = "bs_body_infant_1"							blend_shape = "valyrian_nobility_bs_infant" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_nobility_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_nobility_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_nobility_bs_dwarf" }
+	#attribute = { name = "bs_body_seated"								blend_shape = "valyrian_nobility_bs_seated" }
+
+
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_nobility/valyrian_nobility_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				variation = "valyrian_nobility_high_metal_generic_01"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+

@@ -1,0 +1,4 @@
+﻿# Unique modifiers
+orys_hammer_modifier = {
+	prowess_no_portrait = 7
+}

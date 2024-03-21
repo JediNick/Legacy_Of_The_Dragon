@@ -1,0 +1,87 @@
+pdxmesh = {
+	name = "orys_hammer_mesh"
+	file = "orys_hammer.mesh"
+	meshsettings = {
+		name = "hammer"
+		index = 0
+		texture_diffuse = "orys_hammer_diffuse.dds"
+		texture_normal = "orys_hammer_normal.dds"
+		texture_specular = "orys_hammer_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+pdxmesh = {
+	name = "orys_hammer_equipped_mesh"
+	file = "orys_hammer_equipped.mesh"
+	meshsettings = {
+		name = "hammer"
+		index = 0
+		texture_diffuse = "orys_hammer_diffuse.dds"
+		texture_normal = "orys_hammer_normal.dds"
+		texture_specular = "orys_hammer_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "orys_hammer_flipped_mesh"
+	file = "orys_hammer_flipped.mesh"
+	meshsettings = {
+		name = "hammer"
+		index = 0
+		texture_diffuse = "orys_hammer_diffuse.dds"
+		texture_normal = "orys_hammer_normal.dds"
+		texture_specular = "orys_hammer_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+
+entity = {
+	name = "orys_hammer_entity"
+	pdxmesh = "orys_hammer_mesh"
+}
+
+entity = {
+	name = "orys_hammer_equipped_entity"
+	pdxmesh = "orys_hammer_equipped_mesh"
+}
+
+entity = {
+	name = "orys_hammer_flipped_entity"
+	pdxmesh = "orys_hammer_flipped_mesh"
+}
+
+pdxmesh = {
+	name = "orys_hammer_a_mesh"
+	file = "orys_hammer_a.mesh"
+
+	meshsettings = {
+		name = "hammer"
+		index = 0
+		texture_diffuse = "orys_hammer_diffuse.dds"
+		texture_normal = "orys_hammer_normal.dds"
+		texture_specular = "orys_hammer_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "orys_hammer_a_entity"
+	pdxmesh = "orys_hammer_a_mesh"
+}

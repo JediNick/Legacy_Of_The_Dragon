@@ -1,0 +1,62 @@
+﻿l_english:
+
+ read_aegon_prophecy:0 "Prophecy Reading"
+
+ read_prophecy_0001:0 "Aegon's Prophecy"
+ read_prophecy_0001_desc:0 "It has been long since I gazed into the dagger that once belonged to [aegonTarg.GetTitledFirstName]. The words of a prophecy are hidden in the blade.\n\nPerhaps it is time for my eyes to read the prophecy once more?"
+
+ read_prophecy_0001_aegon_desc:0 "It has been long since I gazed into my dagger. The words of my dream are hidden in the blade.\n\nPerhaps it is time for my eyes to read the prophecy once more?"
+
+ read_prophecy_0002_desc:0 "Just as [daenysTarg.GetFirstName] foresaw the end of Valyria, [aegonTarg.GetFirstName] foresaw the end of the world of men. It is to begin with a terrible winter. Gusting out of the distant north. [aegonTarg.GetFirstName] saw absolute darkness riding on those winds, and whatever dwells within will destroy the world of the living. [aegonTarg.GetFirstName] called his dream The Song of Ice and Fire. This secret has been passed from King to heir since.\n\nI lower the dagger into the flame and watch as Valyrian glyphs begin to glow within the blade.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n"From my blood will come the prince that was promised, and his will be The Song of Ice and Fire""
+
+ read_prophecy_0002_a_desc:0 "I lower the dagger into the flame and watch as Valyrian glyphs begin to glow within the blade and stare at The Song of Ice and Fire...\n\nProphecies are strange and mysterious things...\n\nI sit and ponder for some time, am I the #COLOR:{0.5,0.0,0.0} 'Prince That Was Promised'#!? or will they be born from my line? It's impossible to know, but one thing is certain.\n\nThe day will come."
+
+ read_prophecy_0002_b_desc:0 "In the night I take the opportunity to once again gaze into the prophecy.\n\nI read it to myself softly.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n"From my blood will come the prince that was promised, and his will be The Song of Ice and Fire"\n\nSuch mysterious words, yet they seem strangely familiar.\n\nPerhaps one day I will make sense of it..."
+
+ read_prophecy_0002_c_desc:0 "I run my fingers across the glowing blade, the legacy of [aegonTarg.GetFirstName] lies in my hands.\n\nMy duty as his descendant is to protect this secret, and pass it to my heir, as those who came before me have done.\n\nPerhaps one day it will all make sense..."
+
+
+ read_prophecy_0020_desc:0 "As I lower the blade into the flame I once again see the ancient Valyrian glyphs begin to glow...\n\nGlyphs turn to shapes, and my vision becomes unclear. I hear voices and see faces...The flame burns hotter and glyphs shine brighter...\n\nI begin to see dragons, men, women, and cities I've never known, one vision fades into another again and again, as I struggle to focus.\n\nMy mind can't bear it all and I begin to hear whispers and then shouting. My blood begins to boil and my vision fades into nothing but a blur of light. My skin feels like it is burning. All I can see and hear is the prohecy..."From my blood will come the prince that was promised...From my blood will come the prince that was promised" "
+
+
+
+ read_prophecy_0021_a_desc:0 "I gaze into the blade once again...and once again I am presented with intense visions.\n\nI see Kings Landing in ruins...I see a young Valyrian woman flanked by 3 dragons unleashing unimaginable terror upon the city.\n\n #X Fire and Blood...#!\n\n All is consumed and none are sparred...I too, am eventually consumed by the flame."
+
+ read_prophecy_0021_b_desc:0 "As I gaze into the blade, my eyes fixate on one gylph in particular...\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:21 :C:#!\n\nThe Valyrian glyph for #COLOR:{0.5,0.0,0.0} blood#!. Mist and strange shapes begin to surround me. Soon enough I find myself found by oddly familiar faces. First appears [ancestor_1.GetTitledFirstName], alone in the mist. I then recognize [ancestor_2.GetTitledFirstName], [ancestor_3.GetTitledFirstName], and [ancestor_4.GetTitledFirstName], all standing around me, smiling.\n\nSoon enough I am surrounded by all my ancestors, and some relatives I cannont yet recognize.\n\nTheir smiles fade and so does the peace, my ancestors all begin fighting one another in a disgusting display of hostility...Soon enough they turn their anger to me! My vision fades as they strangle me...\n\nI once again find myself in my chambers...safe albeit a bit jarred."
+
+ read_prophecy_0021_c_desc:0 "As I stare into the dagger, mist and smoke consumes me.\n\nI find myself surrounded by my distant ancestors. [aegonTarg.GetFirstName], [visenya.GetFirstName], and [rhaenys.GetFirstName] appear infront of me as if I could reach out and touch them.\n\nThey begin to speak, but I cannont quite understand them.\n\nSlowly, their bodies begin to rot away in front of me. I watch as my three ancestors regress into rotting flesh and bones...\n\nI awake again in my chambers, unharmed."
+
+ read_prophecy_0021_d_desc:0 "I gaze into the blade once again...and once again I am presented with intense visions.\n\nI see Westeros in a deep winter...\n\nA dark night lies over the land, and snow falls to the ground.\n\nIn the night I see distant shadows, the outlines of men walking in the snow.\n\nThey turn toward me, each with a pair of bright blue eyes that glow in the night...and then they begin to advance toward me...I run, but no matter how far, or for how long they still trail behind me.\n\nEventually they catch me. Cold dead hands grab at me...\n\nSuddenly I awake in my chambers, unharmed."
+
+ read_prophecy_0021_e_desc:0 "I sit and gaze into the blade...Soon enough I find myself in the middle of a pit.\n\nSeveral animals are fighting around me.\n\nA lion and direwolf claw at each other with great fearlessness.\n\nA stag lies dead at the center of them...\n\nI look up as three dragons descend onto us. I am engulfed in flame along with the animals.\n\nStartled, I awake, safely in my chambers..."
+
+
+
+#  read_prophecy_0001_aegon_desc:0 "Just as [daenysTarg.GetFirstName] foresaw the end of Valyria, I foresaw the end of the world of men.I dreamt a terrible winter. Gusting out of the distant north. I saw absolute darkness riding on those winds, and whatever dwells within will destroy the world of the living. I call my dreams 'The Song of Ice and Fire'.\n\nI lower the dagger into the flame and watch as Valyrian glyphs begin to glow within the blade. My dream is safely protected within this blade.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n"From my blood... will come the prince that was promised... and his will be The Song of Ice and Fire"\n\n[heir.GetFirstName].\n\nThis secret must not die with me, it is far too important."
+
+
+ read_prophecy.0001.a:0 "I shall read the prophecy on my own..."
+ read_prophecy.0001.b:0 "The time has come to share this prophecy with my heir, [heir.GetFirstName]"
+ read_prophecy.0001.c:0 "Another time perhaps..."
+ read_prophecy.0001.d:0 "There is a secret hidden in this dagger...I must discover it."
+ read_prophecy.0004.a:0 "I have rediscovered [aegonTarg.GetFirstNameNicknamedPossessive] dream..."
+read_prophecy.0020.a:0 "What does it mean?"
+ 
+ read_prophecy.0002.a:0 "I bear this burden now..."
+
+ read_prophecy_0003_desc:0 "Just as [daenysTarg.GetFirstName] foresaw the end of Valyria, [aegonTarg.GetFirstName] foresaw the end of the world of men. It is to begin with a terrible winter. Gusting out of the distant north. [aegonTarg.GetFirstName] saw absolute darkness riding on those winds, and whatever dwells within will destroy the world of the living. [aegonTarg.GetFirstName] called his dream The Song of Ice and Fire. This secret has been passed from King to heir since.\n\nI lower the dagger into the flame and watch as Valyrian glyphs begin to glow within the blade as [heir.GetFirstName] watches on.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n[heir.GetFirstName] begins to read the Valyrian text "From my blood... will come the prince that was promised... and his will be The Song of Ice and Fire"\n\n[heir.GetFirstName] looks back to me.\n\n"[heir.GetFirstName], this secret has been passed from King to heir since [aegonTarg.GetFirstNameNicknamedPossessive] time. Now you must promise to carry it, and protect it.""
+ read_prophecy.0003.a:0 "The prophecy has been passed to [heir.GetFirstName]..."
+
+ read_prophecy_0003_aegon_desc:0 "Just as [daenysTarg.GetFirstName] foresaw the end of Valyria, I foresaw the end of the world of men. It is to begin with a terrible winter. Gusting out of the distant north. I saw absolute darkness riding on those winds, and whatever dwells within will destroy the world of the living. I call this dream 'The Song of Ice and Fire'.\n\nI lower the dagger into the flame and watch as Valyrian glyphs begin to glow within the blade as [heir.GetFirstName] watches on.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n[heir.GetFirstName] begins to read the Valyrian text "From my blood... will come the prince that was promised... and his will be The Song of Ice and Fire"\n\n[heir.GetFirstName] looks back to me.\n\n"[heir.GetFirstName], this secret must not die with me. I pass this prophecy on to you. Now you must promise to carry it, and protect it.""
+
+ read_prophecy_0004_desc:0 "There has always been much mystery surrounding the Valyrian steel dagger that once belonged to [aegonTarg.GetFullName]. Perhaps there is something more to this dagger?\n\nI muster all the books and records I have from [aegonTarg.GetFirstNameNicknamedPossessive] time...and I find nothing except a diary and a sketch of the dagger alongside the Valyrian glyph #COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:20 J #!which translates to 'Fire'.\n\n"Fire?" I ask myself. I lower the blade into the flame that lights my room and it glows to life with numerous Valyrian glyphs.\n\n#COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:14 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#!\n\n"From my blood... will come the prince that was promised... and his will be The Song of Ice and Fire."\nWith this knowledge I connect the contents of the diary to the words in the blade. [aegonTarg.GetFirstName] saw something... something dark and terrible, and only the heir of [aegonTarg.GetFirstName] can protect the world of men..."
+ read_prophecy_decision_desc:0 "Read the prophecy hidden in your Valyrian Steel dagger. The Song of Ice and Fire is a prophecy that can be passed from ruler to heir."
+ read_prophecy_effect_0:0 "You can look into the prophecy hidden in your dagger and pass it to a heir."
+ read_prophecy_effect_1:0 "You will gain a small amount of [prestige|E] and [dynasty_prestige|E]"
+ read_prophecy_effect_2:0 "@warning_icon! Prophecy readings are often mysterious and may have unexpected outcomes..."
+ read_prophecy_decision_tooltip:1 "Read the prophecy hidden in your dagger."
+
+
+
+
+

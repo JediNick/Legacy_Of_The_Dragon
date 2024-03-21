@@ -1,0 +1,185 @@
+﻿aegoncrown_to_court = {
+	in_type = helmet
+	in_visuals = aegon_crown
+	out_type = pedestal
+	out_visuals = aegon_crown
+}
+
+aegoncrown_nogems_to_court = {
+	in_type = helmet
+	in_visuals = aegon_crown_nogems
+	out_type = pedestal
+	out_visuals = aegon_crown_nogems
+}
+
+aegoncrown_to_inventory= {
+	in_type = pedestal
+	in_visuals = aegon_crown
+	out_type = helmet
+	out_visuals = aegon_crown
+}
+
+aegoncrown_nogems_to_inventory = {
+	in_type = pedestal
+	in_visuals = aegon_crown_nogems
+	out_type = helmet
+	out_visuals = aegon_crown_nogems
+}
+
+viserys_crown_to_court = {
+	in_type = helmet
+	in_visuals = viserys_crown
+	out_type = pedestal
+	out_visuals = viserys_crown
+}
+
+viserys_crown_to_inventory= {
+	in_type = pedestal
+	in_visuals = viserys_crown
+	out_type = helmet
+	out_visuals = viserys_crown
+}
+
+seafoam_to_inventory = {
+	in_type = pedestal
+	in_visuals = seafoam_court
+	out_type = sword
+	out_visuals = seafoam
+}
+
+seafoam_to_court = {
+	in_type = sword
+	in_visuals = seafoam
+	out_type = pedestal
+	out_visuals = seafoam_court
+}
+
+calamity_to_inventory = {
+	in_type = pedestal
+	in_visuals = calamity_court
+	out_type = axe
+	out_visuals = calamity
+}
+
+calamity_to_court = {
+	in_type = axe
+	in_visuals = calamity
+	out_type = pedestal
+	out_visuals = calamity_court
+}
+
+blackfyre_to_inventory = {
+	in_type = pedestal
+	in_visuals = blackfyre_court
+	out_type = sword
+	out_visuals = blackfyre
+}
+
+blackfyre_to_court = {
+	in_type = sword
+	in_visuals = blackfyre
+	out_type = pedestal
+	out_visuals = blackfyre_court
+}
+
+blackfyre_rehilt_to_inventory = {
+	in_type = pedestal
+	in_visuals = blackfyre_rehilt_court
+	out_type = sword
+	out_visuals = blackfyre_rehilt
+}
+
+blackfyre_rehilt_to_court = {
+	in_type = sword
+	in_visuals = blackfyre_rehilt
+	out_type = pedestal
+	out_visuals = blackfyre_rehilt_court
+}
+
+
+##THESE ARE NEEDED FOR EVENTS
+blackfyre_to_blackfyre_rehilt = {
+	in_type = sword
+	in_visuals = blackfyre
+	out_type = sword
+	out_visuals = blackfyre_rehilt
+}
+
+blackfyre_rehilt_to_blackfyre = {
+	in_type = sword
+	in_visuals = blackfyre_rehilt
+	out_type = sword
+	out_visuals = blackfyre
+}
+##END
+
+
+darksister_to_inventory = {
+	in_type = pedestal
+	in_visuals = darksister_court
+	out_type = sword
+	out_visuals = darksister
+}
+
+darksister_to_court = {
+	in_type = sword
+	in_visuals = darksister
+	out_type = pedestal
+	out_visuals = darksister_court
+}
+
+subterfuge_to_inventory = {
+	in_type = pedestal
+	in_visuals = subterfuge_court
+	out_type = dagger
+	out_visuals = subterfuge
+}
+
+subterfuge_to_court = {
+	in_type = dagger
+	in_visuals = subterfuge
+	out_type = pedestal
+	out_visuals = subterfuge_court
+}
+
+aegon_dagger_to_inventory = {
+	in_type = pedestal
+	in_visuals = aegon_dagger_court
+	out_type = dagger
+	out_visuals = aegon_dagger
+}
+
+aegon_dagger_to_court = {
+	in_type = dagger
+	in_visuals = aegon_dagger
+	out_type = pedestal
+	out_visuals = aegon_dagger_court
+}
+
+orys_hammer_to_inventory = {
+	in_type = pedestal
+	in_visuals = orys_hammer_court
+	out_type = hammer
+	out_visuals = orys_hammer
+}
+
+orys_hammer_to_court = {
+	in_type = hammer
+	in_visuals = orys_hammer
+	out_type = pedestal
+	out_visuals = orys_hammer_court
+}
+
+viserys_mask_to_court = {
+	in_type = valyrian_mask
+	in_visuals = viserys_mask
+	out_type = pedestal
+	out_visuals = viserys_mask_court
+}
+
+viserys_mask_to_inventory= {
+	in_type = pedestal
+	in_visuals = viserys_mask_court
+	out_type = valyrian_mask
+	out_visuals = viserys_mask
+}

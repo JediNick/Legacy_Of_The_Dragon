@@ -1,0 +1,132 @@
+pdxmesh = {
+	name = "valyrian_robes_no_gloves_mesh"
+	file = "valyrian_robes_no_gloves.mesh"
+
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_muscle"			type = "valyrian_robes_no_gloves_bs_muscular.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_fat"			type = "valyrian_robes_no_gloves_bs_fat.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_gaunt"		type = "valyrian_robes_no_gloves_bs_gaunt.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_old"			type = "valyrian_robes_no_gloves_bs_old.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_dwarf"		type = "valyrian_robes_no_gloves_bs_dwarf.mesh" }
+
+
+	meshsettings = {
+		name = "valyrian_robes"
+		index = 0
+		texture_diffuse = "valyrian_robes_diffuse.dds"
+		texture_normal = "valyrian_robes_normal.dds"
+		texture_specular = "valyrian_robes_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+pdxmesh = {
+	name = "valyrian_robes_no_gloves_low_mesh"
+	file = "valyrian_robes_no_gloves.mesh"
+
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_muscle"			type = "valyrian_robes_no_gloves_bs_muscular.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_fat"			type = "valyrian_robes_no_gloves_bs_fat.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_gaunt"		type = "valyrian_robes_no_gloves_bs_gaunt.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_old"			type = "valyrian_robes_no_gloves_bs_old.mesh" }
+	blend_shape = { id = "valyrian_robes_no_gloves_bs_dwarf"		type = "valyrian_robes_no_gloves_bs_dwarf.mesh" }
+
+
+	meshsettings = {
+		name = "valyrian_robes"
+		index = 0
+		texture_diffuse = "valyrian_robes_low_diffuse.dds"
+		texture_normal = "valyrian_robes_low_normal.dds"
+		texture_specular = "valyrian_robes_low_properties.dds"
+		shader = "portrait_attachment_pattern"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+entity = {
+	name = "valyrian_robes_no_gloves_low_entity"
+	pdxmesh = "valyrian_robes_no_gloves_low_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_robes_no_gloves_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_robes_no_gloves_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_robes_no_gloves_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_robes_no_gloves_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_robes_no_gloves_bs_dwarf" }
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_low_mask.dds"
+				variation = "valyrian_nobility_high_metal_01_trim"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "valyrian_robes_no_gloves_entity"
+	pdxmesh = "valyrian_robes_no_gloves_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_robes_no_gloves_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_robes_no_gloves_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_robes_no_gloves_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_robes_no_gloves_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_robes_no_gloves_bs_dwarf" }
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_mask.dds"
+				variation = "valyrian_nobility_high_metal_01_trim"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+entity = {
+	name = "valyrian_robes_no_gloves_low_generic_entity"
+	pdxmesh = "valyrian_robes_no_gloves_low_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_robes_no_gloves_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_robes_no_gloves_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_robes_no_gloves_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_robes_no_gloves_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_robes_no_gloves_bs_dwarf" }
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_low_mask.dds"
+				variation = "valyrian_nobility_high_metal_01_trim_generic"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+entity = {
+	name = "valyrian_robes_no_gloves_generic_entity"
+	pdxmesh = "valyrian_robes_no_gloves_mesh"
+	
+	attribute = { name = "bs_body_muscular_1"							blend_shape = "valyrian_robes_no_gloves_bs_muscle" }
+	attribute = { name = "bs_body_fat_1"								blend_shape = "valyrian_robes_no_gloves_bs_fat" }
+	attribute = { name = "bs_body_gaunt_1"								blend_shape = "valyrian_robes_no_gloves_bs_gaunt" }
+	attribute = { name = "bs_body_old_1"								blend_shape = "valyrian_robes_no_gloves_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"								blend_shape = "valyrian_robes_no_gloves_bs_dwarf" }
+	
+	game_data = {
+        portrait_entity_user_data = {
+			portrait_accessory = {
+				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_mask.dds"
+				variation = "valyrian_nobility_high_metal_01_trim_generic"	#A "variation" object in gfx/portraits/accessory_variations/
+			}
+        }
+	}
+}
+
+
+
+
+
+

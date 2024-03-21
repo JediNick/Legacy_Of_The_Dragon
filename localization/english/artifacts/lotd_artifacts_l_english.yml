@@ -1,0 +1,59 @@
+﻿l_english:
+ artifact_blackfyre_name:0 "Blackfyre"
+ artifact_blackfyre_description:1 "Blackfyre is the fabled hand-and-a-half longsword of Valyrian steel once wielded by Aegon the Conqueror. It is the most famous of the several Valyrian Steel artifacts owned by House Targaryen"
+ artifact_darksister_name:0 "Darksister"
+ artifact_darksister_description:1 "Dark Sister is a famous longsword of Valyrian steel. It is one of two ancestral swords of House Targaryen, the other being Blackfyre."
+ 
+ artifact_seafoam_name:0 "Seafoam"
+ artifact_seafoam_description:1 "Seafoam is the iconic hand-and-a-half sabre of Valyrian steel that belongs to House Valeryon."
+ 
+ artifact_calamity_name:0 "Calamity"
+ artifact_calamity_description:1 "Calamity is the brutal Valyrian steel axe that belongs to House Celtigar."
+ 
+ artifact_subterfuge_name:0 "Subterfuge"
+ artifact_subterfuge_description:1 "Subterfuge is the insidious Valyrian steel dagger that belongs to House Qoherys. It is said the dagger has been involved in the rise and fall of many rulers of Old Valyria."
+
+ artifact_aegons_crown_name:0 "Aegon I's Crown"
+ artifact_aegons_crown_desc:0 "Aegon I's Crown is a Valyrial Steel circlet with a number of square rubies decorating it. It is one of the few artifacts to survive the Doom of Valyria."
+ 
+ artifact_aegon_dagger_name:0 "Aegon's Dagger"
+ artifact_aegon_dagger_description:1 "Aegon's Dagger is a lesser known Valyrian steel blade owned by House Targaryen whose origins go back to Old Valyria. The hilt is decorated with gold and dragonbone.\n\nAegon instructed the last surviving Valyrian pyromancers to hide a prophecy into the blade.\n\n #COLOR:{1.0,1.0,1.0};FONT:ValyrianGlyphsFont;SIZE:16 ;AB:CV:FLPG:HRP:TIDX:E:YN:WP:JPE:KQ:ZOU;#! \n\n "From my blood will come the prince that was promised, and his will be the song of ice and fire""
+ 
+ artifact_orys_hammer_name:0 "Fury"
+ artifact_orys_hammer_description:1 "Fury is the war hammer that was given to [orys.GetFirstName] by [aegonTarg.GetTitledFirstName] when he was legitimized as the founder of House [orys.GetDynasty.GetBaseName].\n\nThe hammer represents the might and glory of House [orys.GetDynasty.GetBaseName] and gives legitimacy to the newly formed house."
+
+
+jaehaerys_crown_description_lotd:0 "The Crown of Jaehaerys I, "the Concilliator", is a gold crown with the sigil of each of the seven kingdoms lining the crown"
+ artifact_blackfyre:0 "Blackfyre"
+ artifact_darksister:0 "Darksister"
+ artifact_seafoam:0 "Seafoam"
+ artifact_calamity:0 "Calamity"
+ artifact_orys_hammer:0 "Fury"
+ artifact_aegon_dagger:0 "Aegon's Dagger"
+ artifact_subterfuge:0 "Subterfuge"
+
+
+artifact_viserys_mask_name:0 "Mask of Viserys I Targaryen"
+artifact_viserys_mask_requirements:0 "Only rulers with a physical affliction may wear this mask."
+artifact_viserys_mask_desc:0 "The golden mask that was once worn by Viserys I during the later years of his life. The mask represents the wealth of House Targaryen and also serves as a reminder of a time before the Dance..."
+
+
+
+
+ valyrian_mask_01_option:0 "Gold"
+ valyrian_mask_02_option:0 "Bronze"
+ valyrian_mask_03_option:0 "Black"
+ valyrian_mask_04_option:0 "Valyrian Steel"
+ valyrian_mask_05_option:0 "Silver"
+
+
+ # Flavor for when you hover over the options
+
+valyrian_mask_01_tooltip:0 "A mask made of #BOLD;COLOR:{1.00,0.84,0.00} Gold#! will do!"
+valyrian_mask_02_tooltip:0 "#BOLD;COLOR:{0.36,0.38,0.21} Bronze#! will be a good material."
+valyrian_mask_03_tooltip:0 "Get me a mask of #BOLD;COLOR:{0.10,0.10,0.10} Blackened Steel#! will serve me well."
+valyrian_mask_04_tooltip:0 "Perhaps #BOLD;COLOR:{0.30,0.30,0.30} Valyrian Steel#! would be fitting..."
+valyrian_mask_05_tooltip:0 "A mask of #BOLD;COLOR:{0.81.00,0.81,0.81} Silver#! make will suffice."
+
+
+artifact_valyrian_mask:0 "Valyrian Mask"

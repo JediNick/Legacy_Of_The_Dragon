@@ -1,0 +1,35 @@
+﻿blackfyre_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "blackfyre_entity" game_entity_override = weapon }	
+}
+
+blackfyre_rehilt_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "blackfyre_rehilt_entity" game_entity_override = weapon }	
+}
+
+darksister_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "darksister_entity" game_entity_override = weapon }	
+}
+
+seafoam_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "seafoam_entity" game_entity_override = weapon }	
+}
+
+aegon_dagger_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "aegon_dagger_entity" }	
+}
+
+subterfuge_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "subterfuge_entity" game_entity_override = weapon }	
+}
+
+calamity_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "calamity_entity" game_entity_override = weapon }	
+}
+
+orys_hammer_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "orys_hammer_entity" game_entity_override = weapon }	
+}
+
+aegon_dagger_glow_prop = {
+	entity = {	required_tags = ""        node = "bn_r_prop"		entity = "aegon_dagger_glow_entity"}	
+}

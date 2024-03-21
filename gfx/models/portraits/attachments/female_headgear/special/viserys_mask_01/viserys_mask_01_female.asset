@@ -1,0 +1,118 @@
+pdxmesh = {
+	name = "viserys_mask_01_female_mesh"
+	file = "viserys_mask_01_female.mesh"
+	
+	blend_shape = { id = "viserys_mask_01_bs_fat"		type = "viserys_mask_01_bs_fat_female.mesh" }
+
+	meshsettings = {
+		name = "mask"
+		index = 0
+		texture_diffuse = "viserys_mask_01_diffuse.dds"
+		texture_normal = "viserys_mask_01_normal.dds"
+		texture_specular = "viserys_mask_01_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "viserys_mask_01_female_entity"
+	pdxmesh = "viserys_mask_01_female_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "viserys_mask_01_bs_fat" }
+}
+
+pdxmesh = {
+	name = "viserys_mask_02_female_mesh"
+	file = "viserys_mask_01_female.mesh"
+	blend_shape = { id = "viserys_mask_01_bs_fat"		type = "viserys_mask_01_bs_fat_female.mesh" }
+
+	meshsettings = {
+		name = "mask"
+		index = 0
+		texture_diffuse = "viserys_mask_02_diffuse.dds"
+		texture_normal = "viserys_mask_02_normal.dds"
+		texture_specular = "viserys_mask_02_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "viserys_mask_02_female_entity"
+	pdxmesh = "viserys_mask_02_female_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "viserys_mask_01_bs_fat" }
+}
+
+pdxmesh = {
+	name = "viserys_mask_03_female_mesh"
+	file = "viserys_mask_01_female.mesh"
+	blend_shape = { id = "viserys_mask_01_bs_fat"		type = "viserys_mask_01_bs_fat_female.mesh" }
+
+	meshsettings = {
+		name = "mask"
+		index = 0
+		texture_diffuse = "viserys_mask_03_diffuse.dds"
+		texture_normal = "viserys_mask_03_normal.dds"
+		texture_specular = "viserys_mask_03_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "viserys_mask_03_female_entity"
+	pdxmesh = "viserys_mask_03_female_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "viserys_mask_01_bs_fat" }
+}
+
+pdxmesh = {
+	name = "viserys_mask_04_female_mesh"
+	file = "viserys_mask_01_female.mesh"
+	blend_shape = { id = "viserys_mask_01_bs_fat"		type = "viserys_mask_01_bs_fat_female.mesh" }
+
+	meshsettings = {
+		name = "mask"
+		index = 0
+		texture_diffuse = "viserys_mask_04_diffuse.dds"
+		texture_normal = "viserys_mask_04_normal.dds"
+		texture_specular = "viserys_mask_04_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "viserys_mask_04_female_entity"
+	pdxmesh = "viserys_mask_04_female_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "viserys_mask_01_bs_fat" }
+}
+
+pdxmesh = {
+	name = "viserys_mask_05_female_mesh"
+	file = "viserys_mask_01_female.mesh"
+	blend_shape = { id = "viserys_mask_01_bs_fat"		type = "viserys_mask_01_bs_fat_female.mesh" }
+
+	meshsettings = {
+		name = "mask"
+		index = 0
+		texture_diffuse = "viserys_mask_05_diffuse.dds"
+		texture_normal = "viserys_mask_05_normal.dds"
+		texture_specular = "viserys_mask_05_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "viserys_mask_05_female_entity"
+	pdxmesh = "viserys_mask_05_female_mesh"
+	
+	attribute = { name = "bs_fat_1"								blend_shape = "viserys_mask_01_bs_fat" }
+
+}
+
+

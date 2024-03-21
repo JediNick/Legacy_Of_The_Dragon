@@ -1,0 +1,51 @@
+﻿l_english:
+ setting_dynastic_clothing_enabled:0 "Enabled"
+ setting_dynastic_clothing_enabled_desc:0 "Valyrian Rulers will wear Dynastic clothing"
+
+ setting_dynastic_clothing_disabled:0 "Disabled"
+ setting_dynastic_clothing_disabled_desc:0 "Dynastic clothing is disabled"
+
+ rediscover_mechanic:0 "Recover Targaryen Artifacts"   
+
+
+ rule_hotd_visual_replacement:0 "Legacy Of The Dragon - Artifact Visuals"
+ setting_hotd_visuals:0 "Use Show Based Visuals"
+setting_hotd_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aegon I's Crown, or Jaehaerys I's Crown will use show based visuals."
+ setting_agot_visuals:0 "Use Vanilla AGOT Visuals"
+setting_agot_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aegon I's Crown, or Jaehaerys I's Crown will use vanilla AGOT visuals."
+
+
+
+ rule_extra_visual_replacement:0 "Legacy Of The Dragon - Optional Visuals"
+setting_extra_visuals_disabled:0 "Disabled"
+setting_extra_visuals:0 "Enabled"
+
+setting_extra_visuals_desc:0 "Seafoam and Pincer will have new high quality 3D models with alternate visuals."
+setting_extra_visuals_disabled_desc:0 "Alternate visuals will be disabled."
+
+rule_rediscover_mechanic:0 "Legacy Of The Dragon - Rediscover Mechanic"
+setting_rediscover_mechanic_enabled:0 "Enabled"
+setting_rediscover_mechanic_disabled:0 "Disabled"
+
+setting_rediscover_mechanic_enabled_desc:0 "Aerys will no longer spawn with all Targaryen Artifacts, instead a decision to recover them will be given to any Targaryen ruler. Your Antiquarian can recover a number of Targaryen artifacts."
+setting_rediscover_mechanic_disabled_desc:0 "The new Rediscover mechanic will be disabled."
+
+rehilt_blackfyre:0 "Rehilt Blackfyre"
+rehilt_blackfyre_desc_02:0 "Restore Blackfyre to its former glory.\n\nWith a bit of gold and craftmanship, this sword can be restored to appear as it did when it was wielded by Aegon The Conqueror.\n\nDecorated with red rubies and blackened steel, Blackfyre was a sight to behold."
+
+rehilt_blackfyre_desc_01:0 "Rehilt Blackfyre to follow aesthetics of the Faith of the Seven, or Restore it to appear as it did when it was wielded by Aegon The Conqueror."
+
+rehilt_blackfyre_effect_1:0 "Rehilt Blackfyre to its original aesthetics:\nWith a bit of gold and craftmanship, this sword can be restored to appear as it did when it was wielded by Aegon The Conqueror.\n\nDecorated with red rubies and blackened steel, this new design will invoke reminders of the Conquest.\n"
+rehilt_blackfyre_effect_2:0 "Rehilt Blackfyre to follow aesthetics of the Faith of the Seven:\nSome time after Aegon's Conquest. Blackfyre was rehilted. Its rubies were removed and replaced with the star of the Seven. Additionally, it was decorated with gold plating.\n\nWith a bit of gold and craftmanship you can redesign Blackfyre to follow this design."
+
+
+rehilt_blackfyre.0001.t:0 "Blackfyre"
+rehilt_blackfyre_confirm:0 "Rehilt it"
+
+rehilt_blackfyre.0001.a:0 "Well done..."
+
+rehilt_blackfyre.0002_desc:0 "I stand before the skilled blacksmith with an air of regal authority, my ancestral sword, Blackfyre, gripped tightly in my hand. The blade, a symbol of Targaryen might and legacy, demands a hilt befitting its storied history.\n\nWith a nod to the master craftsman, I commission the rehilt of Blackfyre.\n\nAdorned with blood red rubies across the hilt, and reforged with black steel, the blade has now been restored to its orginal appearance as it appeared when it was wielded by [aegonTarg.GetFirstNameNicknamed]."
+
+rehilt_blackfyre.0001_desc:0 "I present Blackfyre to the skilled blacksmith, a blade forged  and adorned with the ominous beauty of black steel and rubies. However, it is time for a new look.\n\nI instruct the blacksmith to plate the dark and fiery hilt, replacing it with a layer of fine golden metal. This time, the intricate design shall be an ode to the Seven, featuring a seven pointed star in place of the ruby on the pommel.\n\nThe once ominous and fearsome blade shall now carry the grace and symbolism of the Faith."
+
+rehilt_blackfyre_decision_tooltip:0 "Change the visual design of Blackfyre"

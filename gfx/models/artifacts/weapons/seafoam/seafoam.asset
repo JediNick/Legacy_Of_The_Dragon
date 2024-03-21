@@ -1,0 +1,51 @@
+pdxmesh = {
+	name = "seafoam_mesh"
+	file = "seafoam.mesh"
+	meshsettings = {
+		name = "seafoam_shape"
+		index = 0
+		texture_diffuse = "seafoam_diffuse.dds"
+		texture_normal = "seafoam_normal.dds"
+		texture_specular = "seafoam_properties.dds"
+		#shader = "court"
+		#shader_file = "gfx/FX/court_scene.shader"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+entity = {
+	name = "seafoam_entity"
+	pdxmesh = "seafoam_mesh"
+}
+
+pdxmesh = {
+	name = "seafoam_a_mesh"
+	file = "seafoam_a.mesh"
+
+	meshsettings = {
+		name = "seafoam_shape"
+		index = 0
+		texture_diffuse = "seafoam_diffuse.dds"
+		texture_normal = "seafoam_normal.dds"
+		texture_specular = "seafoam_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "seafoam_a_entity"
+	pdxmesh = "seafoam_a_mesh"
+}

@@ -1,0 +1,46 @@
+﻿aegon_crown = {
+	icon = "aegoncrown_gems.dds"	
+	asset = {
+		trigger = { portrait_should_wear_aegoncrown_trigger = yes }
+		reference = male_headgear_aegoncrown_01_artifact_entity
+	}
+	asset = {
+		trigger = { portrait_should_wear_aegoncrown_nogems_trigger = yes }
+		reference = male_headgear_aegoncrown_02_artifact_entity
+	}
+	
+	pedestal = "tall_pillow"
+}
+
+aegon_crown_nogems = {
+	icon = "aegoncrown_nogems.dds"
+	asset = {
+		trigger = { portrait_should_wear_aegoncrown_trigger = yes }
+		reference = male_headgear_aegoncrown_01_artifact_entity
+	}
+	asset = {
+		trigger = { portrait_should_wear_aegoncrown_nogems_trigger = yes }
+		reference = male_headgear_aegoncrown_02_artifact_entity
+	}
+	
+	pedestal = "tall_pillow"
+}
+
+viserys_crown = {
+	icon = "viserys_crown.dds"	
+	asset = male_headgear_viserys_crown_01_artifact_entity
+	pedestal = "tall_pillow"
+}
+
+viserys_mask = {
+	icon = "viserys_mask.dds"	
+	asset = viserys_mask_artifact_entity
+	pedestal = "tall_pillow"
+}
+
+
+viserys_mask_court = {
+	icon = "viserys_mask.dds"	
+	asset = viserys_mask_artifact_entity
+	pedestal = "tall_pillow"
+}

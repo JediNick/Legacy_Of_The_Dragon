@@ -1,0 +1,649 @@
+﻿agot_create_artifact_vs_blackfyre_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	add_targ_artifact_claim_effect = yes
+
+	if = {
+		limit = {
+			has_game_rule = hotd_visuals
+		}
+		create_artifact = {
+			name = vs_blackfyre_name
+			visuals = blackfyre
+			description = vs_blackfyre_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_blackfyre_template
+			history = {
+				type = created
+				date = 7852.1.1
+				recipient = character:Targaryen_13
+			}
+			modifier = vs_blackfyre_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	else = {
+		create_artifact = {
+			name = vs_blackfyre_name
+			visuals = vs_blackfyre_visuals
+			description = vs_blackfyre_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_blackfyre_template
+			history = {
+				type = created
+				date = 7852.1.1
+				recipient = character:Targaryen_13
+			}
+			modifier = vs_blackfyre_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+
+	scope:newly_created_artifact = {
+		equip_artifact_to_owner = yes
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = blackfyre_artifact
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7900.1.1
+			recipient = character:Targaryen_14
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7930.1.1
+			recipient = character:Targaryen_16
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7935.1.1
+			recipient = character:Targaryen_19
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7950.1.1
+			recipient = character:Targaryen_20
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7955.1.1
+			recipient = character:Targaryen_22
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7959.1.1
+			recipient = character:Targaryen_23
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7963.1.1
+			recipient = character:Targaryen_24
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7971.1.1
+			recipient = character:Targaryen_26
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7996.1.1
+			recipient = character:Targaryen_27
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8037.9.9
+			recipient = character:Targaryen_31
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8037.9.10
+			recipient = character:Targaryen_30
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8037.9.17
+			recipient = character:Targaryen_31
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8048.3.6
+			recipient = character:Targaryen_32
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8048.3.7
+			recipient = character:Targaryen_35
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8103.1.1
+			recipient = character:Targaryen_60
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8129.3.3
+			recipient = character:Targaryen_65
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8130.12.1
+			recipient = character:Broome_18
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8130.12.2
+			recipient = character:Targaryen_65
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8131.1.8
+			recipient = character:Targaryen_78
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8157.1.1
+			recipient = character:Targaryen_81
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8161.6.9
+			recipient = character:Targaryen_82
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8171.1.1
+			recipient = character:Targaryen_79
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8172.1.1
+			recipient = character:Targaryen_88
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8182.1.1
+			recipient = character:Targaryen_94
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8182.1.2
+			recipient = character:Blackfyre_2
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8182.1.3
+			recipient = character:Targaryen_95
+		}
+	}
+}
+agot_create_artifact_vs_dark_sister_effect= {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	add_targ_artifact_claim_effect = yes
+
+	if = {
+		limit = {
+			has_game_rule = hotd_visuals
+		}
+		create_artifact = {
+			name = vs_dark_sister_name
+			visuals = darksister
+			description = vs_dark_sister_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_dark_sister_template
+			history = {
+				type = inherited
+				date = 7900.1.1
+				recipient = character:Targaryen_15
+			}
+			modifier = vs_dark_sister_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	else = {
+		create_artifact = {
+			name = vs_dark_sister_name
+			visuals = vs_dark_sister_visuals
+			description = vs_dark_sister_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_dark_sister_template
+			history = {
+				type = inherited
+				date = 7900.1.1
+				recipient = character:Targaryen_15
+			}
+			modifier = vs_dark_sister_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	scope:newly_created_artifact = {
+		equip_artifact_to_owner = yes
+		save_scope_as = epic
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = dark_sister_artifact
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7930.1.1
+			recipient = character:Targaryen_17
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7950.1.1
+			recipient = character:Targaryen_21
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7955.1.1
+			recipient = character:Targaryen_24
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7971.1.1
+			recipient = character:Targaryen_26
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7996.1.1
+			recipient = character:Targaryen_28
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8044.7.1
+			recipient = character:Targaryen_31
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8048.3.7
+			recipient = character:Targaryen_35
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8103.1.1
+			recipient = character:Targaryen_46
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8101.9.1
+			recipient = character:Targaryen_61
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8130.5.22
+			recipient = character:Targaryen_78
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8157.1.1
+			recipient = character:Targaryen_81
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8161.6.9
+			recipient = character:Targaryen_89
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8178.6.1
+			recipient = character:Targaryen_96
+		}
+	}
+}
+agot_create_artifact_vs_seafoam_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+
+	if = {
+		limit = {
+			has_game_rule = extra_visuals
+		}
+		create_artifact = {
+			name = vs_seafoam_name
+			visuals = seafoam
+			description = vs_seafoam_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_seafoam_template
+			history = {
+				type = created
+				date = 7844.1.1
+				recipient = character:Velaryon_6
+				location = province:4419
+			}
+			modifier = vs_seafoam_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	else = {
+		create_artifact = {
+			name = vs_seafoam_name
+			visuals = vs_seafoam_visuals
+			description = vs_seafoam_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_seafoam_template
+			history = {
+				type = created
+				date = 7844.1.1
+				recipient = character:Velaryon_6
+				location = province:4419
+			}
+			modifier = vs_seafoam_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	scope:newly_created_artifact = {
+		equip_artifact_to_owner = yes
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = seafoam_artifact
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7891.1.1
+			RECIPIENT = character:Velaryon_7
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7912.1.1
+			RECIPIENT = character:Velaryon_8
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7941.1.1
+			RECIPIENT = character:Velaryon_9
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7968.1.1
+			RECIPIENT = character:Velaryon_10
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7990.1.1
+			RECIPIENT = character:Velaryon_11
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7998.5.9
+			RECIPIENT = character:Velaryon_13
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8035.1.1
+			RECIPIENT = character:Velaryon_20
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8086.1.1
+			RECIPIENT = character:Velaryon_31
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8132.1.8
+			RECIPIENT = character:Velaryon_44
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8175.1.1
+			RECIPIENT = character:Velaryon_52
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8197.1.1
+			RECIPIENT = character:Velaryon_54
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8235.1.1
+			RECIPIENT = character:Velaryon_56
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8258.1.1
+			RECIPIENT = character:Velaryon_57
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8271.1.1
+			RECIPIENT = character:Velaryon_1
+		}
+	}
+}
+agot_create_artifact_vs_pincer_effect = {
+	$OWNER$ = {
+		save_scope_as = owner
+	}
+	set_artifact_rarity_illustrious = yes
+	
+		if = {
+		limit = {
+			has_game_rule = extra_visuals
+		}
+		create_artifact = {
+			name = artifact_calamity_name
+			visuals = calamity
+			description = artifact_calamity_description
+			type = axe
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_pincer_template
+			history = {
+				type = created
+				date = 7848.1.1
+				recipient = character:Celtigar_8
+				location = province:4436
+			}
+			modifier = vs_pincer_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+		scope:newly_created_artifact = {
+			set_variable = {
+				name = calamity
+				value = yes
+			}
+		}
+	}
+	else = {
+		create_artifact = {
+			name = vs_pincer_name
+			visuals = vs_pincer_visuals
+			description = vs_pincer_description
+			type = axe
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_pincer_template
+			history = {
+				type = created
+				date = 7848.1.1
+				recipient = character:Celtigar_8
+				location = province:4436
+			}
+			modifier = vs_pincer_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+		scope:newly_created_artifact = {
+			set_variable = {
+				name = pincer_artifact
+				value = yes
+			}
+		}
+	}
+	scope:newly_created_artifact = {
+		equip_artifact_to_owner = yes
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7883.1.1
+			RECIPIENT = character:Celtigar_9
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7900.1.1
+			RECIPIENT = character:Celtigar_10
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7957.1.1
+			RECIPIENT = character:Celtigar_11
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7968.1.1
+			RECIPIENT = character:Celtigar_13
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7980.1.1
+			RECIPIENT = character:Celtigar_15
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8006.1.1
+			RECIPIENT = character:Celtigar_16
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8017.1.1
+			RECIPIENT = character:Celtigar_18
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8059.2.1
+			RECIPIENT = character:Celtigar_19
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8059.2.4
+			RECIPIENT = character:Celtigar_22
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8087.1.1
+			RECIPIENT = character:Celtigar_23
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8114.1.1
+			RECIPIENT = character:Celtigar_24
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8130.5.22
+			RECIPIENT = character:Celtigar_26
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8167.1.1
+			RECIPIENT = character:Celtigar_43
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8187.1.1
+			RECIPIENT = character:Celtigar_45
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8188.1.1
+			RECIPIENT = character:Celtigar_48
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8248.1.1
+			RECIPIENT = character:Celtigar_50
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8280.1.1
+			RECIPIENT = character:Celtigar_2
+		}
+	}
+}

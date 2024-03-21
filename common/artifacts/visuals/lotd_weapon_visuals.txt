@@ -1,0 +1,103 @@
+﻿seafoam = {
+	icon = "artifact_seafoam.dds"
+	asset = {
+		reference = seafoam_entity
+	}
+}
+seafoam_court = {
+	icon = "artifact_seafoam.dds"
+	asset = {
+		reference = seafoam_a_entity
+	}
+}
+
+calamity = {
+	icon = "artifact_calamity.dds"
+	asset = {
+		reference = calamity_entity
+	}
+}
+calamity_court = {
+	icon = "artifact_calamity.dds"
+	asset = {
+		reference = calamity_a_entity
+	}
+}
+
+subterfuge = {
+	icon = "artifact_subterfuge.dds"
+	asset = {
+		reference = subterfuge_entity
+	}
+}
+subterfuge_court = {
+	icon = "artifact_subterfuge.dds"
+	asset = {
+		reference = subterfuge_a_entity
+	}
+}
+
+blackfyre = {
+	icon = "artifact_blackfyre.dds"
+	asset = {
+		reference = blackfyre_entity
+	}
+}
+blackfyre_court = {
+	icon = "artifact_blackfyre.dds"
+	asset = {
+		reference = blackfyre_a_entity
+	}
+}
+
+blackfyre_rehilt = {
+	icon = "artifact_blackfyre_rehilt.dds"
+	asset = {
+		reference = blackfyre_rehilt_entity
+	}
+}
+blackfyre_rehilt_court = {
+	icon = "artifact_blackfyre_rehilt.dds"
+	asset = {
+		reference = blackfyre_rehilt_a_entity
+	}
+}
+
+darksister = {
+	icon = "artifact_darksister.dds"
+	asset = {
+		reference = darksister_entity
+	}
+}
+darksister_court = {
+	icon = "artifact_darksister.dds"
+	asset = {
+		reference = darksister_a_entity
+	}
+}
+
+aegon_dagger = {
+	icon = "artifact_aegon_dagger.dds"
+	asset = {
+		reference = aegon_dagger_entity
+	}
+}
+aegon_dagger_court = {
+	icon = "artifact_aegon_dagger.dds"
+	asset = {
+		reference = aegon_dagger_a_entity
+	}
+}
+
+orys_hammer = {
+	icon = "artifact_orys_hammer.dds"
+	asset = {
+		reference = orys_hammer_entity
+	}
+}
+orys_hammer_court = {
+	icon = "artifact_orys_hammer.dds"
+	asset = {
+		reference = orys_hammer_a_entity
+	}
+}

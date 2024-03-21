@@ -1,0 +1,59 @@
+pdxmesh = {
+	name = "male_headgear_aegoncrown_02_mesh"
+	file = "aegoncrown_nogems.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headgear_aegoncrown_02_entity"
+	pdxmesh = "male_headgear_aegoncrown_02_mesh"
+}
+
+pdxmesh = {
+	name = "male_headgear_aegoncrown_mask_02_mesh"
+	file = "aegoncrown_nogems_bs_mask.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment_alpha_to_coverage"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "male_headgear_aegoncrown_mask_02_entity"
+	pdxmesh = "male_headgear_aegoncrown_mask_02_mesh"
+}
+
+pdxmesh = {
+	name = "male_headgear_aegoncrown_02_artifact_mesh"
+	file = "aegoncrown_nogems_artifact.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "male_headgear_aegoncrown_02_artifact_entity"
+	pdxmesh = "male_headgear_aegoncrown_02_artifact_mesh"
+}

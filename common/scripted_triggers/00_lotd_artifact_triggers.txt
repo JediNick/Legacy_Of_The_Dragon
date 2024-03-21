@@ -1,0 +1,62 @@
+﻿all_artifacts_found = {
+	AND = {
+		##Weapons
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:blackfyre
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:darksister
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:aegon_dagger
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:orys_hammer
+		}
+		
+		
+		##Crowns
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:aegon_1_crown
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:aenys_crown
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:jaehaerys_crown
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:aegon_3_crown
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:baelors_crown
+		}
+		
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:maekars_crown
+		}
+
+		##Viserys_Mask
+		is_target_in_global_variable_list = {
+			name = unavailable_artifacts
+			target = flag:viserys_mask
+		}
+	}
+}

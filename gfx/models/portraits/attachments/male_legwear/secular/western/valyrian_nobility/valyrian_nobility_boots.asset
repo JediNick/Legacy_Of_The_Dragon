@@ -1,0 +1,40 @@
+pdxmesh = {
+	name = "valyrian_nobility_boots_mesh"
+	file = "valyrian_nobility_boots.mesh"
+	
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_fat"		type = "valyrian_nobility_boots_bs_fat.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_muscle"		type = "valyrian_nobility_boots_bs_muscle.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_old"		type = "valyrian_nobility_boots_bs_old.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_dwarf"		type = "valyrian_nobility_boots_bs_dwarf.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_gaunt"		type = "valyrian_nobility_boots_bs_gaunt.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_child"		type = "valyrian_nobility_boots_bs_child.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_infant"		type = "valyrian_nobility_boots_bs_infant.mesh" }
+	blend_shape = { id = "male_valyrian_nobility_legwear_01_bs_no_left_leg" type = "valyrian_nobility_boots_bs_no_left_leg.mesh" }	
+
+	
+	meshsettings = {
+		name = "boot"
+		index = 0
+		texture_diffuse = "valyrian_nobility_boots_diffuse.dds"
+		texture_normal = "valyrian_nobility_boots_normal.dds"
+		texture_specular = "valyrian_nobility_boots_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "valyrian_nobility_boots_entity"
+	pdxmesh = "valyrian_nobility_boots_mesh"
+	
+	attribute = { name = "bs_body_fat_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_fat" }
+	attribute = { name = "bs_body_muscular_1"				blend_shape = "male_valyrian_nobility_legwear_01_bs_muscle" }
+    attribute = { name = "bs_body_old_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_old" }
+	attribute = { name = "bs_body_dwarf_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_dwarf" }
+	attribute = { name = "bs_body_gaunt_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_gaunt" }
+	attribute = { name = "bs_body_child_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_child" }
+	attribute = { name = "bs_body_infant_1"					blend_shape = "male_valyrian_nobility_legwear_01_bs_infant" }
+	attribute = { name = "bs_body_no_left_leg"				blend_shape = "male_valyrian_nobility_legwear_01_bs_no_left_leg" }
+
+
+}

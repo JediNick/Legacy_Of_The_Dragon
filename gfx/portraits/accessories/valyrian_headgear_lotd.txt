@@ -1,0 +1,36 @@
+﻿male_aegoncrown_01 = {
+	set_tags = "crown"
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = male_headgear_aegoncrown_mask_01_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_aegoncrown_01_entity	 }		
+}
+
+female_aegoncrown_01 = {
+	set_tags = "crown,fit_over_headgear"	
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = female_headgear_aegoncrown_mask_01_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_aegoncrown_01_entity	 }		
+}
+
+male_viserys_crown_01 = {
+	set_tags = "crown"
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = male_headgear_viserys_crown_mask_01_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_viserys_crown_01_entity	 }		
+}
+
+female_viserys_crown_01 = {
+	set_tags = "crown,fit_over_headgear"	
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = female_headgear_viserys_crown_mask_01_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_viserys_crown_01_entity	 }		
+}
+
+male_aegoncrown_02 = {
+	set_tags = "crown"
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = male_headgear_aegoncrown_mask_02_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_aegoncrown_02_entity	 }		
+}
+
+female_aegoncrown_02 = {
+	set_tags = "crown,fit_over_headgear"
+	entity = { required_tags = "mask"			shared_pose_entity = head		entity = female_headgear_aegoncrown_mask_01_entity 	 }
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_aegoncrown_02_entity	 }		
+}
+

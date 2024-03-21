@@ -1,0 +1,71 @@
+﻿disfigured = {
+	category = health
+	diplomacy = -4
+	fertility = -0.2
+	
+	#No dread loss: you're not actually worse for wear physically or mentally.
+
+	attraction_opinion = -20
+	
+	culture_modifier = {
+		parameter = wounds_and_scars_give_bonuses
+		monthly_prestige_gain_mult = 0.15
+		same_culture_opinion = 10
+	}
+	
+	ruler_designer_cost = -10
+	icon = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { 
+				    exists = this
+					has_character_flag = wears_valyrian_mask_01
+				}
+				desc = valyrian_mask_01.dds
+			}
+			triggered_desc = {
+				trigger = { 
+				    exists = this
+					has_character_flag = wears_valyrian_mask_02
+				}
+				desc = valyrian_mask_02.dds
+			}
+			triggered_desc = {
+				trigger = { 
+				    exists = this
+					has_character_flag = wears_valyrian_mask_03
+				}
+				desc = valyrian_mask_03.dds
+			}
+			triggered_desc = {
+				trigger = { 
+				    exists = this
+					has_character_flag = wears_valyrian_mask_04
+				}
+				desc = valyrian_mask_04.dds
+			}
+			triggered_desc = {
+				trigger = { 
+				    exists = this
+					has_character_flag = wears_valyrian_mask_05
+				}
+				desc = valyrian_mask_05.dds
+			}
+			desc = disfigured.dds
+		}
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_disfigured_desc
+			}
+			desc = trait_disfigured_character_desc
+		}
+	}
+
+	ai_sociability = low_negative_ai_value
+}

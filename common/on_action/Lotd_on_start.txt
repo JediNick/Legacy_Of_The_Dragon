@@ -1,0 +1,44 @@
+﻿on_game_start = {
+	on_actions = {
+		lotd_start
+		delay = { days = 1 }
+		lotd_rediscover_mechanic
+	}
+}
+
+lotd_start = {
+	effect = {
+       set_global_variable = {
+			name = Lotd_enabled
+			value = yes
+		}
+       if = {
+           limit = {
+               exists = global_var:Lotd_enabled
+			}
+		}
+	}
+}
+
+lotd_rediscover_mechanic = {
+	effect = {
+		if = {
+			limit = {
+				has_game_rule = rediscover_mechanic_enabled
+			}
+			rediscover_mechanic_setup.0001 = yes 
+		}
+		else = {
+			rediscover_mechanic_setup.0002 = yes
+		}
+	}
+}
+
+# lotd_rediscover_mechanic = {
+# 	trigger = {
+# 		has_game_rule = rediscover_mechanic_enabled
+# 	}
+# 	effect = {
+# 		rediscover_mechanic_setup = yes
+# 	}
+# }

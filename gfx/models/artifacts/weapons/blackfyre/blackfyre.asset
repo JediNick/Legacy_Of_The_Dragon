@@ -1,0 +1,108 @@
+pdxmesh = {
+	name = "blackfyre_mesh"
+	file = "blackfyre.mesh"
+	meshsettings = {
+		name = "blackfyre"
+		index = 0
+		texture_diffuse = "blackfyre_diffuse.dds"
+		texture_normal = "blackfyre_normal.dds"
+		texture_specular = "blackfyre_properties.dds"
+		#shader = "court"
+		#shader_file = "gfx/FX/court_scene.shader"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+entity = {
+	name = "blackfyre_entity"
+	pdxmesh = "blackfyre_mesh"
+}
+
+
+pdxmesh = {
+	name = "blackfyre_a_mesh"
+	file = "blackfyre_a.mesh"
+
+	meshsettings = {
+		name = "blackfyre"
+		index = 0
+		texture_diffuse = "blackfyre_diffuse.dds"
+		texture_normal = "blackfyre_normal.dds"
+		texture_specular = "blackfyre_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "blackfyre_a_entity"
+	pdxmesh = "blackfyre_a_mesh"
+}
+
+
+##REHILTED
+
+pdxmesh = {
+	name = "blackfyre_rehilt_mesh"
+	file = "blackfyre_rehilt.mesh"
+	meshsettings = {
+		name = "blackfyre"
+		index = 0
+		texture_diffuse = "blackfyre_rework_diffuse.dds"
+		texture_normal = "blackfyre_rework_normal.dds"
+		texture_specular = "blackfyre_rework_properties.dds"
+		#shader = "court"
+		#shader_file = "gfx/FX/court_scene.shader"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+
+entity = {
+	name = "blackfyre_rehilt_entity"
+	pdxmesh = "blackfyre_rehilt_mesh"
+}
+
+
+pdxmesh = {
+	name = "blackfyre_rehilt_a_mesh"
+	file = "blackfyre_rehilt_a.mesh"
+
+	meshsettings = {
+		name = "blackfyre"
+		index = 0
+		texture_diffuse = "blackfyre_rework_diffuse.dds"
+		texture_normal = "blackfyre_rework_normal.dds"
+		texture_specular = "blackfyre_rework_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+
+	meshsettings = {
+		name = "rack"
+		index = 0
+		texture_diffuse = "ep1_western_weaponrack_01_diffuse.dds"
+		texture_normal = "ep1_western_weaponrack_01_normal.dds"
+		texture_specular = "ep1_western_weaponrack_01_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+}
+
+entity = {
+	name = "blackfyre_rehilt_a_entity"
+	pdxmesh = "blackfyre_rehilt_a_mesh"
+}

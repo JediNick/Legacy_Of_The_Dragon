@@ -1,0 +1,354 @@
+﻿create_artifact_subterfuge_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_subterfuge_name
+		description = artifact_subterfuge_description
+		template = general_unique_template
+		type = dagger
+		visuals = subterfuge
+		wealth = 70
+		quality = 70
+		history = {
+			type = inherited
+			date = 7970.2.3
+			recipient = character:Qoherys_1
+		}
+		modifier = artifact_prowess_5_modifier
+		modifier = artifact_owned_hostile_scheme_success_chance_add_5_modifier
+		modifier = artifact_owned_personal_scheme_success_chance_add_5_modifier
+		modifier = artifact_owned_scheme_secrecy_add_4_modifier
+		modifier = artifact_hostile_scheme_power_add_5_modifier
+		modifier = artifact_personal_scheme_power_add_5_modifier
+		modifier = artifact_monthly_intrigue_lifestyle_xp_2_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = subterfuge
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		save_scope_as = epic
+
+		add_artifact_history = {
+			type = inherited
+			date = 8009.1.1
+			recipient = character:Qoherys_4
+		}
+		
+	}
+}
+
+create_artifact_aegon_dagger_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_aegon_dagger_name
+		description = artifact_aegon_dagger_description
+		template = general_unique_template
+		type = dagger
+		visuals = aegon_dagger
+		wealth = 90
+		quality = 90
+		history = {
+			type = created
+			date = 7852.1.1
+			recipient = character:Targaryen_13
+			location = province:4415
+		}
+		modifier = artifact_prowess_4_modifier
+		modifier = artifact_monthly_prestige_add_5_modifier
+		modifier = artifact_dynasty_opinion_5_modifier
+		modifier = artifact_owned_scheme_secrecy_add_2_modifier
+		modifier = artifact_stress_gain_1_penalty_modifier 
+		modifier = artifact_monthly_dynasty_prestige_2_modifier
+
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+	scope:newly_created_artifact = {
+		#equip_artifact_to_owner = yes
+		add_targ_artifact_claim_effect = yes
+		set_variable = aegon_dagger
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
+			value = yes
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7900.1.1
+			recipient = character:Targaryen_14
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7930.1.1
+			recipient = character:Targaryen_16
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7935.1.1
+			recipient = character:Targaryen_19
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7950.1.1
+			recipient = character:Targaryen_20
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7955.1.1
+			recipient = character:Targaryen_22
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7959.1.1
+			recipient = character:Targaryen_23
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7963.1.1
+			recipient = character:Targaryen_24
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7971.1.1
+			recipient = character:Targaryen_26
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 7996.1.1
+			recipient = character:Targaryen_27
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8037.9.9
+			recipient = character:Targaryen_30
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8042.1.1
+			recipient = character:Targaryen_33
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8043.1.2
+			recipient = character:Targaryen_32
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8047.1.1
+			recipient = character:Targaryen_31
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8048.6.2 
+			recipient = character:Targaryen_35
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8103.1.1
+			recipient = character:Targaryen_60
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8129.3.8
+			recipient = character:Targaryen_65
+		}
+	}
+}
+
+create_artifact_orys_hammer_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+	if = {
+		limit = {
+			exists = character:Baratheon_14
+		}
+		character:Baratheon_14 = { save_scope_as = orys } 
+	}
+
+	
+	if = {
+		limit = {
+			exists = character:Targaryen_27
+		}
+		character:Targaryen_27 = { save_scope_as = aegonTarg } 
+	}
+
+	
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_orys_hammer_name
+		description = artifact_orys_hammer_description
+		template = general_unique_template
+		type = hammer
+		visuals = orys_hammer
+		wealth = 70
+		quality = 70
+
+		modifier = orys_hammer_modifier
+		modifier = artifact_dynasty_opinion_4_modifier
+		modifier = artifact_monthly_dynasty_prestige_3_modifier
+		modifier = artifact_monthly_prestige_add_3_modifier
+		modifier = artifact_short_reign_duration_mult_3_modifier
+		modifier = artifact_monthly_martial_lifestyle_xp_3_modifier
+
+
+		save_scope_as = newly_created_artifact
+		decaying = no
+		history = {
+			type = created
+			date = 7998.3.21
+			recipient = character:Targaryen_27
+		}
+	}
+	scope:newly_created_artifact = {
+		#add_targ_artifact_claim_effect = yes
+
+		dynasty:dynn_Baratheon = {
+			ordered_dynasty_member = {
+				order_by = highest_held_title_tier
+				house = { add_house_artifact_claim = scope:newly_created_artifact }
+			}
+		}
+
+		dynasty:dynn_Durrandon = {
+			ordered_dynasty_member = {
+				order_by = highest_held_title_tier
+				house = { add_house_artifact_claim = scope:newly_created_artifact }
+			}
+		}
+
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = orys_hammer
+		save_scope_as = epic
+		#equip_artifact_to_owner = yes
+
+		add_artifact_history = {
+			type = given
+			actor = character:Targaryen_27
+			date = 7998.3.28
+			recipient = character:Baratheon_14
+		}
+	}
+}
+
+create_artifact_viserys_mask_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = artifact_viserys_mask_name
+		description = artifact_viserys_mask_desc
+		type = valyrian_mask 
+		visuals = viserys_mask
+		wealth = 90
+		quality = 90
+		template = viserys_mask_template
+		history = {
+			type = created
+			date = 8128.6.3
+			recipient = character:Targaryen_60
+			location = province:4151
+		}
+		
+		modifier = artifact_negate_health_penalty_add_2_modifier
+		modifier = artifact_monthly_prestige_add_3_modifier
+
+		save_scope_as = newly_created_artifact
+		decaying = no
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = viserys_mask
+		add_targ_artifact_claim_effect = yes
+		#equip_artifact_to_owner = yes
+		save_scope_as = epic
+	}
+}
+
+add_targ_artifact_claim_effect = {
+	dynasty:dynn_Targaryen = {
+		ordered_dynasty_member = {
+			order_by = highest_held_title_tier
+			house = { add_house_artifact_claim = scope:newly_created_artifact }
+		}
+	}
+}
+
+add_prophecy_outcome_effect = {
+
+	if = {
+		limit = { exists = house }
+
+		random_list = {
+			2 = {
+				dynasty = { add_dynasty_prestige = 250 }
+			}
+			1 = {
+				dynasty = { add_dynasty_prestige = 500 }
+			}
+			3 = {
+				dynasty = { add_dynasty_prestige = 100 }
+			}
+			1 = {
+				dynasty = { add_dynasty_prestige = 50 }
+			}
+		}
+
+	}
+
+	random_list = {
+		2 = {
+			add_prestige = 250
+		}
+		1 = {
+			add_prestige = 500
+		}
+		3 = {
+			add_prestige = 100
+		}
+		1 = {
+			add_prestige = 50
+		}
+	}
+
+	random_list = {
+		3 = {
+			add_stress = miniscule_stress_gain
+		}
+		2 = {
+			add_stress = massive_stress_gain
+		}
+		1 = {
+			add_stress = major_stress_gain
+		}
+		1 = {
+			add_stress = monumental_stress_gain
+		}
+	}
+}

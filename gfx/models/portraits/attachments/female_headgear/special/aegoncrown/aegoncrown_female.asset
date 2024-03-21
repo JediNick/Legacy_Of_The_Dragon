@@ -1,0 +1,81 @@
+pdxmesh = {
+	name = "female_headgear_aegoncrown_01_mesh"
+	file = "aegoncrown_female.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_aegoncrown_01_entity"
+	pdxmesh = "female_headgear_aegoncrown_01_mesh"
+}
+
+pdxmesh = {
+	name = "female_headgear_aegoncrown_mask_01_mesh"
+	file = "aegoncrown_female_mask.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_aegoncrown_mask_01_entity"
+	pdxmesh = "female_headgear_aegoncrown_mask_01_mesh"
+}
+
+pdxmesh = {
+	name = "female_headgear_aegoncrown_02_mesh"
+	file = "aegoncrown_nogems_female.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_aegoncrown_02_entity"
+	pdxmesh = "female_headgear_aegoncrown_02_mesh"
+}
+
+
+pdxmesh = {
+	name = "female_headgear_aegoncrown_mask_02_mesh"
+	file = "aegoncrown_nogems_female_mask.mesh"
+
+	meshsettings = {
+		name = "aegoncrown"
+		index = 0
+		texture_diffuse = "aegoncrown_diffuse.dds"
+		texture_normal = "aegoncrown_normal.dds"
+		texture_specular = "aegoncrown_properties.dds"
+		shader = "portrait_attachment"
+		shader_file = "gfx/FX/jomini/portrait.shader"
+	}
+}
+
+entity = {
+	name = "female_headgear_aegoncrown_mask_02_entity"
+	pdxmesh = "female_headgear_aegoncrown_mask_02_mesh"
+}
+

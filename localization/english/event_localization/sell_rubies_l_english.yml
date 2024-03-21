@@ -1,0 +1,36 @@
+﻿l_english:
+
+ sell_ruby_crown:0 "Sell Rubies"
+ sell_ruby_crown_desc:0 "Desperate times call for desperate measures. A merchant in my court is willing to buy the rubies off my crown for a price…"
+ sell_ruby_crown_confirm:0 "Sell rubies"
+ 
+ sell_ruby_crown_effect_0:0 "The rubies on your crown will be sold in exchange for [gold|E]."
+ sell_ruby_crown_effect_1:0 "You will gain 250 [gold|E]."
+ sell_ruby_crown_effect_2:0 "You will lose 250 [prestige|E]."
+ sell_ruby_crown_warning:0 "@warning_icon! #X The rubies on your crown will be lost, you will keep your crown#!"
+
+
+
+ sell_ruby_crown.0001.t:0 "Desperate times call for desperate measures..."
+ sell_ruby_crown.0001.desc:0 "I watch as the merchant plucks the rubies from my crown. He places the rubies in a bag and gives me my sum of gold.\n\nWith that, he departs leaving me with my gold and a slight feeling of embarrasment."
+ sell_ruby_crown.0001.a:0 "I needed the gold...right?"
+ sell_ruby_crown_decision_tooltip:1 "Sell the square rubies on your crown to a merchant in exchange for some [gold|E][gold_i]."
+
+
+
+
+ buy_ruby_crown:0 "Buy Rubies"
+ buy_ruby_crown_desc:0 "A merchant with the rubies that once adorned my crown is in town, for some [gold|E] I can restore my crown to its former glory."
+ buy_ruby_crown_confirm:0 "Buy rubies"
+ buy_ruby_crown_decision_tooltip:1 "Repurchase the rubies that once belonged to your crown."
+
+
+ buy_ruby_crown_effect_0:0 "The rubies that once belonged on your crown will be reacquired in exchange for [gold|E]."
+ buy_ruby_crown_effect_1:0 "You will lose 450 [gold|E]."
+ buy_ruby_crown_effect_2:0 "You will gain 200 [prestige|E]."
+
+
+
+ buy_ruby_crown.0001.t:0 "Restoring the crown"
+ buy_ruby_crown.0001.desc:0 "I lay down my gold, a fair sum more than what these rubies initially sold for, and take back the rubies the once sat atop my crown."
+ buy_ruby_crown.0001.a:0 "My crown has been restored to its former glory!"

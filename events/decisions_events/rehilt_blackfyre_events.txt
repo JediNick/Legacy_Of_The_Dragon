@@ -1,0 +1,110 @@
+﻿namespace = rehilt_blackfyre
+
+
+################################
+# Rehilt blackfyre
+################################
+
+# rehilt gold blackfyre to black blackfyre
+rehilt_blackfyre.0001 = {
+	type = character_event
+	title = rehilt_blackfyre.0001.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:blackfyre_artifact_rehilt
+				}
+				desc = rehilt_blackfyre.0002_desc
+			}
+			desc = rehilt_blackfyre.0001_desc
+		}
+	}
+	theme = stewardship
+	
+	override_background = {
+		reference = market
+	}
+
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				exists = scope:blackfyre_artifact_rehilt
+			}
+			animation = valyrian_invasion_blackfyre_2
+		}
+		triggered_animation = {
+			trigger = {
+				exists = scope:blackfyre_artifact
+			}
+			animation = valyrian_invasion_blackfyre_rehilt_2
+		}
+		animation = idle
+	}
+
+	artifact = { # To display the artifact in the event-window
+		target = scope:blackfyre_artifact
+		position = lower_center_portrait
+	}	
+
+	
+	immediate = {
+		random_character_artifact = {
+			limit = { has_artifact_modifier = vs_blackfyre_modifier	}
+			save_scope_as = blackfyre_artifact
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_27
+			}
+			character:Targaryen_27 = { save_scope_as = aegonTarg } 
+		}
+
+		if = {
+			limit = {
+				scope:blackfyre_artifact = {
+					has_variable = rehilted
+				}
+			}
+			scope:blackfyre_artifact = { 
+				reforge_artifact = {
+					type = sword
+					visuals = blackfyre
+				}
+				remove_variable = rehilted
+			}
+		}
+		else = {
+			scope:blackfyre_artifact  = {
+				save_scope_as = blackfyre_artifact_rehilt
+
+				reforge_artifact = {
+					type = sword
+					visuals = blackfyre_rehilt
+				}
+				set_variable = {
+					name = rehilted
+					value = yes
+				}
+			}
+		}
+	} 
+	
+	option = {
+		name = rehilt_blackfyre.0001.a
+		if = {
+			limit = {
+				scope:blackfyre_artifact = {
+					has_variable = rehilted	
+				}
+			}
+			add_prestige = 200
+		}
+		else = {
+			add_piety = 200
+		}
+	}
+}

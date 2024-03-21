@@ -1,0 +1,101 @@
+﻿# Events for eyereplace
+
+namespace = buy_valyrian_mask
+
+
+################################
+# Special Eye Gem Events
+################################
+
+# First selection event
+buy_valyrian_mask.0001 = {
+	type = character_event
+	title = eyereplace.0001.t
+	desc = buy_facemask_desc.0001.desc
+	theme = stewardship
+	
+	override_background = {
+		reference = market
+	}
+	left_portrait = root
+	
+	option = {
+		name = buy_facemask.0001.a	#Valyrian Steel
+		remove_short_term_gold = 150
+		add_character_flag = wears_valyrian_mask_04
+		trigger_event = {id = buy_valyrian_mask.0002 }
+	}
+	
+	option = {
+		name = buy_facemask.0001.b
+		remove_short_term_gold = 50
+		add_character_flag = wears_valyrian_mask_01
+		trigger_event = {id = buy_valyrian_mask.0002 }
+	}
+	
+	option = {
+		name = buy_facemask.0001.c	#First three gems
+		add_character_flag = wears_valyrian_mask_02
+		trigger_event = {id = buy_valyrian_mask.0002 }
+	}
+
+	option = {
+		name = buy_facemask.0001.d	#First three gems
+		add_character_flag = wears_valyrian_mask_03
+		trigger_event = {id = buy_valyrian_mask.0002 }
+	}
+	
+	option = {
+		name = buy_facemask.0001.e	#First three gems
+		add_character_flag = wears_valyrian_mask_05
+		trigger_event = {id = buy_valyrian_mask.0002 }
+	}
+
+	option = {
+		name = buy_facemask.0001.f	#Nvm
+		add_gold = 50
+		remove_decision_cooldown = buy_facemask_decision
+	}
+}
+
+buy_valyrian_mask.0002 = {
+	type = character_event
+	title = eyereplace.0001.t
+	desc = buy_facemask_desc.0002.desc
+	theme = stewardship
+	
+	override_background = {
+		reference = market
+	}
+	left_portrait = root
+	
+	option = {
+		name = buy_facemask.0002.a
+	}
+}
+
+buy_valyrian_mask.0003 = {
+	type = character_event
+	title = eyereplace.0001.t
+	desc = remove_facemask_desc.0003
+	theme = stewardship
+	
+	override_background = {
+		reference = market
+	}
+	left_portrait = root
+	
+	option = {
+		name = remove_facemask_option.0003.a
+		remove_character_flag = wears_valyrian_mask_01
+		remove_character_flag = wears_valyrian_mask_02
+		remove_character_flag = wears_valyrian_mask_03
+		remove_character_flag = wears_valyrian_mask_04
+		remove_character_flag = wears_valyrian_mask_05
+	}
+	option = {
+		name = buy_facemask.0001.f
+		remove_decision_cooldown = remove_facemask_decision
+	}
+}
+

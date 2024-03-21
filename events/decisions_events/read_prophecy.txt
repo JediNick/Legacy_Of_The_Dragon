@@ -1,0 +1,717 @@
+﻿namespace = read_prophecy
+
+read_prophecy.0001 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc = {
+		first_valid = {
+			triggered_desc = { 
+				desc =  read_prophecy_0001_desc
+			}
+		}
+	}
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	immediate = {
+		random_memory = {
+			limit = {
+				OR = {
+					has_memory_type = read_prophecy
+					has_memory_type = inherit_prophecy
+					has_memory_type = read_prophecy_to_heir
+					has_memory_type = discover_prophecy
+				}
+			}
+
+			save_scope_as = prophecyMemory
+		}
+			
+		if = {
+			limit = {
+				exists = character:Targaryen_27
+			}
+			character:Targaryen_27 = { save_scope_as = aegonTarg } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_15
+			}
+			character:Targaryen_15 = { save_scope_as = daenysTarg } 
+		}
+			
+		primary_heir = {
+			save_scope_as = heir
+		  }
+	}
+	#Re Discover
+	option = {
+		name = read_prophecy.0001.d
+		trigger = {
+			root = {
+				NOT = { exists = scope:prophecyMemory
+			}
+			}
+		}
+		trigger_event = read_prophecy.0004
+
+	}
+	#Re Read By My self...
+	option = {
+		name = read_prophecy.0001.a
+		trigger = {
+			OR = {
+				exists = scope:prophecyMemory
+			}
+		}
+
+		random_list = {
+			50 = { # Standard event
+				##Small chance to get lunatic events as a non lunatic
+				random_list = {
+					10 = {
+						trigger_event = read_prophecy.0002
+					}
+					2 = {
+						trigger_event = read_prophecy.0021
+					}
+					1 = {
+						trigger_event = read_prophecy.0022
+					}
+					1 = {
+						trigger_event = read_prophecy.0023
+					}
+				}
+			
+			}
+			5 = { # Lunatic event
+				trigger = {
+					NOT = {
+						OR = {
+							has_trait = lunatic_1
+							has_trait = lunatic_genetic
+							has_trait = possessed_1
+							has_trait = possessed_genetic
+						}
+						}
+					}
+					trigger_event = read_prophecy.0020
+
+				}
+				51 = { # Lunatic follow up events
+					trigger = {
+						OR = {
+								has_trait = lunatic_1
+								has_trait = lunatic_genetic
+								has_trait = possessed_1
+								has_trait = possessed_genetic
+							}
+						}
+					random_list = {
+						1 = {
+							trigger_event = read_prophecy.0021
+						}
+						1 = {
+							trigger_event = read_prophecy.0022
+						}
+						1 = {
+							trigger_event = read_prophecy.0023
+						}
+					}
+				}
+			}
+
+	}
+	#With my heir
+	option = {
+		name = read_prophecy.0001.b
+		trigger = { 
+		exists = root.primary_heir
+		##You can't pass a prophecy if you havent discovered it
+		OR = {
+			exists = scope:prophecyMemory
+		}
+		root.primary_heir = {
+			is_ai = yes
+			age >= 12
+			is_primary_heir_of = root
+			#is_player_heir_of = root
+			#is_child_of = root
+			root.primary_heir = {
+				NOT = {
+					any_memory = {
+						OR = {
+							has_memory_type = read_prophecy
+							has_memory_type = inherit_prophecy
+							has_memory_type = read_prophecy_to_heir
+							has_memory_type = discover_prophecy
+						}
+					}
+
+				}
+			}
+		  } 
+		}
+		primary_heir = {
+			save_scope_as = heir
+		}
+
+		trigger_event = read_prophecy.0003
+	}
+
+	#Nevermind..
+	option = {
+		name = read_prophecy.0001.c
+		remove_decision_cooldown = read_aegon_prophecy 
+
+		ai_chance = {
+			factor = 0
+		} 
+	}
+}
+
+read_prophecy.0002 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc =  {
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0002_desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0002_a_desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0002_b_desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0002_c_desc
+			}
+		}
+	}
+	
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+
+
+	immediate = {
+		add_prophecy_outcome_effect = yes
+
+
+		create_character_memory = {
+			type = read_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0002.a
+
+	}
+}
+
+
+##GO CRAY CRAY
+read_prophecy.0020 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc =  read_prophecy_0020_desc
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+
+
+	immediate = {
+
+		add_prophecy_outcome_effect = yes
+
+		random_list = { # all chances are 50%
+			50 = { 
+				add_trait = lunatic_1
+			}
+			50 = {
+				add_trait = possessed_1
+			}
+			50 = { 
+				add_trait = lunatic_genetic
+			}
+			50 = {
+				add_trait = possessed_genetic
+			}
+		}
+
+		create_character_memory = {
+			type = read_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0002.a
+
+	}
+}
+
+##GO CRAY CRAY
+read_prophecy.0021 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc =  {
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0021_a_desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0021_d_desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = read_prophecy_0021_e_desc
+			}
+		}
+	}
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+
+	immediate = {
+		add_prophecy_outcome_effect = yes
+
+		create_character_memory = {
+			type = read_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0020.a
+
+	}
+}
+
+
+##GO CRAY CRAY, ancestors
+read_prophecy.0022 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc = read_prophecy_0021_b_desc
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+	right_portrait = {
+		trigger = { exists = scope:ancestor_1 }
+		character = scope:ancestor_1
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:ancestor_2 }
+		character = scope:ancestor_2
+	}
+	lower_center_portrait = {
+		trigger = { exists = scope:ancestor_3 }
+		character = scope:ancestor_3
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:ancestor_4 }
+		character = scope:ancestor_4
+	}
+
+
+	immediate = {
+		add_prophecy_outcome_effect = yes
+
+
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = character:Targaryen_27
+				}
+				character:Targaryen_27 = {
+					add_to_list = ancestor_list
+				}
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_13
+				}
+				character:Targaryen_13 = {
+					add_to_list = ancestor_list
+				}
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_63
+				}
+				character:Targaryen_63 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_60
+				}
+				character:Targaryen_60 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_96
+				}
+				character:Targaryen_96 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_15
+				}
+				character:Targaryen_15 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_110
+				}
+				character:Targaryen_110 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_81
+				}
+				character:Targaryen_81 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_82
+				}
+				character:Targaryen_82 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_35
+				}
+				character:Targaryen_35 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_30
+				}
+				character:Targaryen_30 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_78
+				}
+				character:Targaryen_78 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_31
+				}
+				character:Targaryen_31 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_28
+				}
+				character:Targaryen_28 = {
+					add_to_list = ancestor_list
+				}		
+			}
+	
+	
+			random_in_list = {	#Nab someone related to the attacker, preferring tangentials.
+				list = ancestor_list
+				add_to_list = def_ancestor_list
+				save_scope_as = ancestor_1
+			}
+			random_in_list = {	#Always try to grab a second person.
+				list = ancestor_list
+				limit = {
+					NOT = { is_in_list = def_ancestor_list }
+				}
+				add_to_list = def_ancestor_list
+				save_scope_as = ancestor_2
+			}
+			random_in_list = {	#Always try to grab a third person.
+				list = ancestor_list
+				limit = {
+					NOT = { is_in_list = def_ancestor_list }
+				}
+				add_to_list = def_ancestor_list
+				save_scope_as = ancestor_3
+			}
+			random_in_list = {	#Always try to grab a third person.
+				list = ancestor_list
+				limit = {
+					NOT = { is_in_list = def_ancestor_list }
+				}
+				add_to_list = def_ancestor_list
+				save_scope_as = ancestor_4
+			}
+		}
+
+		create_character_memory = {
+			type = read_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0020.a
+
+	}
+}
+
+##GO CRAY CRAY, three dragons
+read_prophecy.0023 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc = read_prophecy_0021_c_desc
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+	right_portrait = {
+		trigger = { exists = scope:aegonTarg }
+		character = scope:aegonTarg
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:visenya }
+		character = scope:visenya
+	}
+	lower_center_portrait = {
+		trigger = { exists = scope:aegonTarg }
+		character = scope:aegonTarg
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:rhaenys }
+		character = scope:rhaenys
+	}
+
+
+	immediate = {
+		add_prophecy_outcome_effect = yes
+
+
+		hidden_effect = {
+	
+			if = {
+				limit = {
+					exists = character:Targaryen_28
+				}
+				character:Targaryen_28 = { save_scope_as = visenya } 
+			}
+
+			if = {
+				limit = {
+					exists = character:Targaryen_29
+				}
+				character:Targaryen_29 = { save_scope_as = rhaenys } 
+			}
+		}
+
+		create_character_memory = {
+			type = read_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0020.a
+
+	}
+}
+
+##Pass the prophecy
+read_prophecy.0003 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc = {
+		first_valid = {
+			triggered_desc = { 
+				desc =  read_prophecy_0003_desc
+			}
+		}
+	}
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+	right_portrait = scope:heir
+	
+	immediate = {
+		add_prestige = 250
+		if = {
+			limit = { exists = house }
+			dynasty = { add_dynasty_prestige = 250 }
+		}
+		create_character_memory = {
+			type = read_prophecy_to_heir
+			participants = {
+				heir = scope:heir
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+
+		scope:heir = { 
+			add_prestige = 250
+			if = {
+				limit = { exists = house }
+				dynasty = { add_dynasty_prestige = 250 }
+			}
+			create_character_memory = {
+				type = inherit_prophecy
+				participants = {
+					daggerOwner = root
+					aegonTargLoc = scope:aegonTarg
+				}
+			}
+		}
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0003.a
+
+	}
+  }
+
+
+  ##Rediscover the prophecy
+  read_prophecy.0004 = {
+	type = character_event
+	title = read_prophecy_0001
+	desc =  read_prophecy_0004_desc
+
+	theme = secret
+
+	override_background = corridor_night
+	left_portrait = {
+		character = root
+		animation = valyrian_invasion_aegon_dagger_glow_1	
+	}
+
+	immediate = {
+		add_prestige = 250
+		if = {
+			limit = { exists = house }
+			dynasty = { add_dynasty_prestige = 250 }
+		}
+		create_character_memory = {
+			type = discover_prophecy
+			participants = {
+				aegonTargLoc = scope:aegonTarg
+			}
+		}
+	
+
+	}
+	#Nevermind..
+	option = {
+		name = read_prophecy.0004.a
+
+	}
+}

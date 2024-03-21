@@ -1,0 +1,726 @@
+﻿namespace = rediscover_events
+
+
+##Send off the guy
+rediscover_events.0001 = {
+	type = character_event
+	title = rediscover_events_0001_t
+	desc = rediscover_events_0001_desc
+	theme = secret
+
+	left_portrait = {
+		character = root
+	}
+
+	right_portrait = {
+		character = scope:antiquarian
+		animation = personality_rational	
+	}
+
+	immediate = {
+
+		root = {
+			save_scope_as = main
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_27
+			}
+			character:Targaryen_27 = { save_scope_as = aegonTarg } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_13
+			}
+			character:Targaryen_13 = { save_scope_as = aenar } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_63
+			}
+			character:Targaryen_63 = { save_scope_as = rhae } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_60
+			}
+			character:Targaryen_60 = { save_scope_as = viserys } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_96
+			}
+			character:Targaryen_96 = { save_scope_as = brynden } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_15
+			}
+			character:Targaryen_15 = { save_scope_as = daenys } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_110
+			}
+			character:Targaryen_110 = { save_scope_as = maekar } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_81
+			}
+			character:Targaryen_81 = { save_scope_as = daeron } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_82
+			}
+			character:Targaryen_82 = { save_scope_as = baelor } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_35
+			}
+			character:Targaryen_35 = { save_scope_as = jaehaerys } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Baratheon_14
+			}
+			character:Baratheon_14 = { save_scope_as = orys } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_30
+			}
+			character:Targaryen_30 = { save_scope_as = aenys } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_78
+			}
+			character:Targaryen_78 = { save_scope_as = aegon_3 } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_31
+			}
+			character:Targaryen_31 = { save_scope_as = maegor } 
+		}
+
+		if = {
+			limit = {
+				exists = character:Targaryen_28
+			}
+			character:Targaryen_28 = { save_scope_as = visenya } 
+		}
+
+		
+
+		if = {
+			limit = {
+				exists = dynasty:dynn_Baratheon
+				dynasty:dynn_Baratheon.dynast ?= {
+					is_alive = yes
+				}
+			}
+			dynasty:dynn_Baratheon.dynast = {
+				save_scope_as = baratheon_head
+			}
+			dynasty:dynn_Baratheon = { save_scope_as = baratheonDynasty } 
+		}
+
+		##Setup the person who will search for the artifact
+		random_court_position_holder = {
+			type = antiquarian_court_position
+			limit = { is_available_ai_adult = yes }
+			save_scope_as = antiquarian
+		}	
+
+	}
+
+
+	#Nevermind..
+	option = {
+		name = rediscover_events.0001.a
+		remove_short_term_gold = 350
+		trigger_event = rediscover_events.0002
+	}
+
+	#Nevermind..
+	option = {
+		name = read_prophecy.0001.c
+		remove_decision_cooldown = rediscover_mechanic
+	}
+}
+
+##He leaves and you watch him go into the sunset
+rediscover_events.0002 = {
+	type = character_event
+	title = rediscover_events_0001_t
+	desc = rediscover_events_0002_desc
+
+	theme = secret
+
+	left_portrait = {
+		character = root
+	}
+
+	right_portrait = {
+		character = scope:antiquarian
+		animation = throne_room_bow_1	
+	}
+
+	#Nevermind..
+	option = {
+		name =  rediscover_events.0002.a
+
+		trigger_event = {
+			id = rediscover_events.0003
+			days = {15 45}
+		}
+	}
+}
+
+
+##He comes back
+rediscover_events.0003 = {
+	hidden = yes
+
+	theme = secret
+
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	right_portrait = {
+		character = scope:antiquarian
+		animation = personality_rational	
+	}
+
+	immediate = {
+
+		if = {
+			limit = {is_alive = no}
+			##Silent fail
+		}
+		else = {
+			hidden_effect = {
+				##clean this shit up later....
+				random_list = {
+					1 = { # Blackfyre
+						trigger = {
+							NOT = {
+								any_living_character = { #dont like this but i aint see any other way to do it chief
+									any_character_artifact = {
+										has_artifact_modifier = vs_blackfyre_modifier
+									}
+								}
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:blackfyre
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:blackfyre
+							}
+						}
+					1 = { # Darksister
+						trigger = {
+							NOT = {
+								any_living_character = { #dont like this but i aint see any other way to do it chief
+									any_character_artifact = {
+										has_artifact_modifier = vs_dark_sister_modifier
+									}
+								}
+								is_target_in_global_variable_list = {
+									name = unavailable_artifacts
+									target = flag:darksister
+								}
+							}
+						}
+						set_variable = {
+							name = artifact_choice
+							value = flag:darksister
+						}
+					}
+					1 = { # aegon dagger
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+									name = unavailable_artifacts
+									target = flag:aegon_dagger
+								}
+							}
+						}
+						set_variable = {
+							name = artifact_choice
+							value = flag:aegon_dagger
+						}
+					}
+					1 = { # orys hammer
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+									name = unavailable_artifacts
+									target = flag:orys_hammer
+								}
+							}
+						}
+						set_variable = {
+							name = artifact_choice
+							value = flag:orys_hammer
+						}
+					}
+					1 = { # viserys_mask
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+									name = unavailable_artifacts
+									target = flag:viserys_mask
+								}
+							}
+						}
+						set_variable = {
+							name = artifact_choice
+							value = flag:viserys_mask
+						}
+					}
+					1 = { # aegon_1_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+									name = unavailable_artifacts
+									target = flag:aegon_1_crown
+							}
+						}
+					}
+					set_variable = {
+							name = artifact_choice
+							value = flag:aegon_1_crown
+						}
+					}
+					1 = { # aenys_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:aenys_crown
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:aenys_crown
+							}
+						}
+					1 = { # jaehaerys_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:jaehaerys_crown
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:jaehaerys_crown
+							}
+						}
+					1 = { # aegon_3_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:aegon_3_crown
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:aegon_3_crown
+							}
+						}
+					1 = { # baelors_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:baelors_crown
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:baelors_crown
+							}
+						}
+					1 = { # maekars_crown
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:maekars_crown
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:maekars_crown
+							}
+						}
+					1 = { # visenya_circlet, circlet_visenya_artifact
+						trigger = {
+							NOT = {
+								is_target_in_global_variable_list = {
+										name = unavailable_artifacts
+										target = flag:visenya_circlet
+									}
+								}
+							}
+							set_variable = {
+								name = artifact_choice
+								value = flag:visenya_circlet
+							}
+						}
+					1 = { #fallback
+						trigger = {
+							all_artifacts_found = yes
+						}
+						set_variable = {
+							name = artifact_choice
+							value = flag:all_found
+						}
+					}
+				}
+				trigger_event = rediscover_events.1001
+			}
+		}
+	}
+
+	#Nevermind..
+	option = {
+		name = read_prophecy.0001.c
+	}
+}
+
+##He gives u the artifact
+rediscover_events.1001 = {
+	type = character_event
+	title = rediscover_events_0001_t
+	theme = secret
+	override_background = council_chamber
+
+	right_portrait = {
+		character = scope:antiquarian
+		animation = personality_rational	
+	}
+
+	artifact = {
+		target = scope:newly_created_artifact
+		position = lower_center_portrait
+	}	
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:blackfyre
+				} 
+				desc = rediscover_events_1001_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:darksister
+				} 
+				desc = rediscover_events_1002_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:aegon_dagger
+				} 
+				desc = rediscover_events_1003_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:orys_hammer
+				} 
+				desc = rediscover_events_1004_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:aegon_1_crown
+				} 
+				desc = rediscover_events_1005_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:aenys_crown
+				} 
+				desc = rediscover_events_1006_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:jaehaerys_crown
+				} 
+				desc = rediscover_events_1007_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:visenya_circlet
+				} 
+				desc = rediscover_events_1008_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:aegon_3_crown
+				} 
+				desc = rediscover_events_1009_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:maekars_crown
+				} 
+				desc = rediscover_events_1010_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:viserys_mask
+				} 
+				desc = rediscover_events_1011_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = var:artifact_choice
+					var:artifact_choice = flag:baelors_crown
+				} 
+				desc = rediscover_events_1012_desc
+			}
+			triggered_desc = { 
+				desc =  rediscover_events_fallback_desc
+			}
+		}
+	}
+
+	##Special case for weapons, need to hardcode the anims.
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:blackfyre
+				has_game_rule = hotd_visuals
+			}
+			animation = valyrian_invasion_blackfyre_2
+		}
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:blackfyre
+				NOT = { has_game_rule = hotd_visuals }
+			}
+			animation = agot_blackfyre_2
+		}
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:darksister
+				has_game_rule = hotd_visuals
+			}
+			animation = valyrian_invasion_darksister_1
+		}
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:darksister
+				NOT = { has_game_rule = hotd_visuals }
+			}
+			animation = agot_darksister_2
+		}
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:aegon_dagger
+			}
+			animation = valyrian_invasion_aegon_dagger_1
+		}
+		triggered_animation = {
+			trigger = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:orys_hammer
+			}
+			animation = valyrian_invasion_orys_hammer_1
+		}
+		animation = idle
+	}
+
+	immediate = { 
+		if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:blackfyre
+			}
+			agot_create_artifact_vs_blackfyre_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:darksister
+			}
+			agot_create_artifact_vs_dark_sister_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:aegon_dagger
+			}
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:orys_hammer
+			}
+			create_artifact_orys_hammer_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:viserys_mask
+			}
+			create_artifact_viserys_mask_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:aegon_1_crown
+			}
+			agot_create_artifact_aegon_i_crown_historical_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:aenys_crown
+			}
+			agot_create_artifact_aenys_crown_effect = { OWNER = this }
+			add_targ_artifact_claim_effect = yes
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:jaehaerys_crown
+			}
+			agot_create_artifact_jaehaerys_crown_historical_effect = { OWNER = this }
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:aegon_3_crown
+			}
+			agot_create_artifact_aegon_iii_crown_effect = { OWNER = this }
+			add_targ_artifact_claim_effect = yes
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:baelors_crown
+			}
+			agot_create_artifact_baelors_crown_effect = { OWNER = this }
+			add_targ_artifact_claim_effect = yes
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:maekars_crown
+			}
+			agot_create_artifact_maekars_crown_effect = { OWNER = this }
+			add_targ_artifact_claim_effect = yes
+		}
+		else_if = {
+			limit = {
+				exists = var:artifact_choice
+				var:artifact_choice = flag:visenya_circlet
+			}
+			agot_create_artifact_visenya_circlet_effect = { OWNER = this }
+			add_targ_artifact_claim_effect = yes
+		}
+		else = {
+			##do nothing
+		}
+
+		hidden_effect = {
+			##Handle equiping to character
+			if = {
+				limit = {
+					exists = var:artifact_choice
+					OR = {
+						var:artifact_choice = flag:blackfyre
+						var:artifact_choice = flag:darksister
+						var:artifact_choice = flag:aegon_dagger
+						var:artifact_choice = flag:orys_hammer
+					}
+				}
+				##If we have an artifact in our weapon slot, unequip it to prevent the dumb override that will jank
+				##the anim
+				random_character_artifact = {
+					limit = {
+						is_equipped = yes
+						artifact_slot_type = primary_armament
+					}
+					unequip_artifact_from_owner = yes
+					save_scope_as = old_weapon
+				}
+
+				##Equip it
+				scope:newly_created_artifact = {
+					equip_artifact_to_owner_replace = yes
+				}
+			}
+
+
+			##Handle artifact specific variable stuff.
+			if = {
+				limit = {
+					exists = var:artifact_choice
+				}
+				add_to_global_variable_list = {
+					name = unavailable_artifacts
+					target = var:artifact_choice
+				}
+			}
+		}
+	}
+
+	#Nevermind..
+	option = {
+		name = rediscover_events_1001_exit.a
+	}
+}

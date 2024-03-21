@@ -1,0 +1,74 @@
+﻿# Events for eyereplace
+
+namespace = sell_ruby_crown
+
+
+################################
+# Sell Aegons Crown rubies for gold
+################################
+
+# First selection event
+sell_ruby_crown.0001 = {
+	type = character_event
+	title = sell_ruby_crown.0001.t
+	desc =  sell_ruby_crown.0001.desc
+	theme = stewardship
+	
+	override_background = {
+		reference = market
+	}
+	left_portrait = root
+	artifact = { # To display the artifact in the event-window
+		target = scope:aeg_crown
+		position = lower_center_portrait
+	}	
+	immediate = {
+		random_character_artifact = {
+			limit = { has_variable = aegoncrown }
+			save_scope_as = aeg_crown
+
+			reforge_artifact = {
+				type = crown
+				visuals = aegon_crown_nogems
+			}
+			
+			set_variable = aegoncrown_nogems
+		}
+		create_character_memory = {
+			type = sold_rubies
+		}
+	} 
+	
+	option = {
+		name = sell_ruby_crown.0001.a	#First three gems
+		add_gold = 250
+		add_prestige = -250
+	}
+}
+
+
+
+sell_ruby_crown.0999 = {
+	hidden = yes
+	
+	immediate = {
+		add_gold = 250
+		add_prestige = -250
+		random_character_artifact = {
+			limit = { has_variable = aegoncrown }
+
+			
+			reforge_artifact = {
+				type = crown
+				visuals = aegon_crown_nogems
+			}
+			
+			set_variable = aegoncrown_nogems
+		}
+		create_character_memory = {
+			type = sold_rubies
+		}
+	} 
+}
+		
+	

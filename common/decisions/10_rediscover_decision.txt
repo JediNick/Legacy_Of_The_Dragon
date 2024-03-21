@@ -1,0 +1,55 @@
+﻿rediscover_mechanic = {
+	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	ai_check_interval = 60
+
+	cooldown = { years = 5}
+
+	
+	sort_order = 88
+
+	desc = rediscover_mechanic_decision_desc
+	selection_tooltip = rediscover_mechanic_decision_tooltip
+
+	is_shown = {
+		has_game_rule = rediscover_mechanic_enabled
+		is_landed = yes
+		is_ruler = yes
+		all_artifacts_found = no
+		OR = {
+			dynasty = dynasty:dynn_Targaryen
+			house = house:house_Blackfyre
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		employs_court_position = antiquarian_court_position
+	}
+	
+	effect = {
+		custom_tooltip = rediscover_mechanic_effect_0
+
+		trigger_event = rediscover_events.0001
+	}
+
+	ai_potential = {
+		is_landed = yes
+		is_ruler = yes
+		##Prevent the AI from doing it in the first 10 years after RR.... Dont want them to grab it, only to die and destroy the artifact
+		current_date > 8292.9.15
+		employs_court_position = antiquarian_court_position
+		NOT = { all_artifacts_found = yes}
+		OR = {
+			dynasty = dynasty:dynn_Targaryen
+			house = house:house_Blackfyre
+		}
+	}
+
+	ai_will_do = {
+		base = 15
+		modifier = {
+			add = 30
+			gold >= 350
+		}
+	}
+}

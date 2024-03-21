@@ -1,0 +1,425 @@
+﻿read_aegon_prophecy = {
+	picture = "gfx/interface/illustrations/decisions/prophecy.dds"
+	ai_check_interval = 60
+
+	cooldown = { years = 5}
+
+	
+	sort_order = 88
+
+	desc = read_prophecy_decision_desc
+	selection_tooltip = read_prophecy_decision_tooltip
+
+	is_shown = {
+		is_landed = yes
+		any_character_artifact = {
+			artifact_owner = root # This should not need to be explicit, but for some reason scoping is being ignored
+			has_variable = aegon_dagger
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+	
+	effect = {
+		custom_tooltip = read_prophecy_effect_0
+		custom_tooltip = read_prophecy_effect_1
+		custom_tooltip = read_prophecy_effect_2
+
+		if = {
+			#limit = { is_ai = no }
+			trigger_event = read_prophecy.0001
+		}
+	}
+
+	ai_potential = {
+		#is_landed = yes
+		is_available_adult = yes
+		OR = {
+			##Non Targs probably shouldnt read the prophecy, will allow for non targ players to do it tho.
+			dynasty = dynasty:dynn_Targaryen
+			house = house:house_Blackfyre
+		}
+		any_character_artifact = {
+			artifact_owner = root # This should not need to be explicit, but for some reason scoping is being ignored
+			has_variable = aegon_dagger
+		}
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+
+		modifier = {
+			add = 20
+			has_trait = paranoid
+		}
+	}
+}
+
+sell_ruby_crown = {
+	picture = "gfx/interface/illustrations/decisions/rubies.dds"
+	ai_check_interval = 60
+	
+	sort_order = 88
+
+	desc = sell_ruby_crown_desc
+	selection_tooltip = sell_ruby_crown_decision_tooltip
+
+	is_shown = {
+		is_landed = yes
+		any_equipped_character_artifact = {
+			AND = {
+				has_variable = aegoncrown
+				NOT = { has_variable = aegoncrown_nogems }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+	
+	effect = {
+		custom_tooltip = sell_ruby_crown_effect_0
+		custom_tooltip = sell_ruby_crown_effect_1
+		custom_tooltip = sell_ruby_crown_effect_2
+		custom_tooltip = sell_ruby_crown_warning
+		if = {
+			limit = { is_ai = yes }
+			   trigger_event = sell_ruby_crown.0999 
+		}
+		else = {
+			trigger_event = sell_ruby_crown.0001
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		is_available_adult = yes
+		any_equipped_character_artifact = {
+			has_variable = aegoncrown
+		}
+		short_term_gold < 50
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 30
+			short_term_gold <= 0
+		}
+	}
+}
+
+buy_ruby_crown = {
+	picture = "gfx/interface/illustrations/decisions/rubies.dds"
+	ai_check_interval = 60
+	
+	sort_order = 88
+
+	desc = buy_ruby_crown_desc
+	selection_tooltip = buy_ruby_crown_decision_tooltip
+
+	cost = {
+		gold = 450
+	}
+
+	is_shown = {
+		is_landed = yes
+		OR = {
+			dynasty = dynasty:dynn_Targaryen
+			house = house:house_Blackfyre
+		}
+		any_equipped_character_artifact = {
+			AND = {
+				has_variable = aegoncrown
+				has_variable = aegoncrown_nogems
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+	
+	effect = {
+		custom_tooltip = buy_ruby_crown_effect_0
+		custom_tooltip = buy_ruby_crown_effect_1
+		custom_tooltip = buy_ruby_crown_effect_2
+		if = {
+			limit = { is_ai = yes }
+			   trigger_event = buy_ruby_crown.0999 
+		}
+		else = {
+			trigger_event = buy_ruby_crown.0001
+		}
+	}
+
+	ai_potential = {
+		is_landed = yes
+		is_available_adult = yes
+		any_equipped_character_artifact = {
+			has_variable = aegoncrown
+			has_variable = aegoncrown_nogems
+		}
+		gold > 450
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 30
+			gold >= 550
+		}
+	}
+}
+
+buy_facemask_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	ai_check_interval = 60
+	
+	sort_order = 43
+
+	desc = buy_facemask_desc
+	selection_tooltip = buy_facemask_decision_tooltip
+
+	cooldown = { years = 3}
+
+	cost = {
+		gold = basic_fund_inspiration_cost
+	}
+
+	is_shown = {
+		has_trait = disfigured
+		root.culture = { agot_is_wildling_culture = no}
+		NOT = {
+			OR = {
+				has_character_flag = wears_valyrian_mask_01
+				has_character_flag = wears_valyrian_mask_02
+				has_character_flag = wears_valyrian_mask_03
+				has_character_flag = wears_valyrian_mask_04
+				has_character_flag = wears_valyrian_mask_05
+				agot_has_artifact_equiped = { ARTIFACT_VARIABLE = viserys_mask }
+			}
+		}
+	}
+
+	widget = {
+    	gui = "decision_view_widget_commission_artifact"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "buy_facemask_decision" 
+		
+		# Gem List
+
+		item = {
+			value = valyrian_mask_01
+			localization  = {
+				desc = valyrian_mask_01_option
+			}
+			icon = "gfx/interface/icons/traits/valyrian_mask_01.dds"
+
+			ai_chance = {
+				value = { 0 10 }
+			}
+		}
+		item = {
+			value = valyrian_mask_02
+			localization  = {
+				desc = valyrian_mask_02_option
+			}
+			icon = "gfx/interface/icons/traits/valyrian_mask_02.dds"
+
+			ai_chance = {
+				value = { 0 10 }
+			}
+		}
+		item = {
+			value = valyrian_mask_03
+			localization  = {
+				desc = valyrian_mask_03_option
+			}
+			icon = "gfx/interface/icons/traits/valyrian_mask_03.dds"
+
+			ai_chance = {
+				value = { 0 10 }
+			}
+		}
+		item = {
+			value = valyrian_mask_04
+			localization  = {
+				desc = valyrian_mask_04_option
+			}
+			icon = "gfx/interface/icons/traits/valyrian_mask_04.dds"
+
+			ai_chance = {
+				value = { 0 10 }
+			}
+		}
+		item = {
+			value = valyrian_mask_05
+			localization  = {
+				desc = valyrian_mask_05_option
+			}
+			icon = "gfx/interface/icons/traits/valyrian_mask_05.dds"
+
+			ai_chance = {
+				value = { 0 10 }
+			}
+		}
+	}
+
+
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { scope:valyrian_mask_01 = yes }
+				add_character_flag = wears_valyrian_mask_01
+			} else_if = {
+				limit = { scope:valyrian_mask_02 = yes }
+				add_character_flag = wears_valyrian_mask_02
+			} else_if = {
+				limit = { scope:valyrian_mask_03 = yes }
+				add_character_flag = wears_valyrian_mask_03
+			} else_if = {
+				limit = { scope:valyrian_mask_04 = yes }
+				add_character_flag = wears_valyrian_mask_04
+			} else_if = {
+				limit = { scope:valyrian_mask_05 = yes }
+				add_character_flag = wears_valyrian_mask_05
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 20
+			gold > 100
+		}
+		modifier = {
+			add = 20
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 20
+			has_trait = shy
+		}
+		modifier = {
+			add = -25
+			has_trait = reclusive
+		}
+		modifier = {
+			add = 20
+			has_trait = ambitious
+		}
+		# Bold Characters will be more inspired to take this decision
+		modifier = {
+			add = 20
+			ai_boldness > very_low_positive_ai_value
+		}
+	}
+
+	ai_potential = {
+		is_available_adult = yes
+		gold > 100 # So they don't bankrupt themself on a pretty eyepiece
+	}
+}
+
+remove_facemask_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	ai_check_interval = 60
+	
+	sort_order = 88
+
+	desc = remove_facemask_desc
+	selection_tooltip = remove_facemask_decision_tooltip
+
+	cooldown = { years = 3}
+
+
+	is_shown = {
+		has_trait = disfigured
+		OR = {
+			has_character_flag = wears_valyrian_mask_01
+			has_character_flag = wears_valyrian_mask_02
+			has_character_flag = wears_valyrian_mask_03
+			has_character_flag = wears_valyrian_mask_04
+			has_character_flag = wears_valyrian_mask_05
+		}
+	}
+
+	effect = {
+		trigger_event = { id = buy_valyrian_mask.0003 }
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+
+	ai_potential = {
+		always = no
+	}
+}
+
+rehilt_blackfyre = {
+	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	ai_check_interval = 60
+	
+	sort_order = 88
+	desc = rehilt_blackfyre_desc_01
+	selection_tooltip = rehilt_blackfyre_decision_tooltip
+	cooldown = { years = 5}
+
+	cost = {
+		gold = 250
+	}
+
+	is_shown = {
+	always = yes
+		is_landed = yes
+		is_lotd_loaded_trigger = yes
+		has_game_rule = hotd_visuals
+		is_available_adult = yes
+		OR = {
+			dynasty = dynasty:dynn_Targaryen
+			house = house:house_Blackfyre
+		}
+		any_equipped_character_artifact = {
+			AND = {
+				has_artifact_modifier = vs_blackfyre_modifier
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+	}
+	
+	effect = {
+		custom_tooltip = rehilt_blackfyre_effect_1
+		custom_tooltip = rehilt_blackfyre_effect_2
+		trigger_event = rehilt_blackfyre.0001
+		}
+	
+
+	ai_potential = {
+		is_available_adult = yes
+		any_equipped_character_artifact = {
+			has_artifact_modifier = vs_blackfyre_modifier
+		}
+		gold > 250
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = 30
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 30
+			gold >= 350
+		}
+	}
+}

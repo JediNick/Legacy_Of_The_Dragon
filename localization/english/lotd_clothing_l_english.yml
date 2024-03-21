@@ -1,0 +1,48 @@
+﻿l_english:
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_nobility_01_high:0 "@lotd_icon! Valyrian Nobility Doublet"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_high:0 "@lotd_icon! Valyrian Robes Royal"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_low:0 "@lotd_icon! Valyrian Robes"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_high:0 "@lotd_icon! Valyrian Robes Royal (No Gloves)"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_low:0 "@lotd_icon! Valyrian Robes (No Gloves)"
+
+
+
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_nobility_01_generic_high:0 "$PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_nobility_01_high$ (Western)"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_generic_high:0 "$PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_high$ (Western)"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_generic_low:0 "$PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_01_low$ (Western)"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_generic_high:0 "$PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_high$ (Western)"
+  PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_generic_low:0 "$PORTRAIT_MODIFIER_custom_clothes_male_clothes_secular_valyrian_robes_no_gloves_01_low$ (Western)"
+
+  PORTRAIT_MODIFIER_custom_legwear_male_legwear_valyrian_nobility_01:0 "@lotd_icon! Valyrian Nobility Legwear"
+
+  PORTRAIT_MODIFIER_custom_clothes_female_clothes_secular_valyrian_dress_01_high:0 "@lotd_icon! Valyrian Dress"
+  PORTRAIT_MODIFIER_custom_clothes_female_clothes_secular_valyrian_dress_01_generic_high:0 "@lotd_icon! Valyrian Dress (Western)"
+
+  
+  
+  AEGON_CROWN_LOTD:0 "@lotd_icon! Aegon I's Crown"
+  PORTRAIT_MODIFIER_custom_headgear_male_aegoncrown_01:0 "$AEGON_CROWN_LOTD$"
+  PORTRAIT_MODIFIER_custom_headgear_male_aegoncrown_02:0 "$AEGON_CROWN_LOTD$ (No Gems)"
+  PORTRAIT_MODIFIER_custom_headgear_female_aegoncrown_01:0 "$PORTRAIT_MODIFIER_custom_headgear_male_aegoncrown_01$"
+  PORTRAIT_MODIFIER_custom_headgear_female_aegoncrown_02:0 "$PORTRAIT_MODIFIER_custom_headgear_male_aegoncrown_02$"
+  
+  
+  
+  
+  PORTRAIT_MODIFIER_custom_headgear_male_viserys_crown_01:0 "@lotd_icon! Viserys I's Crown"
+  PORTRAIT_MODIFIER_custom_headgear_female_viserys_crown_01:0 "$PORTRAIT_MODIFIER_custom_headgear_male_viserys_crown_01$"
+  
+  PORTRAIT_MODIFIER_custom_legwear_male_legwear_valyrian_nobility_02:0 "@lotd_icon! Valyrian Legwear"
+  PORTRAIT_MODIFIER_custom_legwear_female_legwear_valyrian_nobility_01:0 "@lotd_icon! Valyrian Legwear"
+
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_01:0 "@lotd_icon! Valyrian Mask 1"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_02:0 "@lotd_icon! Valyrian Mask 2"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_03:0 "@lotd_icon! Valyrian Mask 3"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_04:0 "@lotd_icon! Valyrian Mask 4"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_05:0 "@lotd_icon! Valyrian Mask 5"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_01_female:0 "$PORTRAIT_MODIFIER_custom_special_viserys_mask_01$"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_02_female:0 "$PORTRAIT_MODIFIER_custom_special_viserys_mask_02$"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_03_female:0 "$PORTRAIT_MODIFIER_custom_special_viserys_mask_03$"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_04_female:0 "$PORTRAIT_MODIFIER_custom_special_viserys_mask_04$"
+  PORTRAIT_MODIFIER_custom_special_viserys_mask_05_female:0 "$PORTRAIT_MODIFIER_custom_special_viserys_mask_05$"
+

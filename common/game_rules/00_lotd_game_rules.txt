@@ -1,0 +1,22 @@
+﻿##Controls darksister, blackfyre, and aegon's crown stuff
+##Also enables Aegons dagger, and aegons crown mechanics
+##IF agot_visuals is enabled only additional clothing and mask mechanics will be availible
+hotd_visual_replacement = {
+	default  = hotd_visuals
+	hotd_visuals = {}
+	agot_visuals = {}
+}
+
+##Will replace Celtigar axe, Seafoam with different models.
+extra_visual_replacement = {
+	default  = extra_visuals
+	extra_visuals = {}
+	extra_visuals_disabled = {}
+}
+
+##Removes certain artifacts by default and gives the player the ability to recover them. 
+rediscover_mechanic = {
+	default  = rediscover_mechanic_enabled
+	rediscover_mechanic_enabled = {}
+	rediscover_mechanic_disabled = {}
+}

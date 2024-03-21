@@ -1,0 +1,152 @@
+﻿agot_create_artifact_aegon_i_crown_historical_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_illustrious = yes
+
+	if = {
+		limit = {
+			has_game_rule = hotd_visuals
+		}
+		create_artifact = {
+			name = aegon_i_crown_name
+			description = aegon_i_crown_description
+			type = helmet
+			visuals = aegon_crown_nogems
+			wealth = scope:wealth
+			quality = scope:quality
+			template = aegon_i_crown_template
+			history = {
+				type = created
+				date = 7998.1.2
+				recipient = character:Targaryen_27 # Aegon Targaryen
+				location = province:4151
+			}
+			modifier = aegon_i_crown_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	else = {
+		create_artifact = {
+			name = aegon_i_crown_name
+			description = aegon_i_crown_description
+			type = helmet
+			visuals = aegon_i_crown_visuals
+			wealth = scope:wealth
+			quality = scope:quality
+			template = aegon_i_crown_template
+			history = {
+				type = created
+				date = 7998.1.2
+				recipient = character:Targaryen_27 # Aegon Targaryen
+				location = province:4151
+			}
+			modifier = aegon_i_crown_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	
+
+	# Create the artifact
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		add_targ_artifact_claim_effect = yes
+		
+		if = {
+			limit = {
+				has_game_rule = hotd_visuals
+			}
+			set_variable = {
+				name = aegoncrown
+				value = yes
+			}
+			set_variable = {
+				name = aegoncrown_nogems
+				value = yes
+			}
+		}
+		else = {
+			set_variable = { name = crown_aegon_i_artifact value = yes }
+		}
+		set_variable = {
+			name = artifact_succession_title
+			value = title:c_kings_landing
+		}
+		add_artifact_title_history = {
+			target = title:e_the_iron_throne
+			date = 7998.1.2
+		}
+	}
+}
+
+agot_create_artifact_jaehaerys_crown_historical_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_illustrious = yes
+
+	if = {
+		limit = {
+			has_game_rule = hotd_visuals
+		}
+		create_artifact = {
+			name = jaehaerys_crown_name
+			description = jaehaerys_crown_description_lotd
+			type = helmet
+			visuals = viserys_crown
+			wealth = scope:wealth
+			quality = scope:quality
+			template = jaehaerys_crown_template
+			history = {
+				type = created
+				date = 8048.3.7
+				recipient = character:Targaryen_35 # Jaehaerys Targaryen
+				location = province:4151
+			}
+			modifier = jaehaerys_crown_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	else = {
+		create_artifact = {
+			name = jaehaerys_crown_name
+			description = jaehaerys_crown_description
+			type = helmet
+			visuals = jaehaerys_crown_visuals
+			wealth = scope:wealth
+			quality = scope:quality
+			template = jaehaerys_crown_template
+			history = {
+				type = created
+				date = 8048.3.7
+				recipient = character:Targaryen_35 # Jaehaerys Targaryen
+				location = province:4151
+			}
+			modifier = jaehaerys_crown_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+	scope:newly_created_artifact = {
+		set_variable = { name = crown_jaehaerys_artifact value = yes }
+		set_variable = { name = historical_unique_artifact value = yes }
+		add_targ_artifact_claim_effect = yes
+		set_variable = {
+			name = artifact_succession_title
+			value = title:c_kings_landing
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8103.1.1
+			recipient = character:Targaryen_60
+		}
+		add_artifact_history = {
+			type = inherited
+			date = 8129.3.3
+			recipient = character:Targaryen_63
+		}
+	}
+}

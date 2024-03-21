@@ -1,0 +1,173 @@
+﻿##Prophecy Stuff
+read_prophecy = {
+	categories = { positive family prophecy }
+	icon = "diplomacy.dds"
+	description = {
+		random_valid = {
+			desc = read_prophecy_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = read_prophecy_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = read_prophecy_desc_third_perspective
+		}
+	}
+
+	participants = { aegonTargLoc }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}
+
+##Prophecy Stuff
+read_prophecy_to_heir = {
+	categories = { positive family prophecy }
+	icon = "diplomacy.dds"
+	description = {
+		random_valid = {
+			desc = read_prophecy_to_heir_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = read_prophecy_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = read_prophecy_desc_third_perspective
+		}
+	}
+
+	participants = { heir aegonTargLoc }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}
+
+##Prophecy Stuff
+inherit_prophecy = {
+	categories = { positive family prophecy }
+	icon = "diplomacy.dds"
+	description = {
+		random_valid = {
+			desc = inherit_prophecy_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = inherit_prophecy_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = inherit_prophecy_desc_third_perspective
+		}
+	}
+
+	participants = { daggerOwner aegonTargLoc }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}
+
+##Prophecy Stuff
+discover_prophecy = {
+	categories = { positive family prophecy }
+	icon = "diplomacy.dds"
+	description = {
+		random_valid = {
+			desc = discover_prophecy_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = discover_prophecy_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = discover_prophecy_desc_third_perspective
+		}
+	}
+
+	participants = { aegonTargLoc }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}
+
+##Prophecy Stuff
+sold_rubies = {
+	categories = {negative }
+	icon = "_default.dds"
+	description = {
+		random_valid = {
+			desc = sold_rubies_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = sold_rubies_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = sold_rubies_desc_third_perspective
+		}
+	}
+
+	participants = {  }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}
+
+##Prophecy Stuff
+buy_rubies = {
+	categories = { positive }
+	icon = "_default.dds"
+	description = {
+		random_valid = {
+			desc = buy_rubies_desc
+		}
+	}
+
+	second_perspective_description = {
+		random_valid = {
+			desc = buy_rubies_desc_second_perspective
+		}
+	}
+
+	third_perspective_description = {
+		random_valid = {
+			desc = buy_rubies_desc_third_perspective
+		}
+	}
+
+	participants = {  }
+
+	duration = {
+		years = memory_default_duration 
+	}
+}

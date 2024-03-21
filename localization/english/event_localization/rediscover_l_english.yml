@@ -1,0 +1,56 @@
+﻿l_english:
+
+ rediscover_events_0001_t:0 "Legacy of the Dragon"
+ rediscover_mechanic_decision_desc:0 "Task your antiquarian to hunt down long lost Targaryen artifacts."
+ rediscover_mechanic_confirm:0 "Start the search."
+ 
+ rediscover_events_0001_desc:0 "A number of my ancestors artifacts remain lost to this day, some of which date back to before [aegonTarg.GetTitledFirstName] arrived in Westeros...\n\nPerhaps with enough gold and the right mind they could be returned to House [main.GetDynasty.GetBaseName]..."
+ 
+ 
+ rediscover_events.0001.a:0 "Bring back what rightfully belongs to House [main.GetDynasty.GetBaseName]!"
+ rediscover_events.1001_desc:0 "Bring back what rightfully belongs to House [main.GetDynasty.GetBaseName]!"
+
+
+ rediscover_events.0002.a:0 "Safe travels..."
+
+
+ rediscover_events_0002_desc:0 ""I will return soon my [main.GetTitleTierName]!"\n\nAnd with that, [antiquarian.GetFirstName] is gone, in search of artifacts long lost..."
+
+
+ rediscover_events_1001_desc:0 "[antiquarian.GetFirstName], weather-beaten and worn, carries in a burden wrapped in cloth to my throneroom.\n\n[antiquarian.GetSheHe|U] kneels and unveiles the legendary Blackfyre, one of two ancestral swords of House [main.GetDynasty.GetBaseName], its hilt gleaming with the reflections of distant history and untold perils.\n\nAt last, the long-lost symbol of House [main.GetDynasty.GetBaseName] has been returned to its rightful place."
+
+ rediscover_events_1002_desc:0 "[antiquarian.GetFirstName] returns atlast to my court. I immediately notice [antiquarian.GetSheHe|U] has been through the seven hells...\n\n"My [ROOT.Char.GetTitleAsName]," [antiquarian.GetFirstName] bows deeply, "I bring news and a gift from beyond The Wall."\n\n[antiquarian.GetSheHe|U] presents me a blade once wielded by my ancestors. Dark Sister, one of two Vayrian Steel blades owned by House [main.GetDynasty.GetBaseName]...\n\nIt was rumoured that [brynden.GetFirstNameNicknamed] had brought the sword with him to the Nights Watch...it has remained lost beyond the Wall until now."
+
+ rediscover_events_1003_desc:0 "[antiquarian.GetFirstName] arrives, and with [antiquarian.GetHerHim] is an artifact surrounded with great mystery and intrigue...\n\n"A dagger my [ROOT.Char.GetTitleAsName], made of Valyrian Steel..."\n\n[antiquarian.GetSheHe|U] presents it to me.\n\n[antiquarian.GetSheHe|U] continues, "I've found scarce readings from old letters and books that mention a dagger that once was owned by [aenar.GetTitledFirstName], and eventually [aegonTarg.GetTitledFirstName]...It appears very few times in the writings up until its recorded ownership by [viserys.GetTitledFirstName]...it all but disappeared from the writings after The Dance."\n\nIntriguing, a third Valyrian Steel weapon that belonged to my ancestors? Strange...\n\nI wonder what mystery lies in this dagger..."
+
+ rediscover_events_1004_desc:0 "[antiquarian.GetFirstName] arrives to my courtroom and presents a mighty weapon to me.\n\n"The war hammer of [orys.GetTitledFirstName]...This hammer was wielded by [orys.GetFirstName] following the Conquest...It's rumored that [orys.GetFirstNamePossessive] half brother, [aegonTarg.GetTitledFirstName], gifted it after his conquest."\n\nIt had been passed down through the Lords of House [orys.GetDynasty.GetBaseName], but its roots go back to House [aegonTarg.GetDynasty.GetBaseName] as [orys.GetFirstName] was originally a [aegonTarg.GetDynasty.GetBaseName] bastard!\n\nWhile the hammer now belongs to me, I have no doubt that [baratheon_head.GetTitledFirstName] yearns for this weapon...\n\nPerhaps returning it to House [orys.GetDynasty.GetBaseName] would be a gesture of good will? \n\nOr maybe it is better kept in the hands of House [main.GetDynasty.GetBaseName]..."
+
+ rediscover_events_1005_desc:0 "[antiquarian.GetFirstName] arrives to my courtroom and presents a mighty gift for me.\n\n"The crown of The Conqueror...May the strength of [aegonTarg.GetTitledFirstName] be reborn in you..."\n\n[aegonTarg.GetTitledFirstName] was crowned with this circlet by his sister wife, [visenya.GetFirstName], following his arrival in Westeros.\n\nIt had been passed down from [aegonTarg.GetDynasty.GetBaseName] King to [aegonTarg.GetDynasty.GetBaseName] King until it was lost in Dorne along with [daeron.GetTitledFirstName].\n\nNow it has returned to House [main.GetDynasty.GetBaseName], albeit with the rubies plucked from their sockets...\n\nPerhaps I could pay an artisan to have the crown restored to its former glory?"
+
+ rediscover_events_1006_desc:0 "[antiquarian.GetFirstName] arrives to my courtroom and presents a royal gift to me.\n\n"The crown of [aenys.GetTitledFirstName]...It was lost sometime after the death of [jaehaerys.GetTitledFirstName], but alas now it is found..."\n\nThis crown was was worn by the second [main.GetDynasty.GetBaseName] King in Westeros, [aenys.GetTitledFirstName] before his death at the hands of [maegor.GetTitledFirstName].\n\nIt has now returned to its rightful owners."
+
+ rediscover_events_1007_desc:0 "[antiquarian.GetFirstName] arrives at last.\n\n"My [ROOT.Char.GetTitleAsName]! My journey took me far across the Narrow sea to Braavos where I found something that may be of interest to you..."\n\n[antiquarian.GetSheHe|U] presents to me the crown of [jaehaerys.GetTitledFirstName]. It's fate has long been unknown following the Dance of Dragons when [rhae.GetTitledFirstName] sold it to Braavosi merchants.\n\nNow it has been returned to its rightful owners."
+
+ rediscover_events_1008_desc:0 "[antiquarian.GetFirstName] arrives, and with [antiquarian.GetHerHim] carries a rather small item.\n\n"My [ROOT.Char.GetTitleAsName]! I found something that will interest you greatly...The circlet of the Dowager Queen [visenya.GetFirstName] "\n\n[antiquarian.GetSheHe|U] presents to me small Valyrian Steel band, decorated with small oval shaped rubies.\n\nThis circlet is a reminder of the origins of House [aegonTarg.GetDynasty.GetBaseName] as rulers of Westeros."
+
+ rediscover_events_1009_desc:0 "[antiquarian.GetFirstName] arrives at last, and with [antiquarian.GetHerHim] carries an artifact from my ancestors...\n\n"The crown of [aegon_3.GetTitledFirstName]...A simpler artifact of your house, but one that still carries significant meaning." [antiquarian.GetFirstName] says.\n\nThe crown of the Dragonbane marks the transition of House [aegonTarg.GetDynasty.GetBaseName] from dragonlords, to mere mortals, their once-mighty dragons reduced to mere echoes of a bygone era."
+
+ rediscover_events_1010_desc:0 "[antiquarian.GetFirstName] arrives to my courtroom and presents a an artifact from a bygone era. \n\n"The crown of [maekar.GetTitledFirstName], returned to your House at last..."\n\nI am presented with a harsh and pointy looking crown which reflects the martial nature of the late [maekar.GetTitledFirstName], who was renowned for both his prowess and martial ability.\n\nThe crown now has returned to its home, at last."
+
+ rediscover_events_1011_desc:0 "Eventually, [antiquarian.GetFirstName] arrives at my court bearing a small item.\n\n [antiquarian.GetSheHe|U] kneels an presents it to me.\n\n"The mask of the late [viserys.GetTitledFirstName]. A remnant of a time before the Dance of Dragons..."\n\n[antiquarian.GetFirstName] presents a golden mask to me that was once worn by [viserys.GetTitledFirstName] during the last years of his life.\n\n[viserys.GetTitledFirstName] wore the mask in his rare court appearences prior to his death."
+
+ rediscover_events_1012_desc:0 "[antiquarian.GetFirstName] returns, and with [antiquarian.GetHerHim] is a rather interesting item...\n\n[antiquarian.GetSheHe|U] presents a crown made of flowers to me.\n\n"The mask of the [baelor.GetTitledFirstName] 'the Blessed'.\n\nIt is remarkable how this artifact has survived the years..."
+
+
+ rediscover_events_1001_exit.a:0 "Well done [antiquarian.GetFirstName]..."
+
+
+ rediscover_events_fallback_desc:0 "Hmpf...Perhaps all of House Targaryen's belongings have been found?"
+
+
+rediscover_mechanic_decision_tooltip:0 "Send your antiquarian to find long lost Targaryen Artifacts."
+
+
+rediscover_mechanic_effect_0:0 "Your antiquarian will hunt down any remaining Targaryen artifacts."
+
+rediscover_mechanic_effect_1:0 "d"

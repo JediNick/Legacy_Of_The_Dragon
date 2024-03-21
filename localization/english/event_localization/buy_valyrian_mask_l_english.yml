@@ -1,0 +1,26 @@
+﻿l_english:
+ buy_facemask.0001.a:0 "Gather me any remaining #BOLD;COLOR:{0.50,0.50,0.50} Valyrian Steel#!!"
+ buy_facemask.0001.b:0 "Get me a #BOLD;COLOR:{1.00,0.83,0.00} Golden#! mask..."
+ buy_facemask.0001.c:0 "Something made of #BOLD;COLOR:{0.42,0.32,0.11} Bronze#! will suffice..."
+ buy_facemask.0001.d:0 "A mask made of #BOLD;COLOR:{0.22,0.22,0.22} Blackened Steel#! is what I want!"
+ buy_facemask.0001.e:0 "A simple #BOLD;COLOR:{0.75,0.75,0.75} Silver#! mask will do."
+ buy_facemask.0001.f:0 "Perhaps another time..."
+
+ buy_facemask_desc:0 "Buy an ornate facemask to cover the disfigured portions of your face."
+
+ buy_facemask_decision_desc:0 "In an attempt to regain part of your prior public appearance, you can purchase a facemask that will hide your disfigurement while being somewhat ornate and flashy."
+ buy_facemask_desc.0001.desc:0 "I summon my craftsman and order him to bring me an assortment of designs for my new mask. It is time to ditch this horrid mask I am currently using in favor of something more ornate.\n\n"My [ROOT.Char.GetLadyLord|U], what material best suites you?\" He asks, presenting me with several options."
+
+ buy_facemask_desc.0002.desc:0 "Eventually my craftsman returns with the mask I had commissioned from him. \n\nHe fits the mask to my face and presents me with a mirror. \n\nThe part of my face that had been disfigured is now hidden behind this mask, while the rest of my face is once again visible to the world."
+ buy_facemask.0002.a:0 "I can show my face again in court!"
+
+ buy_facemask_decision:0 "Purchase Valyrian Facemask"
+ buy_facemask_decision_confirm:0 "Purchase Valyrian Facemask"
+
+ buy_facemask_decision_tooltip:1 "For a sum of [gold|E][gold_i] you can purchase a Valyrian facemask to wear at court."
+ remove_facemask_desc:0 "Remove the Valyrian mask you purchased and go back to wearing a traditional mask."
+ remove_facemask_decision_tooltip:1 "Remove the Valyrian mask you purchased and go back to wearing a traditional mask."
+ remove_facemask_decision_confirm:0 "Remove Valyrian Facemask"
+ remove_facemask_desc.0003:0 "Long have I worn this Valyrian mask...perhaps this look no longer suits me?"
+ remove_facemask_option.0003.a:0 "This look no longer suits me..."
+ remove_facemask_decision:0 "Remove Valyrian Facemask"

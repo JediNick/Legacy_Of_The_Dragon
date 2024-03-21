@@ -1,0 +1,37 @@
+﻿l_english:
+ read_aegon_prophecy_confirm:0 "Read prophecy"
+ read_prophecy_desc:0 "I read the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+ read_prophecy_desc_second_perspective:0 "you read the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+ read_prophecy_desc_third_perspective:0 "[owner.GetName] read the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+
+ read_prophecy_to_heir_desc:0 "I passed the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger to [heir.GetName]"
+ read_prophecy_to_heir_desc_second_perspective:0 "you passed the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger to [heir.GetName]"
+ read_prophecy_desc_to_heir_third_perspective:0 "[owner.GetName] passed the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger to [heir.GetName]"
+
+ inherit_prophecy_desc:0 "I learned of the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger from [daggerOwner.GetName]"
+ inherit_prophecy_desc_second_perspective:0 "you learned of the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger from [daggerOwner.GetName]"
+ inherit_prophecy_desc_third_perspective:0 "[owner.GetName] learned of the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger from [daggerOwner.GetName]"
+
+ discover_prophecy_desc:0 "I rediscovered the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+ discover_prophecy_desc_second_perspective:0 "you rediscovered the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+ discover_prophecy_desc_third_perspective:0 "[owner.GetName] rediscovered the prophecy hidden in [aegonTargLoc.GetFirstNameNicknamedPossessive] dagger"
+
+
+ read_prophecy:0 "Read a prophecy"
+ discover_prophecy:0 "Rediscovered a prophecy"
+
+ inherit_prophecy:0 "Inherited a prophecy"
+ read_prophecy_to_heir:0 "Passed a prophecy to heir"
+
+ buy_rubies_desc:0 "I repurchased the rubies that belong to my crown"
+ buy_rubies_desc_second_perspective:0 "you repurchased the rubies that belong to your crown"
+ buy_rubies_desc_third_perspective:0 "[owner.GetName] repurchased the rubies that belong to [owner.GetHerHis] crown"
+
+
+ sold_rubies_desc:0 "I sold the rubies that belong to my crown for gold"
+ sold_rubies_desc_second_perspective:0 "you sold the rubies that belong to your crown for gold"
+ sold_rubies_desc_third_perspective:0 "[owner.GetName] sold the rubies that belong to [owner.GetHerHis] crown for gold"
+
+
+ buy_rubies:0 "Repurchased crown rubies"
+ sold_rubies:0 "Sold crown rubies"

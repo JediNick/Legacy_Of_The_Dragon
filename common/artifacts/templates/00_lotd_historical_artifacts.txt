@@ -1,0 +1,80 @@
+﻿viserys_mask_template = {
+	can_equip = {
+		custom_tooltip = {
+			text = artifact_viserys_mask_requirements
+
+			OR = {
+				AND = {
+					scope:artifact = {
+						artifact_slot_type = miscellaneous
+					}
+						OR = {
+							has_trait = disfigured
+							has_trait = scarred
+							has_trait = wounded
+							has_trait = wounded_1
+							has_trait = wounded_2
+							has_trait = wounded_3
+							has_short_disease_trigger = yes
+							has_serious_disease_trigger = yes
+						}	
+				}
+				scope:artifact = {
+					artifact_slot_type = pedestal
+				}
+			}
+		}
+	}
+	# can this character benefit from the full modifiers of the artifact?
+	can_benefit = {
+		always = yes
+	}
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		#always = yes
+	}
+	unique = yes
+	ai_score = {
+		value = 10
+		if = {
+			limit = {
+				OR = {
+					has_trait = disfigured
+					has_trait = scarred
+					has_trait = wounded
+					has_trait = wounded_1
+					has_trait = wounded_2
+					has_trait = wounded_3
+					has_short_disease_trigger = yes
+					has_serious_disease_trigger = yes
+				}
+			}
+			add = 26
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = gregarious
+					has_trait = ambitious
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = shy
+				}
+			}
+			add = 10
+		}
+		if = {
+			limit = {
+				OR = {
+					has_trait = reclusive
+				}
+			}
+			add = -25
+		}
+	}
+}

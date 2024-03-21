@@ -1,0 +1,47 @@
+﻿l_english:
+ seafoam_poses_list:0 "Seafoam"
+ calamity_poses_list:0 "Calamity"
+ subterfuge_poses_list:0 "Subterfuge"
+ blackfyre_poses_list:0 "Blackfyre"
+ darksister_poses_list:0 "Darksister"
+ dragon_eggs_poses_list:0 "Dragon eggs"
+
+ orys_hammer_poses_list:0 "Fury"
+ aegon_dagger_poses_list:0 "Aegon's Dagger"
+ 
+ vs_dagger_1_poses_list:0 "Valyrian Steel Dagger"
+
+ valyrian_invasion_seafoam_1:0 "@lotd_icon! Seafoam Low"
+ valyrian_invasion_seafoam_2:0 "@lotd_icon! Seafoam Shoulder"
+ valyrian_invasion_seafoam_3:0 "@lotd_icon! Seafoam Duel"
+ 
+ valyrian_invasion_calamity_1:0 "@lotd_icon! Calamity Low"
+ valyrian_invasion_calamity_2:0 "@lotd_icon! Calamity Duel"
+ valyrian_invasion_calamity_3:0 "@lotd_icon! Calamity Celebrate"
+ 
+ valyrian_invasion_subterfuge_1:0 "@lotd_icon! Subterfuge Spymaster"
+ valyrian_invasion_subterfuge_2:0 "@lotd_icon! Subterfuge Duel"
+ valyrian_invasion_subterfuge_3:0 "@lotd_icon! Subterfuge Assassin"
+ 
+ valyrian_invasion_blackfyre_1:0 "@lotd_icon! Blackfyre Low"
+ valyrian_invasion_blackfyre_2:0 "@lotd_icon! Blackfyre Shoulder"
+ valyrian_invasion_blackfyre_3:0 "@lotd_icon! Blackfyre Duel"
+
+ valyrian_invasion_blackfyre_rehilt_1:0 "@lotd_icon! Blackfyre (Rehilt) Low"
+ valyrian_invasion_blackfyre_rehilt_2:0 "@lotd_icon! Blackfyre (Rehilt) Shoulder"
+ valyrian_invasion_blackfyre_rehilt_3:0 "@lotd_icon! Blackfyre (Rehilt) Duel"
+ 
+ 
+ valyrian_invasion_darksister_1:0 "@lotd_icon! Darksister Low"
+ valyrian_invasion_darksister_2:0 "@lotd_icon! Darksister Shoulder"
+ valyrian_invasion_darksister_3:0 "@lotd_icon! Darksister Duel"
+ 
+ valyrian_invasion_orys_hammer_1:0 "@lotd_icon! Fury Low"
+ valyrian_invasion_orys_hammer_2:0 "@lotd_icon! Fury Duel"
+ valyrian_invasion_orys_hammer_3:0 "@lotd_icon! Fury Celebrate"
+ 
+ valyrian_invasion_aegon_dagger_1:0 "@lotd_icon! Aegon's Dagger Spymaster"
+ valyrian_invasion_aegon_dagger_2:0 "@lotd_icon! Aegon's Dagger Duel"
+ valyrian_invasion_aegon_dagger_3:0 "@lotd_icon! Aegon's Dagger Assassin"
+ valyrian_invasion_aegon_dagger_glow_1:0 "@lotd_icon! Aegon's Dagger (Prophecy)"
+ 
