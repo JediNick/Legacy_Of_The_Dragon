@@ -811,8 +811,8 @@ agot_house_customizer.0020 = {
 				exists = scope:hc_selection.father
 			}
 			OR = {
-				scope:hc_selection.mother = { can_be_parent_of = root }
-				scope:hc_selection.father = { can_be_parent_of = root }
+				scope:hc_selection.mother = { is_adult = yes }
+				scope:hc_selection.father = { is_adult = yes }
 			}
 		}
 		if = {
@@ -823,7 +823,7 @@ agot_house_customizer.0020 = {
 			set_house = scope:hc_selection.father.house
 			set_father = scope:hc_selection.father
 			if = { # Check for and set valid mother
-				limit = { scope:hc_selection.mother ?= { can_be_parent_of = root } }
+				limit = { scope:hc_selection.mother ?= { is_adult = yes } }
 				set_mother = scope:hc_selection.mother
 			}
 		}
@@ -831,7 +831,7 @@ agot_house_customizer.0020 = {
 			set_house = scope:hc_selection.mother.house
 			set_mother = scope:hc_selection.mother
 			if = { # Check for and set valid father
-				limit = { scope:hc_selection.father ?= { can_be_parent_of = root } }
+				limit = { scope:hc_selection.father ?= { is_adult = yes } }
 				set_father = scope:hc_selection.father
 			}
 		}
@@ -858,16 +858,7 @@ agot_house_customizer.0020 = {
 	#I want to play as their child
 	option = {
 		name = agot_house_customizer.0020.b
-		trigger = {
-			OR = {
-				scope:hc_selection = { can_be_parent_of = root }
-				#For some reason can_be_parent_of doesn't work with female characters?
-				16 <= {
-					value = scope:hc_selection.age
-					subtract = age
-				}
-			}
-		}
+		trigger = { scope:hc_selection = { is_adult = yes } }
 		if = { # You selected a father
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
@@ -876,7 +867,7 @@ agot_house_customizer.0020 = {
 				limit = { # Check for and set valid mother
 					scope:hc_selection.primary_spouse ?= {
 						is_female = yes
-						can_be_parent_of = root
+						is_adult = yes
 					}
 				}
 				set_mother = scope:hc_selection.primary_spouse
@@ -889,7 +880,7 @@ agot_house_customizer.0020 = {
 				limit = { # Check for and set valid father
 					scope:hc_selection.primary_spouse ?= {
 						is_male = yes
-						can_be_parent_of = root
+						is_adult = yes
 					}
 				}
 				set_father = scope:hc_selection.primary_spouse
@@ -1011,7 +1002,16 @@ agot_house_customizer.0021 = {
 				exists = scope:hc_selection.father
 			}
 			OR = {
-				scope:hc_selection.mother = { can_be_parent_of = root }
+				scope:hc_selection.mother = {
+					OR = {
+						can_be_parent_of = root
+						#For some reason can_be_parent_of doesn't work with female characters?
+						16 <= {
+							value = scope:hc_selection.mother.age
+							subtract = root.age
+						}
+					}
+				}
 				scope:hc_selection.father = { can_be_parent_of = root }
 			}
 		}
@@ -1022,7 +1022,18 @@ agot_house_customizer.0021 = {
 			set_house = scope:hc_selection.father.house
 			set_father = scope:hc_selection.father
 			if = { # Check for and set valid mother
-				limit = { scope:hc_selection.mother ?= { can_be_parent_of = root } }
+				limit = {
+					scope:hc_selection.mother ?= {
+						OR = {
+							can_be_parent_of = root
+							#For some reason can_be_parent_of doesn't work with female characters?
+							16 <= {
+								value = scope:hc_selection.mother.age
+								subtract = root.age
+							}
+						}
+					}
+				}
 				set_mother = scope:hc_selection.mother
 
 				hidden_effect = { # Random parents no longer needed
@@ -1065,7 +1076,18 @@ agot_house_customizer.0021 = {
 	#I want to play as their child
 	option = {
 		name = agot_house_customizer.0020.b
-		trigger = { scope:hc_selection = { can_be_parent_of = root } }
+		trigger = {
+			scope:hc_selection = {
+				OR = {
+					can_be_parent_of = root
+					#For some reason can_be_parent_of doesn't work with female characters?
+					16 <= {
+						value = scope:hc_selection.age
+						subtract = root.age
+					}
+				}
+			}
+		}
 		if = {
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
@@ -1106,7 +1128,18 @@ agot_house_customizer.0021 = {
 	#I want to play as their child but have a parent assigned to me
 	option = {
 		name = agot_house_customizer.0020.bb
-		trigger = { scope:hc_selection = { can_be_parent_of = root } }
+		trigger = {
+			scope:hc_selection = {
+				OR = {
+					can_be_parent_of = root
+					#For some reason can_be_parent_of doesn't work with female characters?
+					16 <= {
+						value = scope:hc_selection.age
+						subtract = root.age
+					}
+				}
+			}
+		}
 		if = {
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
@@ -1115,7 +1148,14 @@ agot_house_customizer.0021 = {
 				limit = { # Check for and set valid mother
 					scope:hc_selection.primary_spouse ?= {
 						is_female = yes
-						can_be_parent_of = root
+						OR = {
+							can_be_parent_of = root
+							#For some reason can_be_parent_of doesn't work with female characters?
+							16 <= {
+								value = scope:hc_selection.primary_spouse.age
+								subtract = root.age
+							}
+						}
 					}
 				}
 				set_mother = scope:hc_selection.primary_spouse
@@ -1202,6 +1242,11 @@ agot_house_customizer.0021 = {
 		}
 		add_character_flag = relative_pop_living
 		trigger_event = agot_house_customizer.0200
+
+		hidden_effect = { # Random parents no longer needed
+			scope:hc_random_mother = { death = { death_reason = death_disappearance } }
+			scope:hc_random_father = { death = { death_reason = death_disappearance } }
+		}
 	}
 
 	# Crowned Stag Special Starts
@@ -1312,10 +1357,15 @@ agot_house_customizer.0021 = {
 			days = 2
 		}
 
-		hidden_effect = { # Random parents no longer needed
-			scope:hc_random_mother = { death = { death_reason = death_disappearance } }
-			scope:hc_random_father = { death = { death_reason = death_disappearance } }
+		if = { # The seed is strong
+			limit = { scope:hc_selection = { has_strong_seed_dynasty = yes } } # Does your selection have strong seed?
+			root.house = { save_scope_as = old_house } # Then remember which house you're in before changing
+			hidden_effect = { set_house = scope:hc_selection.house } # Temporarily change to your selection's house
+			trigger_event = agot_house_customizer.0026 # Fire strong seed event using your selection's house
 		}
+
+		# Random father no longer needed
+		hidden_effect = { scope:hc_random_father = { death = { death_reason = death_disappearance } } }
 	}
 
 	after = {
@@ -1743,28 +1793,37 @@ agot_house_customizer.0026 = {
 		animation = throne_room_writer
 	}
 	right_portrait = scope:hc_selection
+
 	# Yes - Apply Strong Seed to My Character: This will overwrite DNA
 	option = {
 		name = agot_house_customizer.0026.a
 		custom_tooltip = agot_house_customizer.0026.a.tt
 		hidden_effect = {
-		agot_assign_strong_seed_traits_effect = yes
-		if = {
-			limit = {
-				any_child = {
-					exists = yes
+			agot_assign_strong_seed_traits_effect = yes
+			if = {
+				limit = {
+					any_child = {
+						exists = yes
+					}
+				}
+				every_child = {
+					agot_assign_strong_seed_traits_effect = yes
 				}
 			}
-			every_child = {
-				agot_assign_strong_seed_traits_effect = yes
-			}
-		  }
 		}
 	}
 
 	# No - Do not apply strong seed
 	option = {
 		name = agot_house_customizer.0026.b
+	}
+
+	# Change your house back if necessary
+	after = {
+		if = {
+			limit = { exists = scope:old_house }
+			hidden_effect = { set_house = scope:old_house }
+		}
 	}
 }
 
@@ -1780,27 +1839,56 @@ agot_house_customizer.0200 = {
 		character = root
 		animation = throne_room_writer
 	}
+	right_portrait = scope:hc_selection
 
 	widget = {
 		is_shown = { is_ai = no }
-		gui = "event_window_character_selection"
+		gui = "event_window_character_selection_tall"
 		container = "custom_widgets_container"
 	}
 
 	immediate = {
 		# Populate List
-		scope:hc_selection = {
-			every_close_or_extended_family_member = {
-				even_if_dead = yes
-				limit = {
-					can_be_parent_of = root
-					is_adult = yes
-					house = scope:hc_selection.house
+		if = { # You chose extinct
+			limit = { has_character_flag = relative_pop_extinct }
+			scope:hc_selection = {
+				every_close_or_extended_family_member = {
+					even_if_dead = yes
+					limit = {
+						is_adult = yes
+						house = scope:hc_selection.house
+					}
+					root = {
+						add_to_variable_list = {
+							name = possible_characters
+							target = prev
+						}
+					}
 				}
-				root = {
-					add_to_variable_list = {
-						name = possible_characters
-						target = prev
+			}
+		}
+		else_if = { # You chose living
+			limit = { has_character_flag = relative_pop_living }
+			scope:hc_selection = {
+				every_close_or_extended_family_member = {
+					even_if_dead = yes
+					limit = {
+						OR = {
+							can_be_parent_of = root
+							#For some reason can_be_parent_of doesn't work with female characters?
+							16 <= {
+								value = root.age
+								subtract = age
+							}
+						}
+						is_adult = yes
+						house = scope:hc_selection.house
+					}
+					root = {
+						add_to_variable_list = {
+							name = possible_characters
+							target = prev
+						}
 					}
 				}
 			}
@@ -1830,7 +1918,7 @@ agot_house_customizer.0200 = {
 				limit = { # Check for and set valid mother
 					scope:hc_random_relative_selection.primary_spouse ?= {
 						is_female = yes
-						can_be_parent_of = root
+						is_adult = yes
 					}
 				}
 				set_mother = scope:hc_random_relative_selection.primary_spouse
@@ -1842,7 +1930,7 @@ agot_house_customizer.0200 = {
 				limit = { # Check for and set valid father
 					scope:hc_random_relative_selection.primary_spouse ?= {
 						is_male = yes
-						can_be_parent_of = root
+						is_adult = yes
 					}
 				}
 				set_father = scope:hc_random_relative_selection.primary_spouse
@@ -1880,15 +1968,17 @@ agot_house_customizer.0200 = {
 				limit = { # Check for and set valid mother
 					scope:hc_random_relative_selection.primary_spouse ?= {
 						is_female = yes
-						can_be_parent_of = root
+						OR = {
+							can_be_parent_of = root
+							#For some reason can_be_parent_of doesn't work with female characters?
+							16 <= {
+								value = scope:hc_random_relative_selection.primary_spouse.age
+								subtract = root.age
+							}
+						}
 					}
 				}
 				set_mother = scope:hc_random_relative_selection.primary_spouse
-
-				hidden_effect = { # Random parents no longer needed
-					scope:hc_random_mother = { death = { death_reason = death_disappearance } }
-					scope:hc_random_father = { death = { death_reason = death_disappearance } }
-				}
 			}
 		}
 		else = {
@@ -1901,11 +1991,6 @@ agot_house_customizer.0200 = {
 					}
 				}
 				set_father = scope:hc_random_relative_selection.primary_spouse
-
-				hidden_effect = { # Random parents no longer needed
-					scope:hc_random_father = { death = { death_reason = death_disappearance } }
-					scope:hc_random_mother = { death = { death_reason = death_disappearance } }
-				}
 			}
 		}
 
