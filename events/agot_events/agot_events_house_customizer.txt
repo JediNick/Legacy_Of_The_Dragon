@@ -798,7 +798,6 @@ agot_house_customizer.0020 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_succession"
-		remove_trait = house_customizer
 		every_held_title = { set_coa = scope:hc_selection.house }
 	}
 
@@ -848,6 +847,7 @@ agot_house_customizer.0020 = {
 			limit = { has_strong_seed_dynasty = yes }
 			trigger_event = agot_house_customizer.0026
 		}
+		hidden_effect = { remove_trait = house_customizer }
 
 		#trigger_event = agot_house_customizer.0022
 
@@ -899,6 +899,7 @@ agot_house_customizer.0020 = {
 			limit = { has_strong_seed_dynasty = yes }
 			trigger_event = agot_house_customizer.0026
 		}
+		hidden_effect = { remove_trait = house_customizer }
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -918,6 +919,14 @@ agot_house_customizer.0020 = {
 		}
 		add_character_flag = relative_pop_extinct
 		trigger_event = agot_house_customizer.0200
+	}
+
+	# I want to choose a different house
+	option = {
+		name = agot_house_customizer.0020.back
+		custom_tooltip = agot_house_customizer.0020.back.tt
+		trigger_event = agot_house_customizer.0002
+		every_held_title = { set_coa = scope:root.house }
 	}
 
 	after = {
@@ -958,7 +967,6 @@ agot_house_customizer.0021 = {
 	immediate = {
 		play_music_cue = "mx_cue_succession"
 		scope:recipient = { save_scope_as = hc_selection }
-		remove_trait = house_customizer
 		# Mother may be needed, so generate one if one doesn't exist
 		if = {
 			limit = { NOT = { exists = scope:hc_random_mother } }
@@ -1068,6 +1076,7 @@ agot_house_customizer.0021 = {
 			limit = { has_strong_seed_dynasty = yes }
 			trigger_event = agot_house_customizer.0026
 		}
+		hidden_effect = { remove_trait = house_customizer }
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1120,6 +1129,7 @@ agot_house_customizer.0021 = {
 			limit = { has_strong_seed_dynasty = yes }
 			trigger_event = agot_house_customizer.0026
 		}
+		hidden_effect = { remove_trait = house_customizer }
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1223,6 +1233,7 @@ agot_house_customizer.0021 = {
 			limit = { has_strong_seed_dynasty = yes }
 			trigger_event = agot_house_customizer.0026
 		}
+		hidden_effect = { remove_trait = house_customizer }
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1278,6 +1289,7 @@ agot_house_customizer.0021 = {
 			scope:hc_random_mother = { death = { death_reason = death_disappearance } }
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
+		hidden_effect = { remove_trait = house_customizer }
 	}
 
 	option = { # I want to play as Rhaegar's child
@@ -1308,6 +1320,7 @@ agot_house_customizer.0021 = {
 			scope:hc_random_mother = { death = { death_reason = death_disappearance } }
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
+		hidden_effect = { remove_trait = house_customizer }
 	}
 
 	# Royal Bastard Special Start
@@ -1366,6 +1379,14 @@ agot_house_customizer.0021 = {
 
 		# Random father no longer needed
 		hidden_effect = { scope:hc_random_father = { death = { death_reason = death_disappearance } } }
+		hidden_effect = { remove_trait = house_customizer }
+	}
+
+	# I want to choose a different house
+	option = {
+		name = agot_house_customizer.0020.back
+		custom_tooltip = agot_house_customizer.0021.back.tt
+		trigger_event = agot_house_customizer.0001
 	}
 
 	after = {
@@ -1950,6 +1971,7 @@ agot_house_customizer.0200 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		remove_character_flag = relative_pop_extinct
+		hidden_effect = { remove_trait = house_customizer }
 	}
 
 	option = {
@@ -2007,5 +2029,26 @@ agot_house_customizer.0200 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		remove_character_flag = relative_pop_living
+		hidden_effect = { remove_trait = house_customizer }
+	}
+
+	# On second thought - extinct
+	option = {
+		name = agot_house_customizer.0200.back
+		custom_tooltip = agot_house_customizer.0200.back.tt
+		trigger = { has_character_flag = relative_pop_extinct }
+		clear_variable_list = possible_characters
+		remove_character_flag = relative_pop_extinct
+		trigger_event = agot_house_customizer.0020
+	}
+
+	# On second thought - living
+	option = {
+		name = agot_house_customizer.0200.back
+		custom_tooltip = agot_house_customizer.0200.back.tt
+		trigger = { has_character_flag = relative_pop_living }
+		clear_variable_list = possible_characters
+		remove_character_flag = relative_pop_living
+		trigger_event = agot_house_customizer.0021
 	}
 }
