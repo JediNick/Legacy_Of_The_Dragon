@@ -814,7 +814,16 @@ agot_house_customizer.0020 = {
 				scope:hc_selection.father = { is_adult = yes }
 			}
 		}
-		if = {
+		if = { # You have the bastard trait
+			limit = {
+				exists = scope:hc_selection.father
+				scope:hc_selection.father.primary_title.tier >= scope:hc_selection.mother.primary_title.tier
+				has_trait = bastard
+			}
+			set_house = scope:hc_selection.father.house
+			set_father = scope:hc_selection.father
+		}
+		else_if = { # You selected a father
 			limit = {
 				exists = scope:hc_selection.father
 				scope:hc_selection.father.primary_title.tier >= scope:hc_selection.mother.primary_title.tier
@@ -826,7 +835,7 @@ agot_house_customizer.0020 = {
 				set_mother = scope:hc_selection.mother
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_house = scope:hc_selection.mother.house
 			set_mother = scope:hc_selection.mother
 			if = { # Check for and set valid father
@@ -848,6 +857,15 @@ agot_house_customizer.0020 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 
 		#trigger_event = agot_house_customizer.0022
 
@@ -859,7 +877,15 @@ agot_house_customizer.0020 = {
 	option = {
 		name = agot_house_customizer.0020.b
 		trigger = { scope:hc_selection = { is_adult = yes } }
-		if = { # You selected a father
+		if = { # You have the bastard trait
+			limit = {
+				scope:hc_selection = { is_male = yes }
+				has_trait = bastard
+			}
+			set_house = scope:hc_selection.house
+			set_father = scope:hc_selection
+		}
+		else_if = { # You selected a father
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
 			set_father = scope:hc_selection
@@ -900,6 +926,15 @@ agot_house_customizer.0020 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -927,18 +962,6 @@ agot_house_customizer.0020 = {
 		custom_tooltip = agot_house_customizer.0020.back.tt
 		trigger_event = agot_house_customizer.0002
 		every_held_title = { set_coa = scope:root.house }
-	}
-
-	after = {
-		if = {
-			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
-				}
-			}
-			agot_add_custom_bastard_nickname_effect = yes
-		}
 	}
 }
 
@@ -1023,10 +1046,19 @@ agot_house_customizer.0021 = {
 				scope:hc_selection.father = { can_be_parent_of = root }
 			}
 		}
-		if = {
+		if = { # You have the bastard trait
 			limit = {
 				scope:hc_selection.father.primary_title.tier >= scope:hc_selection.mother.primary_title.tier
+				has_trait = bastard
 			}
+			set_house = scope:hc_selection.father.house
+			set_father = scope:hc_selection.father
+			set_mother = scope:hc_random_mother
+			# Other random parent no longer needed
+			hidden_effect = { scope:hc_random_father = { death = { death_reason = death_disappearance } } }
+		}
+		else_if = { # You selected a father
+			limit = { scope:hc_selection.father.primary_title.tier >= scope:hc_selection.mother.primary_title.tier }
 			set_house = scope:hc_selection.father.house
 			set_father = scope:hc_selection.father
 			if = { # Check for and set valid mother
@@ -1043,24 +1075,22 @@ agot_house_customizer.0021 = {
 					}
 				}
 				set_mother = scope:hc_selection.mother
-
-				hidden_effect = { # Random parents no longer needed
-					scope:hc_random_mother = { death = { death_reason = death_disappearance } }
-					scope:hc_random_father = { death = { death_reason = death_disappearance } }
-				}
+			}
+			hidden_effect = { # Random parents no longer needed
+				scope:hc_random_mother = { death = { death_reason = death_disappearance } }
+				scope:hc_random_father = { death = { death_reason = death_disappearance } }
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_house = scope:hc_selection.mother.house
 			set_mother = scope:hc_selection.mother
 			if = { # Check for and set valid father
 				limit = { scope:hc_selection.father ?= { can_be_parent_of = root } }
 				set_father = scope:hc_selection.father
-
-				hidden_effect = { # Random parents no longer needed
-					scope:hc_random_father = { death = { death_reason = death_disappearance } }
-					scope:hc_random_mother = { death = { death_reason = death_disappearance } }
-				}
+			}
+			hidden_effect = { # Random parents no longer needed
+				scope:hc_random_father = { death = { death_reason = death_disappearance } }
+				scope:hc_random_mother = { death = { death_reason = death_disappearance } }
 			}
 		}
 
@@ -1077,6 +1107,15 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1097,7 +1136,7 @@ agot_house_customizer.0021 = {
 				}
 			}
 		}
-		if = {
+		if = { # You selected a father
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
 			set_father = scope:hc_selection
@@ -1107,7 +1146,7 @@ agot_house_customizer.0021 = {
 				scope:hc_random_father = { death = { death_reason = death_disappearance } }
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_house = scope:hc_selection.house
 			set_mother = scope:hc_selection
 
@@ -1130,6 +1169,15 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1150,7 +1198,18 @@ agot_house_customizer.0021 = {
 				}
 			}
 		}
-		if = {
+		if = { # You have the bastard trait
+			limit = {
+				scope:hc_selection = { is_male = yes }
+				has_trait = bastard
+			}
+			set_house = scope:hc_selection.house
+			set_father = scope:hc_selection
+			set_mother = scope:hc_random_mother
+			# Other random parent no longer needed
+			hidden_effect = { scope:hc_random_father = { death = { death_reason = death_disappearance } } }
+		}
+		else_if = { # You selected a father
 			limit = { scope:hc_selection = { is_male = yes } }
 			set_house = scope:hc_selection.house
 			set_father = scope:hc_selection
@@ -1189,7 +1248,7 @@ agot_house_customizer.0021 = {
 				hidden_effect = { scope:hc_random_father = { death = { death_reason = death_disappearance } } }
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_house = scope:hc_selection.house
 			set_mother = scope:hc_selection
 			if = {
@@ -1234,6 +1293,15 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 
 		# Remind them of the option
 		show_as_unavailable = { always = yes }
@@ -1290,6 +1358,15 @@ agot_house_customizer.0021 = {
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 	}
 
 	option = { # I want to play as Rhaegar's child
@@ -1321,6 +1398,15 @@ agot_house_customizer.0021 = {
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 	}
 
 	# Royal Bastard Special Start
@@ -1387,18 +1473,13 @@ agot_house_customizer.0021 = {
 		name = agot_house_customizer.0020.back
 		custom_tooltip = agot_house_customizer.0021.back.tt
 		trigger_event = agot_house_customizer.0001
+		hidden_effect = { # Random parents no longer needed
+			scope:hc_random_mother = { death = { death_reason = death_disappearance } }
+			scope:hc_random_father = { death = { death_reason = death_disappearance } }
+		}
 	}
 
 	after = {
-		if = {
-			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
-				}
-			}
-			agot_add_custom_bastard_nickname_effect = yes
-		}
 		if = {
 			limit = { NOT = { has_character_flag = skip_coa_assignment } }
 			every_held_title = { set_coa = scope:hc_selection.house }
@@ -1932,7 +2013,7 @@ agot_house_customizer.0200 = {
 		# House Customizer Maintenance
 		set_house = scope:hc_random_relative_selection.house
 
-		if = {
+		if = { # You selected a father
 			limit = { scope:hc_random_relative_selection = { is_male = yes } }
 			set_father = scope:hc_random_relative_selection
 			if = {
@@ -1945,7 +2026,7 @@ agot_house_customizer.0200 = {
 				set_mother = scope:hc_random_relative_selection.primary_spouse
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_mother = scope:hc_random_relative_selection
 			if = {
 				limit = { # Check for and set valid father
@@ -1972,6 +2053,15 @@ agot_house_customizer.0200 = {
 		}
 		remove_character_flag = relative_pop_extinct
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 	}
 
 	option = {
@@ -1983,7 +2073,14 @@ agot_house_customizer.0200 = {
 		# House Customizer Maintenance
 		set_house = scope:hc_random_relative_selection.house #Set's the player's house to the selection's house
 
-		if = { #Determines who your parent should be
+		if = { # You have the bastard trait
+			limit = {
+				scope:hc_random_relative_selection = { is_male = yes }
+				has_trait = bastard
+			}
+			set_father = scope:hc_random_relative_selection
+		}
+		else_if = { # You selected a father
 			limit = { scope:hc_random_relative_selection = { is_male = yes } }
 			set_father = scope:hc_random_relative_selection
 			if = {
@@ -2003,7 +2100,7 @@ agot_house_customizer.0200 = {
 				set_mother = scope:hc_random_relative_selection.primary_spouse
 			}
 		}
-		else = {
+		else = { # You selected a mother
 			set_mother = scope:hc_random_relative_selection
 			if = {
 				limit = { # Check for and set valid father
@@ -2030,6 +2127,15 @@ agot_house_customizer.0200 = {
 		}
 		remove_character_flag = relative_pop_living
 		hidden_effect = { remove_trait = house_customizer }
+		if = {
+			limit = {
+				OR = {
+					has_trait = bastard
+					has_trait = legitimized_bastard
+				}
+			}
+			agot_add_custom_bastard_nickname_effect = yes
+		}
 	}
 
 	# On second thought - extinct
