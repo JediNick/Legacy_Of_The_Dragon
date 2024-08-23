@@ -1,4 +1,4 @@
-version="1.33"
+version="1.1.0"
 tags={
 	"Decisions"
 	"Events"

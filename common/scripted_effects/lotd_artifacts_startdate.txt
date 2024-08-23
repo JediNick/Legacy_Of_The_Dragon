@@ -1,54 +1,112 @@
 ﻿rediscover_mechanic_setup.0001 = {
-	character:Targaryen_1 = {
-		every_character_artifact = {
-			limit = {
-				NOT = { has_variable = crown_aegon_iv_artifact }
-				OR = {
-					has_variable = crown_aegon_i_artifact
-					has_variable = aegoncrown
-					has_variable = crown_aegon_iii_artifact
-					has_variable = crown_aenys_artifact
-					has_variable = crown_jaehaerys_artifact
-					has_variable = crown_baelor_artifact
-					has_variable = crown_maekar_artifact
+	if = {
+		limit = { game_start_date = 8258.12.21 }
+		character:Targaryen_122 ?= {
+			every_character_artifact = {
+				limit = {
+					NOT = { has_variable = crown_aegon_iii_artifact }
+					OR = {
+						has_variable = crown_aegon_i_artifact
+						has_variable = aegoncrown
+						has_variable = crown_aenys_artifact
+						has_variable = crown_jaehaerys_artifact
+						has_variable = crown_baelor_artifact
+						has_variable = crown_maekar_artifact
+					}
 				}
+				add_to_list = destory_artifact_list
 			}
-			add_to_list = destory_artifact_list
-		}
-		every_in_list = {
-			list = destory_artifact_list
-			destroy_artifact = this
+			every_in_list = {
+				list = destory_artifact_list
+				destroy_artifact = this
+			}
 		}
 	}
-	character:Targaryen_2 = {
-		every_character_artifact = {
-			limit = {
-				has_variable = circlet_visenya_artifact
+	else_if = {
+		limit = { game_start_date = 8282.9.15 }
+		character:Targaryen_1 ?= {
+			every_character_artifact = {
+				limit = {
+					NOT = { has_variable = crown_aegon_iv_artifact }
+					OR = {
+						has_variable = crown_aegon_i_artifact
+						has_variable = aegoncrown
+						has_variable = crown_aegon_iii_artifact
+						has_variable = crown_aenys_artifact
+						has_variable = crown_jaehaerys_artifact
+						has_variable = crown_baelor_artifact
+						has_variable = crown_maekar_artifact
+					}
+				}
+				add_to_list = destory_artifact_list
 			}
-			add_to_list = destory_artifact_list
+			every_in_list = {
+				list = destory_artifact_list
+				destroy_artifact = this
+			}
 		}
-		every_in_list = {
-			list = destory_artifact_list
-			destroy_artifact = this
+		character:Targaryen_2 ?= {
+			every_character_artifact = {
+				limit = {
+					has_variable = circlet_visenya_artifact
+				}
+				add_to_list = destory_artifact_list
+			}
+			every_in_list = {
+				list = destory_artifact_list
+				destroy_artifact = this
+			}
+		}
+	}
+	else_if = {
+		limit = { game_start_date = 8106.4.18 }
+		character:Targaryen_60 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+			create_artifact_orys_hammer_effect = { OWNER = this }
+			create_artifact_viserys_mask_effect = { OWNER = this }
+		}
+	}
+	else_if = {
+		limit = { game_start_date = 8082.1.1 }
+		character:Targaryen_35 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+			create_artifact_orys_hammer_effect = { OWNER = this }
 		}
 	}
 }
 
 rediscover_mechanic_setup.0002 = {
-	character:Targaryen_1 = {
-		# agot_create_artifact_aegon_i_crown_effect = { OWNER = this }
-		# agot_create_artifact_aenys_crown_effect = { OWNER = this }
-		# agot_create_artifact_jaehaerys_crown_effect = { OWNER = this }
-		# agot_create_artifact_aegon_iii_crown_effect = { OWNER = this }
-		# agot_create_artifact_baelors_crown_effect = { OWNER = this }
-		# agot_create_artifact_maekars_crown_effect = { OWNER = this }
-
-		##Lotd
-		create_artifact_aegon_dagger_effect = { OWNER = this }
-		create_artifact_orys_hammer_effect = { OWNER = this }
-		create_artifact_viserys_mask_effect = { OWNER = this }
+	if = {
+		limit = { game_start_date = 8082.1.1 }
+		character:Targaryen_35 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+			create_artifact_orys_hammer_effect = { OWNER = this }
+		}
 	}
-	# character:Targaryen_2 = {
-	# 	agot_create_artifact_visenya_circlet_effect = { OWNER = this }
-	# }
+	else_if = {
+		limit = { game_start_date = 8106.4.18 }
+		character:Targaryen_60 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+			create_artifact_orys_hammer_effect = { OWNER = this }
+			create_artifact_viserys_mask_effect = { OWNER = this }
+		}
+	}
+	else_if = {
+		limit = { game_start_date = 8258.12.21 }
+		character:Targaryen_122 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+			create_artifact_orys_hammer_effect = { OWNER = this }
+			create_artifact_viserys_mask_effect = { OWNER = this }
+		}
+	}
+	else_if = {
+		limit = { game_start_date ?= 8282.9.15 }
+		character:Targaryen_1 = {
+			create_artifact_orys_hammer_effect = { OWNER = this }
+			create_artifact_viserys_mask_effect = { OWNER = this }
+		}
+		character:Targaryen_3 ?= {
+			create_artifact_aegon_dagger_effect = { OWNER = this }
+		}
+	}
 }

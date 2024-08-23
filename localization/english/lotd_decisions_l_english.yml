@@ -8,7 +8,7 @@
  rediscover_mechanic:0 "Recover Targaryen Artifacts"   
 
 
- rule_hotd_visual_replacement:0 "Legacy Of The Dragon - Artifact Visuals"
+ rule_hotd_visual_replacement:0 "@lotd_icon! Legacy Of The Dragon - Artifact Visuals"
  setting_hotd_visuals:0 "Use Show Based Visuals"
 setting_hotd_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aegon I's Crown, or Jaehaerys I's Crown will use show based visuals."
  setting_agot_visuals:0 "Use Vanilla AGOT Visuals"
@@ -16,18 +16,18 @@ setting_agot_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aego
 
 
 
- rule_extra_visual_replacement:0 "Legacy Of The Dragon - Optional Visuals"
+ rule_extra_visual_replacement:0 "@lotd_icon! Legacy Of The Dragon - Optional Visuals"
 setting_extra_visuals_disabled:0 "Disabled"
 setting_extra_visuals:0 "Enabled"
 
 setting_extra_visuals_desc:0 "Seafoam and Pincer will have new high quality 3D models with alternate visuals."
 setting_extra_visuals_disabled_desc:0 "Alternate visuals will be disabled."
 
-rule_rediscover_mechanic:0 "Legacy Of The Dragon - Rediscover Mechanic"
+rule_rediscover_mechanic:0 "@lotd_icon! Legacy Of The Dragon - Rediscover Mechanic"
 setting_rediscover_mechanic_enabled:0 "Enabled"
 setting_rediscover_mechanic_disabled:0 "Disabled"
 
-setting_rediscover_mechanic_enabled_desc:0 "Aerys will no longer spawn with all Targaryen Artifacts, instead a decision to recover them will be given to any Targaryen ruler. Your Antiquarian can recover a number of Targaryen artifacts."
+setting_rediscover_mechanic_enabled_desc:0 "Aerys will no longer spawn with all Targaryen Artifacts, instead a decision to recover them will be given to any Targaryen ruler. Your Antiquarian can recover a number of Targaryen artifacts. This is only supported for bookmarks after Nine Penny Kings."
 setting_rediscover_mechanic_disabled_desc:0 "The new Rediscover mechanic will be disabled."
 
 rehilt_blackfyre:0 "Rehilt Blackfyre"

@@ -216,6 +216,10 @@ create_artifact_orys_hammer_effect = {
 
 		save_scope_as = newly_created_artifact
 		decaying = no
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
 		history = {
 			type = created
 			date = 7998.3.21

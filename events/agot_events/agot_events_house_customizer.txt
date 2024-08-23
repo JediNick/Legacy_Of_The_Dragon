@@ -189,9 +189,12 @@ agot_house_customizer.0003 = {
 		play_music_cue = "mx_cue_succession"
 	}
 
-	#Amber
+		#Amber
 	option = {
 		name = agot_house_customizer.0003.amber
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Amber_1 }
+		}
 		character:Amber_1 = {
 			save_scope_as = hc_selection
 		}
@@ -201,6 +204,9 @@ agot_house_customizer.0003 = {
 	# Greenwood
 	option = {
 		name = agot_house_customizer.0003.greenwood
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Greenwood_1 }
+		}	
 		character:Greenwood_1 = {
 			save_scope_as = hc_selection
 		}
@@ -210,6 +216,9 @@ agot_house_customizer.0003 = {
 	#Frost
 	option = {
 		name = agot_house_customizer.0003.frost
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Frost_1 }
+		}	
 		character:Frost_1 = {
 			save_scope_as = hc_selection
 		}
@@ -219,6 +228,9 @@ agot_house_customizer.0003 = {
 	#Greystark
 	option = {
 		name = agot_house_customizer.0003.greystark
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Greystark_3 }
+		}	
 		character:Greystark_10 = {
 			save_scope_as = hc_selection
 		}
@@ -228,6 +240,9 @@ agot_house_customizer.0003 = {
 	#Woodfoot
 	option = {
 		name = agot_house_customizer.0003.woodfoot
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Woodfoot_1 }
+		}	
 		character:Woodfoot_1 = {
 			save_scope_as = hc_selection
 		}
@@ -273,6 +288,9 @@ agot_house_customizer.0004 = {
 	#fisher of riverlands
 	option = {
 		name = agot_house_customizer.0004.fisher_riverlands
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Fisher_riverlands_duplicate_1 }
+		}	
 		character:Fisher_riverlands_duplicate_8 = {
 			save_scope_as = hc_selection
 		}
@@ -282,6 +300,9 @@ agot_house_customizer.0004 = {
 	#Harroway
 	option = {
 		name = agot_house_customizer.0004.harroway
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Harroway_5 }
+		}	
 		character:Harroway_8 = {
 			save_scope_as = hc_selection
 		}
@@ -291,15 +312,22 @@ agot_house_customizer.0004 = {
 	#Justman
 	option = {
 		name = agot_house_customizer.0004.justman
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Justman_1 }
+		}	
 		character:Justman_8 = {
 			save_scope_as = hc_selection
 		}
 		trigger_event = agot_house_customizer.0020
 	}
 
+
 	#Qoherys
 	option = {
 		name = agot_house_customizer.0004.qoherys
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Qoherys_1 }
+		}	
 		create_artifact_subterfuge_effect = { OWNER = this }
 		character:Qoherys_4 = {
 			save_scope_as = hc_selection
@@ -310,15 +338,21 @@ agot_house_customizer.0004 = {
 	#Teague
 	option = {
 		name = agot_house_customizer.0004.teague
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Teague_1 }
+		}	
 		character:Teague_6 = {
 			save_scope_as = hc_selection
 		}
 		trigger_event = agot_house_customizer.0020
 	}
 
-	#Towers of Harrenhal
+		#Towers of Harrenhal
 	option = {
 		name = agot_house_customizer.0004.towers_of_harrenhal
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Towers_1 }
+		}	
 		character:Towers_6 = {
 			save_scope_as = hc_selection
 		}
@@ -328,7 +362,7 @@ agot_house_customizer.0004 = {
 	# Back Option
 	option = {
 		name = agot_house_customizer.back_option
-			trigger_event = {
+		trigger_event = {
 			id = agot_house_customizer.0002
 		}
 	}
@@ -366,6 +400,9 @@ agot_house_customizer.0005 = {
 	#shell
 	option = {
 		name = agot_house_customizer.0005.shell
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Shell_Vale_1 }
+		}	
 		character:Shell_Vale_1 = {
 			save_scope_as = hc_selection
 		}
@@ -375,6 +412,9 @@ agot_house_customizer.0005 = {
 	#brightstone
 	option = {
 		name = agot_house_customizer.0005.brightstone
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Brightstone_1 }
+		}	
 		character:Brightstone_1 = {
 			save_scope_as = hc_selection
 		}
@@ -419,7 +459,7 @@ agot_house_customizer.0006 = {
 	option = {
 		name = agot_house_customizer.0006.blackfyre
 		trigger = {
-			game_start_date > 8258.12.21 # Extinct after NPK
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Targaryen_94 }
 		}
 		character:Blackfyre_14 = {
 			save_scope_as = hc_selection
@@ -431,7 +471,7 @@ agot_house_customizer.0006 = {
 	option = {
 		name = agot_house_customizer.0006.darklyn
 		trigger = {
-			game_start_date > 8258.12.21 # Extinct after NPK
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Darklyn_1 }
 		}
 		character:Darklyn_47 = {
 			save_scope_as = hc_selection
@@ -476,6 +516,9 @@ agot_house_customizer.0007 = {
 	#Durrandon
 	option = {
 		name = agot_house_customizer.0007.durrandon
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Durrandon_1 }
+		}	
 		character:Durrandon_87 = {
 			save_scope_as = hc_selection
 		}
@@ -519,6 +562,9 @@ agot_house_customizer.0008 = {
 	# Dryland
 	option = {
 		name = agot_house_customizer.0008.dryland
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Dryland_1 }
+		}	
 		character:Dryland_1 = {
 			save_scope_as = hc_selection
 		}
@@ -568,6 +614,9 @@ agot_house_customizer.0009 = {
 	#Gardener
 	option = {
 		name = agot_house_customizer.0009.gardener
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Gardener_1 }
+		}	
 		character:Gardener_95 = {
 			save_scope_as = hc_selection
 		}
@@ -611,6 +660,9 @@ agot_house_customizer.0010 = {
 	#Casterly
 	option = {
 		name = agot_house_customizer.0010.casterly
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Casterly_1 }
+		}	
 		character:Casterly_7 = {
 			save_scope_as = hc_selection
 		}
@@ -620,6 +672,9 @@ agot_house_customizer.0010 = {
 	#Parren
 	option = {
 		name = agot_house_customizer.0010.parren
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Parren_1 }
+		}	
 		character:Parren_17 = {
 			save_scope_as = hc_selection
 		}
@@ -630,7 +685,7 @@ agot_house_customizer.0010 = {
 	option = {
 		name = agot_house_customizer.0010.reyne
 		trigger = {
-			game_start_date > 8258.12.21 # Extinct after NPK
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Reyne_1 }
 		}
 		character:Reyne_45 = {
 			save_scope_as = hc_selection
@@ -675,6 +730,9 @@ agot_house_customizer.0011 = {
 	# Greyiron
 	option = {
 		name = agot_house_customizer.0011.greyiron
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Greyiron_1 }
+		}	
 		character:Greyiron_32 = {
 			save_scope_as = hc_selection
 		}
@@ -684,6 +742,9 @@ agot_house_customizer.0011 = {
 	# Hoare
 	option = {
 		name = agot_house_customizer.0011.hoare
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Hoare_1 }
+		}	
 		character:Hoare_31 = {
 			save_scope_as = hc_selection
 		}
@@ -727,6 +788,9 @@ agot_house_customizer.0012 = {
 	# Varezys
 	option = {
 		name = agot_house_customizer.0012.varezys
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Varezys_1 }
+		}	
 		custom_tooltip = agot_house_customizer.0012.varezys.tt
 		character:Varezys_1 = {
 			save_scope_as = hc_selection
@@ -737,6 +801,9 @@ agot_house_customizer.0012 = {
 	# Mataeryon
 	option = {
 		name = agot_house_customizer.0012.mataeryon
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Mataeryon_1 }
+		}	
 		character:Mataeryon_1 = {
 			save_scope_as = hc_selection
 		}
@@ -746,6 +813,9 @@ agot_house_customizer.0012 = {
 	# Belaerys
 	option = {
 		name = agot_house_customizer.0012.belaerys
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Belaerys_1 }
+		}	
 		character:Belaerys_1 = {
 			save_scope_as = hc_selection
 		}
@@ -1033,7 +1103,7 @@ agot_house_customizer.0021 = {
 				exists = scope:hc_selection.father
 			}
 			OR = {
-				scope:hc_selection.mother = {
+				scope:hc_selection.mother ?= {
 					OR = {
 						can_be_parent_of = root
 						#For some reason can_be_parent_of doesn't work with female characters?
@@ -1043,7 +1113,7 @@ agot_house_customizer.0021 = {
 						}
 					}
 				}
-				scope:hc_selection.father = { can_be_parent_of = root }
+				scope:hc_selection.father ?= { can_be_parent_of = root }
 			}
 		}
 		if = { # You have the bastard trait
@@ -1521,12 +1591,6 @@ agot_house_customizer.0022 = {
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_greystark = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
 		scope:hc_woodfoot = {
 			death = {
 				death_reason = death_duel
@@ -1583,35 +1647,8 @@ agot_house_customizer.0022 = {
 			}
 			add_to_list = extinct_house_population_list
 		}
-		## Crownlands ##
-		scope:hc_blackfyre = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
-		scope:hc_darklyn = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
-		## STORMLANDS ##
-		scope:hc_durrandon = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
 		## DORNE ##
 		scope:hc_dryland = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
-		## REACH ##
-		scope:hc_gardener = {
 			death = {
 				death_reason = death_duel
 			}
@@ -1630,20 +1667,8 @@ agot_house_customizer.0022 = {
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_reyne = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
 		## iron islands ##
 		scope:hc_greyiron = {
-			death = {
-				death_reason = death_duel
-			}
-			add_to_list = extinct_house_population_list
-		}
-		scope:hc_hoare = {
 			death = {
 				death_reason = death_duel
 			}
@@ -1676,171 +1701,121 @@ agot_house_customizer.0024 = {
 
 	immediate = {
 		## NORTH ##
-		scope:hc_amber = {
+		scope:hc_amber ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_greenwood = {
+		scope:hc_greenwood ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_frost = {
+		scope:hc_frost ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_greystark = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		scope:hc_woodfoot = {
+		scope:hc_woodfoot ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## TRIDENT ##
-		scope:hc_fisher_trident = {
+		scope:hc_fisher_trident ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_harroway = {
+		scope:hc_harroway ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_justman = {
+		scope:hc_justman ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_qoherys = {
+		scope:hc_qoherys ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_teague = {
+		scope:hc_teague ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_towers = {
+		scope:hc_towers ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## VALE ##
-		scope:hc_shell_vale = {
+		scope:hc_shell_vale ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_brightstone = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		## Crownlands ##
-		if = {
-			limit = {
-				exists = scope:hc_blackfyre
-			}
-			scope:hc_blackfyre = {
-				death = {
-					death_reason = death_vanished
-				}
-				add_to_list = extinct_house_population_list
-			}
-		}
-		scope:hc_darklyn = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		## STORMLANDS ##
-		scope:hc_durrandon = {
+		scope:hc_brightstone ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## DORNE ##
-		scope:hc_dryland = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		## REACH ##
-		scope:hc_gardener = {
+		scope:hc_dryland ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## WESTERLANDS ##
-		scope:hc_casterly = {
+		scope:hc_casterly ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_parren = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		scope:hc_reyne = {
+		scope:hc_parren ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## iron islands ##
-		scope:hc_greyiron = {
-			death = {
-				death_reason = death_vanished
-			}
-			add_to_list = extinct_house_population_list
-		}
-		scope:hc_hoare = {
+		scope:hc_greyiron ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
 		## old valyria ##
-		scope:hc_varezys = {
+		scope:hc_varezys ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_mataeryon = {
+		scope:hc_mataeryon ?= {
 			death = {
 				death_reason = death_vanished
 			}
 			add_to_list = extinct_house_population_list
 		}
-		scope:hc_belaerys= {
+		scope:hc_belaerys ?= {
 			death = {
 				death_reason = death_vanished
 			}

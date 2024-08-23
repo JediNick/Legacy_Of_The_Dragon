@@ -364,7 +364,7 @@ remove_facemask_decision = {
 }
 
 rehilt_blackfyre = {
-	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	picture = "gfx/interface/illustrations/decisions/rehilt_to.dds"
 	ai_check_interval = 60
 	
 	sort_order = 88
