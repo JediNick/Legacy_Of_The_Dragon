@@ -216,10 +216,6 @@ create_artifact_orys_hammer_effect = {
 
 		save_scope_as = newly_created_artifact
 		decaying = no
-		set_variable = {
-			name = valyrian_steel
-			value = yes
-		}
 		history = {
 			type = created
 			date = 7998.3.21
@@ -245,6 +241,10 @@ create_artifact_orys_hammer_effect = {
 
 		set_variable = { name = historical_unique_artifact value = yes }
 		set_variable = orys_hammer
+		set_variable = {
+			name = valyrian_steel
+			value = yes
+		}
 		save_scope_as = epic
 		#equip_artifact_to_owner = yes
 
