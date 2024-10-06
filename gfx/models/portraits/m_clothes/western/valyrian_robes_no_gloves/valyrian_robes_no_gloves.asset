@@ -56,7 +56,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_low_mask.dds"
+				pattern_mask = "gfx/models/portraits/m_clothes/western/valyrian_robes/valyrian_robes_low_mask.dds"
 				variation = "valyrian_nobility_high_metal_01_trim"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }
@@ -77,7 +77,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_mask.dds"
+				pattern_mask = "gfx/models/portraits/m_clothes/western/valyrian_robes/valyrian_robes_mask.dds"
 				variation = "valyrian_nobility_high_metal_01_trim"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }
@@ -97,7 +97,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_low_mask.dds"
+				pattern_mask = "gfx/models/portraits/m_clothes/western/valyrian_robes/valyrian_robes_low_mask.dds"
 				variation = "valyrian_nobility_high_metal_01_trim_generic"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }
@@ -118,7 +118,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/male_clothes/secular/western/valyrian_robes/valyrian_robes_mask.dds"
+				pattern_mask = "gfx/models/portraits/m_clothes/western/valyrian_robes/valyrian_robes_mask.dds"
 				variation = "valyrian_nobility_high_metal_01_trim_generic"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }

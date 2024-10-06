@@ -1,5 +1,7 @@
 ﻿rediscover_mechanic = {
-	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	}
 	ai_check_interval = 60
 
 	cooldown = { years = 5}
@@ -40,7 +42,7 @@
 	}
 
 	ai_potential = {
-		is_landed = yes
+		is_landed  = yes
 		is_ruler = yes
 		##Prevent the AI from doing it in the first 10 years after RR.... Dont want them to grab it, only to die and destroy the artifact
 		current_date > 8292.9.15

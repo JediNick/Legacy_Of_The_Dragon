@@ -1,5 +1,7 @@
 ﻿read_aegon_prophecy = {
-	picture = "gfx/interface/illustrations/decisions/prophecy.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/prophecy.dds"
+	}
 	ai_check_interval = 60
 
 	cooldown = { years = 5}
@@ -11,7 +13,7 @@
 	selection_tooltip = read_prophecy_decision_tooltip
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character   = yes
 		any_character_artifact = {
 			artifact_owner = root # This should not need to be explicit, but for some reason scoping is being ignored
 			has_variable = aegon_dagger
@@ -33,7 +35,6 @@
 	}
 
 	ai_potential = {
-		#is_landed = yes
 		is_available_adult = yes
 		OR = {
 			##Non Targs probably shouldnt read the prophecy, will allow for non targ players to do it tho.
@@ -61,7 +62,9 @@
 }
 
 sell_ruby_crown = {
-	picture = "gfx/interface/illustrations/decisions/rubies.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/rubies.dds"
+	}
 	ai_check_interval = 60
 	
 	sort_order = 88
@@ -70,7 +73,7 @@ sell_ruby_crown = {
 	selection_tooltip = sell_ruby_crown_decision_tooltip
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character  = yes
 		any_equipped_character_artifact = {
 			AND = {
 				has_variable = aegoncrown
@@ -97,7 +100,7 @@ sell_ruby_crown = {
 	}
 
 	ai_potential = {
-		is_landed = yes
+		is_playable_character  = yes
 		is_available_adult = yes
 		any_equipped_character_artifact = {
 			has_variable = aegoncrown
@@ -115,7 +118,9 @@ sell_ruby_crown = {
 }
 
 buy_ruby_crown = {
-	picture = "gfx/interface/illustrations/decisions/rubies.dds"
+	picture = { 
+		reference = "gfx/interface/illustrations/decisions/rubies.dds"
+	}
 	ai_check_interval = 60
 	
 	sort_order = 88
@@ -128,7 +133,7 @@ buy_ruby_crown = {
 	}
 
 	is_shown = {
-		is_landed = yes
+		is_playable_character  = yes
 		OR = {
 			dynasty = dynasty:dynn_Targaryen
 			house = house:house_Blackfyre
@@ -158,7 +163,7 @@ buy_ruby_crown = {
 	}
 
 	ai_potential = {
-		is_landed = yes
+		is_playable_character  = yes
 		is_available_adult = yes
 		any_equipped_character_artifact = {
 			has_variable = aegoncrown
@@ -177,7 +182,9 @@ buy_ruby_crown = {
 }
 
 buy_facemask_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_smith.dds"
+	} 
 	ai_check_interval = 60
 	
 	sort_order = 43
@@ -328,7 +335,9 @@ buy_facemask_decision = {
 }
 
 remove_facemask_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
 	ai_check_interval = 60
 	
 	sort_order = 88
@@ -364,7 +373,9 @@ remove_facemask_decision = {
 }
 
 rehilt_blackfyre = {
-	picture = "gfx/interface/illustrations/decisions/rehilt_to.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/rehilt_to.dds"
+	}
 	ai_check_interval = 60
 	
 	sort_order = 88
@@ -377,8 +388,8 @@ rehilt_blackfyre = {
 	}
 
 	is_shown = {
-	always = yes
-		is_landed = yes
+		always = yes
+		is_playable_character   = yes
 		is_lotd_loaded_trigger = yes
 		has_game_rule = hotd_visuals
 		is_available_adult = yes

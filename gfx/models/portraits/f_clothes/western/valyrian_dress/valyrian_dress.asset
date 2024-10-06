@@ -42,7 +42,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/female_clothes/secular/western/valyrian_dress/valyrian_dress_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				pattern_mask = "gfx/models/portraits/f_clothes/western/valyrian_dress/valyrian_dress_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
 				variation = "valyrian_dress_high_01"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }
@@ -67,7 +67,7 @@ entity = {
 	game_data = {
         portrait_entity_user_data = {
 			portrait_accessory = {
-				pattern_mask = "gfx/models/portraits/attachments/female_clothes/secular/western/valyrian_dress/valyrian_dress_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
+				pattern_mask = "gfx/models/portraits/f_clothes/western/valyrian_dress/valyrian_dress_mask.dds"	#Any 4-channel texture. Each channel will be used to mask a pattern from the variation object
 				variation = "valyrian_dress_high_generic_01"	#A "variation" object in gfx/portraits/accessory_variations/
 			}
         }
