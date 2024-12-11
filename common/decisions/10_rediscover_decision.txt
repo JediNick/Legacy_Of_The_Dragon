@@ -19,6 +19,7 @@
 		all_artifacts_found = no
 
 		OR = {
+			game_start_date = 8277.1.1 
 			game_start_date = 8258.12.21 
 			game_start_date = 8282.9.15
 			game_start_date = 8284.6.2
