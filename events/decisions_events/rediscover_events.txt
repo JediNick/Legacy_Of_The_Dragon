@@ -317,13 +317,30 @@ rediscover_events.0003 = {
 						}
 					}
 					1 = { # aenys_crown
+						modifier = {
+							NOT = {
+								any_artifact = {
+									has_variable = crown_aenys_artifact
+								}
+							}
+							add = -1
+							factor = 0
+						}
 						trigger = {
+							NOR = {
+								game_start_date = 8233.2.8
+								game_start_date = 8239.1.11
+							}
 							NOT = {
 								is_target_in_global_variable_list = {
 										name = unavailable_artifacts
 										target = flag:aenys_crown
 									}
 								}
+							}
+							any_artifact = {
+								has_variable = crown_aenys_artifact
+								count < 1
 							}
 							set_variable = {
 								name = artifact_choice
@@ -346,11 +363,19 @@ rediscover_events.0003 = {
 						}
 					1 = { # aegon_3_crown
 						trigger = {
+							
+							any_artifact = {
+								has_variable = crown_aegon_iii_artifact
+								count < 1
+							}
 							NOT = {
 								is_target_in_global_variable_list = {
 										name = unavailable_artifacts
 										target = flag:aegon_3_crown
 									}
+								}
+								any_artifact = {
+									has_variable = crown_aegon_iii_artifact
 								}
 							}
 							set_variable = {
@@ -360,6 +385,10 @@ rediscover_events.0003 = {
 						}
 					1 = { # baelors_crown
 						trigger = {
+							any_artifact = {
+								has_variable = crown_baelor_artifact
+								count < 1
+							}
 							NOT = {
 								is_target_in_global_variable_list = {
 										name = unavailable_artifacts
@@ -373,11 +402,32 @@ rediscover_events.0003 = {
 							}
 						}
 					1 = { # maekars_crown
+						modifier = {
+							NOT = {
+								any_artifact = {
+									OR = {
+										has_variable = maekars_crown
+										has_variable = crown_maekar_artifact
+									}
+								}
+							}
+							factor = 0
+						}
 						trigger = {
+							any_artifact = {
+								has_variable = crown_maekar_artifact
+								count < 1
+							}
 							NOT = {
 								is_target_in_global_variable_list = {
 										name = unavailable_artifacts
 										target = flag:maekars_crown
+									}
+								}
+								any_artifact = {
+									OR = {
+										has_variable = maekars_crown
+										has_variable = crown_maekar_artifact
 									}
 								}
 							}
@@ -388,6 +438,10 @@ rediscover_events.0003 = {
 						}
 					1 = { # visenya_circlet, circlet_visenya_artifact
 						trigger = {
+							any_artifact = {
+								has_variable = circlet_visenya_artifact
+								count < 1
+							}
 							NOT = {
 								is_target_in_global_variable_list = {
 										name = unavailable_artifacts

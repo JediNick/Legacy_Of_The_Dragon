@@ -1,62 +1,141 @@
 ﻿all_artifacts_found = {
 	AND = {
 		##Weapons
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:blackfyre
 		}
+			any_artifact = {
+				has_artifact_modifier = vs_blackfyre_modifier
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:darksister
 		}
+			any_artifact = {
+				has_artifact_modifier = vs_dark_sister_modifier
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:aegon_dagger
 		}
+			any_artifact = {
+				has_variable = aegon_dagger
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:orys_hammer
 		}
+			any_artifact = {
+				has_artifact_modifier = orys_hammer_modifier
+				count > 0
+			}
+		}
+		
 		
 		
 		##Crowns
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:aegon_1_crown
 		}
+			any_artifact = {
+				has_variable = crown_aegon_i_artifact
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:aenys_crown
 		}
+			any_artifact = {
+				has_variable = crown_aenys_artifact
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:jaehaerys_crown
 		}
+			any_artifact = {
+				has_variable = crown_jaehaerys_artifact
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:aegon_3_crown
 		}
+			any_artifact = {
+				has_variable = crown_aegon_iii_artifact
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:baelors_crown
 		}
+			any_artifact = {
+				has_variable = crown_aegon_baelor_artifact
+				count > 0
+			}
+		}
 		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:maekars_crown
 		}
+			any_artifact = {
+				has_variable = crown_maekar_artifact
+				count > 0
+			}
+		}
+
+		OR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_artifacts
+				target = flag:visenya_circlet
+			}
+			any_artifact = {
+				has_variable = circlet_visenya_artifact
+				count > 0
+			}
+		}
 
 		##Viserys_Mask
+		
+		OR = {
 		is_target_in_global_variable_list = {
 			name = unavailable_artifacts
 			target = flag:viserys_mask
+			}
+			any_artifact = {
+				has_variable = viserys_mask
+				count > 0
+			}
 		}
 	}
 }

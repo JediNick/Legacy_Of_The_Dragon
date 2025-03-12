@@ -1,4 +1,4 @@
-version="1.2.4"
+version="1.2.5"
 tags={
 	"Decisions"
 	"Events"
@@ -8,5 +8,5 @@ tags={
 }
 name="Legacy Of The Dragon"
 picture="thumbnail.png"
-supported_version="1.14.*"
+supported_version="1.15.*"
 remote_file_id="3101422928"
