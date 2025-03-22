@@ -249,6 +249,18 @@ agot_house_customizer.0003 = {
 		trigger_event = agot_house_customizer.0020
 	}
 
+	#Towers
+	option = {
+		name = agot_house_customizer.0003.towersn
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:TowersN_1 }
+		}
+		character:TowersN_1 = {
+			save_scope_as = hc_selection
+		}
+		trigger_event = agot_house_customizer.0020
+	}
+
 	# Back Option
 	option = {
 		name = agot_house_customizer.back_option
@@ -927,14 +939,24 @@ agot_house_customizer.0020 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
 					has_trait = bastard
-					has_trait = legitimized_bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 
 		#trigger_event = agot_house_customizer.0022
@@ -996,14 +1018,24 @@ agot_house_customizer.0020 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
-		if = {
+		# Bastard Surnames
+			if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 
 		# Remind them of the option
@@ -1177,14 +1209,24 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 
 		# Remind them of the option
@@ -1239,14 +1281,24 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 
 		# Remind them of the option
@@ -1363,14 +1415,24 @@ agot_house_customizer.0021 = {
 			trigger_event = agot_house_customizer.0026
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 
 		# Remind them of the option
@@ -1428,14 +1490,24 @@ agot_house_customizer.0021 = {
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 	}
 
@@ -1468,14 +1540,24 @@ agot_house_customizer.0021 = {
 			scope:hc_random_father = { death = { death_reason = death_disappearance } }
 		}
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 	}
 
@@ -1576,7 +1658,7 @@ agot_house_customizer.0024 = {
 			death = {
 				death_reason = death_vanished
 			}
-			set_to_lowborn = yes
+			set_to_lowborn = yes			
 		}
 	}
 }
@@ -1756,14 +1838,24 @@ agot_house_customizer.0200 = {
 		}
 		remove_character_flag = relative_pop_extinct
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 	}
 
@@ -1830,14 +1922,24 @@ agot_house_customizer.0200 = {
 		}
 		remove_character_flag = relative_pop_living
 		hidden_effect = { remove_trait = house_customizer }
+		# Bastard Surnames
 		if = {
 			limit = {
-				OR = {
-					has_trait = bastard
-					has_trait = legitimized_bastard
+				has_trait = bastard
+			}
+			if = {
+				limit = {
+					exists = scope:child.var:agot_birthplace
+				}
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.var:agot_birthplace
 				}
 			}
-			agot_add_custom_bastard_nickname_effect = yes
+			else = {
+				agot_add_birthplace_bastard_nickname_effect = {
+					BIRTHPLACE = root.location
+				}
+			}
 		}
 	}
 
