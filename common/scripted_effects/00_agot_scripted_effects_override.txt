@@ -3,8 +3,6 @@
 		save_scope_as = owner
 	}
 	set_artifact_rarity_illustrious = yes
-	add_targ_artifact_claim_effect = yes
-
 	if = {
 		limit = {
 			has_game_rule = hotd_visuals
@@ -18,9 +16,8 @@
 			quality = scope:quality
 			template = vs_blackfyre_template
 			history = {
-				type = created
-				date = 7852.1.1
-				recipient = character:Targaryen_13
+				type = created_before_history
+				date = 7300.1.1
 			}
 			modifier = vs_blackfyre_modifier
 			save_scope_as = newly_created_artifact
@@ -37,20 +34,22 @@
 			quality = scope:quality
 			template = vs_blackfyre_template
 			history = {
-				type = created
-				date = 7852.1.1
-				recipient = character:Targaryen_13
+				type = created_before_history
+				date = 7300.1.1
 			}
 			modifier = vs_blackfyre_modifier
 			save_scope_as = newly_created_artifact
 			decaying = no
 		}
 	}
-
-	scope:newly_created_artifact = {
-		equip_artifact_to_owner = yes
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
 		set_variable = {
 			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
 			value = yes
 		}
 		set_variable = {
@@ -58,194 +57,227 @@
 			value = yes
 		}
 		set_variable = {
-			name = historical_unique_artifact
-			value = yes
+			name = traditional_house_owner
+			value = dynasty:dynn_Targaryen.dynasty_founder.house
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7900.1.1
-			recipient = character:Targaryen_14
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7850.1.1
+			RECIPIENT = character:Targaryen_13_A
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7930.1.1
-			recipient = character:Targaryen_16
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7873.1.1
+			RECIPIENT = character:Targaryen_13
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7935.1.1
-			recipient = character:Targaryen_19
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7900.1.1
+			RECIPIENT = character:Targaryen_14
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7950.1.1
-			recipient = character:Targaryen_20
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7930.1.1
+			RECIPIENT = character:Targaryen_16
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7955.1.1
-			recipient = character:Targaryen_22
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7935.1.1
+			RECIPIENT = character:Targaryen_19
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7959.1.1
-			recipient = character:Targaryen_23
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7950.1.1
+			RECIPIENT = character:Targaryen_20
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7963.1.1
-			recipient = character:Targaryen_24
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7955.1.1
+			RECIPIENT = character:Targaryen_22
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7971.1.1
-			recipient = character:Targaryen_26
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = conquest
+			DATE = 7955.6.1
+			RECIPIENT = character:Targaryen_23
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7996.1.1
-			recipient = character:Targaryen_27
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7957.1.1
+			RECIPIENT = character:Targaryen_24
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8037.9.9
-			recipient = character:Targaryen_31
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7971.1.1
+			RECIPIENT = character:Targaryen_26
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8037.9.10
-			recipient = character:Targaryen_30
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7996.1.1
+			RECIPIENT = character:Targaryen_27
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8037.9.17
-			recipient = character:Targaryen_31
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8037.9.9
+			RECIPIENT = character:Targaryen_30
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8048.3.6
-			recipient = character:Targaryen_32
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8037.9.10
+			RECIPIENT = character:Targaryen_31
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8048.3.7
-			recipient = character:Targaryen_35
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = stolen
+			DATE = 8048.3.1
+			RECIPIENT = character:Targaryen_32
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8103.1.1
-			recipient = character:Targaryen_60
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8048.3.2
+			RECIPIENT = character:Targaryen_35
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8129.3.3
-			recipient = character:Targaryen_65
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8103.10.3
+			RECIPIENT = character:Targaryen_60
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8130.12.1
-			recipient = character:Broome_18
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8129.3.3
+			RECIPIENT = character:Targaryen_65
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8130.12.2
-			recipient = character:Targaryen_65
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8130.10.22
+			RECIPIENT = character:Broome_35
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8131.1.8
-			recipient = character:Targaryen_78
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8131.1.14
+			RECIPIENT = character:Targaryen_78
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8157.1.1
-			recipient = character:Targaryen_81
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8157.1.13
+			RECIPIENT = character:Targaryen_81
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8161.6.9
-			recipient = character:Targaryen_82
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = stolen
+			DATE = 8161.6.9
+			RECIPIENT = character:Martell_74
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8171.1.1
-			recipient = character:Targaryen_79
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8162.2.1
+			RECIPIENT = character:Targaryen_82
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8172.1.1
-			recipient = character:Targaryen_88
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8171.1.1
+			RECIPIENT = character:Targaryen_79
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8182.1.1
-			recipient = character:Targaryen_94
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8172.1.1
+			RECIPIENT = character:Targaryen_88
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8182.1.2
-			recipient = character:Blackfyre_2
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8182.1.1
+			RECIPIENT = character:Targaryen_94
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8182.1.3
-			recipient = character:Targaryen_95
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8196.6.1
+			RECIPIENT = character:Blackfyre_2
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8196.6.2
+			RECIPIENT = character:Targaryen_95
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8218.6.1
+			RECIPIENT = character:Blackfyre_6
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8220.1.1
+			RECIPIENT = character:Targaryen_95
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8236.1.1
+			RECIPIENT = character:Blackfyre_11
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8236.3.2
+			RECIPIENT = character:Targaryen_95
 		}
 	}
 }
-agot_create_artifact_vs_dark_sister_effect= {
+agot_create_artifact_vs_dark_sister_effect = {
 	$OWNER$ = {
 		save_scope_as = owner
 	}
 	set_artifact_rarity_illustrious = yes
-	add_targ_artifact_claim_effect = yes
-
-	if = {
-		limit = {
-			has_game_rule = hotd_visuals
+	create_artifact = {
+		name = vs_dark_sister_name
+		visuals = vs_dark_sister_visuals
+		description = vs_dark_sister_description
+		type = sword
+		wealth = scope:wealth
+		quality = scope:quality
+		template = vs_dark_sister_template
+		history = {
+			type = created_before_history
+			date = 7400.1.1
 		}
-		create_artifact = {
-			name = vs_dark_sister_name
-			visuals = darksister
-			description = vs_dark_sister_description
-			type = sword
-			wealth = scope:wealth
-			quality = scope:quality
-			template = vs_dark_sister_template
-			history = {
-				type = inherited
-				date = 7900.1.1
-				recipient = character:Targaryen_15
-			}
-			modifier = vs_dark_sister_modifier
-			save_scope_as = newly_created_artifact
-			decaying = no
-		}
+		modifier = vs_dark_sister_modifier
+		save_scope_as = newly_created_artifact
+		decaying = no
 	}
-	else = {
-		create_artifact = {
-			name = vs_dark_sister_name
-			visuals = vs_dark_sister_visuals
-			description = vs_dark_sister_description
-			type = sword
-			wealth = scope:wealth
-			quality = scope:quality
-			template = vs_dark_sister_template
-			history = {
-				type = inherited
-				date = 7900.1.1
-				recipient = character:Targaryen_15
-			}
-			modifier = vs_dark_sister_modifier
-			save_scope_as = newly_created_artifact
-			decaying = no
-		}
-	}
-	scope:newly_created_artifact = {
-		equip_artifact_to_owner = yes
+	scope:newly_created_artifact ?= {
+		equip_artifact_to_owner_replace = yes
 		save_scope_as = epic
 		set_variable = {
 			name = valyrian_steel
+			value = yes
+		}
+		set_variable = {
+			name = historical_unique_artifact
 			value = yes
 		}
 		set_variable = {
@@ -253,73 +285,104 @@ agot_create_artifact_vs_dark_sister_effect= {
 			value = yes
 		}
 		set_variable = {
-			name = historical_unique_artifact
-			value = yes
+			name = traditional_house_owner
+			value = dynasty:dynn_Targaryen.dynasty_founder.house
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7930.1.1
-			recipient = character:Targaryen_17
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7880.1.1
+			RECIPIENT = character:Targaryen_13_B
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7950.1.1
-			recipient = character:Targaryen_21
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7889.1.1
+			RECIPIENT = character:Targaryen_13_D
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7955.1.1
-			recipient = character:Targaryen_24
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7907.1.1
+			RECIPIENT = character:Targaryen_15
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7971.1.1
-			recipient = character:Targaryen_26
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7930.1.1
+			RECIPIENT = character:Targaryen_17
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 7996.1.1
-			recipient = character:Targaryen_28
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7950.1.1
+			RECIPIENT = character:Targaryen_23
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8044.7.1
-			recipient = character:Targaryen_31
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7957.1.1
+			RECIPIENT = character:Targaryen_24
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8048.3.7
-			recipient = character:Targaryen_35
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 7971.1.1
+			RECIPIENT = character:Targaryen_26
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8103.1.1
-			recipient = character:Targaryen_46
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 7990.1.1
+			RECIPIENT = character:Targaryen_28
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8101.9.1
-			recipient = character:Targaryen_61
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8025.1.1
+			RECIPIENT = character:Targaryen_31
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8130.5.22
-			recipient = character:Targaryen_78
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = stolen
+			DATE = 8044.7.1
+			RECIPIENT = character:Velaryon_24
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8157.1.1
-			recipient = character:Targaryen_81
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8048.3.1
+			RECIPIENT = character:Targaryen_35
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8161.6.9
-			recipient = character:Targaryen_89
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8092.1.1
+			RECIPIENT = character:Targaryen_46
 		}
-		add_artifact_history = {
-			type = inherited
-			date = 8178.6.1
-			recipient = character:Targaryen_96
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8101.2.3
+			RECIPIENT = character:Targaryen_61
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = discovered
+			DATE = 8140.1.1
+			RECIPIENT = character:Targaryen_78
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = given
+			DATE = 8157.1.13
+			RECIPIENT = character:Targaryen_89
+		}
+		agot_add_artifact_history = {
+			ARTIFACT = this
+			TYPE = inherited
+			DATE = 8178.6.1
+			RECIPIENT = character:Targaryen_96
 		}
 	}
 }
