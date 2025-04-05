@@ -4,6 +4,8 @@
 hotd_visual_replacement = {
 	default  = hotd_visuals
 	hotd_visuals = {}
+	sword_only_visuals = {}
+	crown_only_visuals = {}
 	agot_visuals = {}
 }
 

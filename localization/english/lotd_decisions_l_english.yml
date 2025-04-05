@@ -14,6 +14,11 @@ setting_hotd_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aego
  setting_agot_visuals:0 "Use Vanilla AGOT Visuals"
 setting_agot_visuals_desc:0 "Canon artifacts such as Blackfyre, Darksister, Aegon I's Crown, or Jaehaerys I's Crown will use vanilla AGOT visuals."
 
+ setting_sword_only_visuals:0 "Use Show Based Sword Visuals"
+setting_sword_only_visuals_desc:0 "Canon swords such as Blackfyre, Darksister will use show based visuals, while crowns will retain their book appearances."
+
+ setting_crown_only_visuals:0 "Use Show Based Crown Visuals"
+setting_crown_only_visuals_desc:0 "Canon crowns such as Aegon I's Crown, or Jaehaerys I's Crown will use show based visuals, while swords will retain their book appearances.""
 
 
  rule_extra_visual_replacement:0 "@lotd_icon! Legacy Of The Dragon - Optional Visuals"

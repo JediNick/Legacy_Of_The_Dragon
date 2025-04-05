@@ -5,7 +5,10 @@
 	set_artifact_rarity_illustrious = yes
 	if = {
 		limit = {
-			has_game_rule = hotd_visuals
+			OR = {
+				has_game_rule = hotd_visuals
+				has_game_rule = sword_only_visuals
+			}
 		}
 		create_artifact = {
 			name = vs_blackfyre_name
@@ -253,22 +256,46 @@ agot_create_artifact_vs_dark_sister_effect = {
 		save_scope_as = owner
 	}
 	set_artifact_rarity_illustrious = yes
-	create_artifact = {
-		name = vs_dark_sister_name
-		visuals = vs_dark_sister_visuals
-		description = vs_dark_sister_description
-		type = sword
-		wealth = scope:wealth
-		quality = scope:quality
-		template = vs_dark_sister_template
-		history = {
-			type = created_before_history
-			date = 7400.1.1
+	if = {
+		limit = {
+			has_game_rule = hotd_visuals
 		}
-		modifier = vs_dark_sister_modifier
-		save_scope_as = newly_created_artifact
-		decaying = no
+		create_artifact = {
+			name = vs_dark_sister_name
+			visuals = darksister
+			description = vs_dark_sister_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_dark_sister_template
+			history = {
+				type = created_before_history
+				date = 7400.1.1
+			}
+			modifier = vs_dark_sister_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
 	}
+	else = {
+		create_artifact = {
+			name = vs_dark_sister_name
+			visuals = vs_dark_sister_visuals
+			description = vs_dark_sister_description
+			type = sword
+			wealth = scope:wealth
+			quality = scope:quality
+			template = vs_dark_sister_template
+			history = {
+				type = created_before_history
+				date = 7400.1.1
+			}
+			modifier = vs_dark_sister_modifier
+			save_scope_as = newly_created_artifact
+			decaying = no
+		}
+	}
+
 	scope:newly_created_artifact ?= {
 		equip_artifact_to_owner_replace = yes
 		save_scope_as = epic

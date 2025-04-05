@@ -337,16 +337,17 @@ rediscover_events.0003 = {
 										target = flag:aenys_crown
 									}
 								}
-							}
 							any_artifact = {
 								has_variable = crown_aenys_artifact
 								count < 1
 							}
-							set_variable = {
-								name = artifact_choice
-								value = flag:aenys_crown
-							}
 						}
+							
+						set_variable = {
+							name = artifact_choice
+							value = flag:aenys_crown
+						}
+					}
 					1 = { # jaehaerys_crown
 						trigger = {
 							NOT = {
@@ -591,7 +592,10 @@ rediscover_events.1001 = {
 			trigger = {
 				exists = var:artifact_choice
 				var:artifact_choice = flag:blackfyre
-				has_game_rule = hotd_visuals
+				OR = {
+					has_game_rule = hotd_visuals
+					has_game_rule = sword_only_visuals
+				}
 			}
 			animation = valyrian_invasion_blackfyre_2
 		}
@@ -599,7 +603,10 @@ rediscover_events.1001 = {
 			trigger = {
 				exists = var:artifact_choice
 				var:artifact_choice = flag:blackfyre
-				NOT = { has_game_rule = hotd_visuals }
+				NOR = { 
+					has_game_rule = hotd_visuals
+					has_game_rule = sword_only_visuals 
+				}
 			}
 			animation = agot_blackfyre_2
 		}
@@ -607,7 +614,10 @@ rediscover_events.1001 = {
 			trigger = {
 				exists = var:artifact_choice
 				var:artifact_choice = flag:darksister
-				has_game_rule = hotd_visuals
+				OR = {
+					has_game_rule = hotd_visuals
+					has_game_rule = sword_only_visuals
+				}
 			}
 			animation = valyrian_invasion_darksister_1
 		}
@@ -615,7 +625,10 @@ rediscover_events.1001 = {
 			trigger = {
 				exists = var:artifact_choice
 				var:artifact_choice = flag:darksister
-				NOT = { has_game_rule = hotd_visuals }
+				NOR = { 
+					has_game_rule = hotd_visuals
+					has_game_rule = sword_only_visuals 
+				}
 			}
 			animation = agot_darksister_2
 		}

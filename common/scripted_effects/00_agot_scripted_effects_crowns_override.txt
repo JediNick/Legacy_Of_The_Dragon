@@ -6,7 +6,10 @@
 
 	if = {
 		limit = {
-			has_game_rule = hotd_visuals
+			OR = {
+				has_game_rule = hotd_visuals
+				has_game_rule = crown_only_visuals
+			}
 		}
 		create_artifact = {
 			name = aegon_i_crown_name
@@ -56,7 +59,10 @@
 		
 		if = {
 			limit = {
-				has_game_rule = hotd_visuals
+				OR = {
+					has_game_rule = hotd_visuals
+					has_game_rule = crown_only_visuals
+				}
 			}
 			set_variable = {
 				name = aegoncrown
@@ -89,7 +95,10 @@ agot_create_artifact_jaehaerys_crown_historical_effect = {
 
 	if = {
 		limit = {
-			has_game_rule = hotd_visuals
+			OR = {
+				has_game_rule = hotd_visuals
+				has_game_rule = crown_only_visuals
+			}
 		}
 		create_artifact = {
 			name = jaehaerys_crown_name

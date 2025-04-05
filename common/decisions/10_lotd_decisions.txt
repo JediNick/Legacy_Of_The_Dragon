@@ -391,7 +391,10 @@ rehilt_blackfyre = {
 		always = yes
 		is_playable_character   = yes
 		is_lotd_loaded_trigger = yes
-		has_game_rule = hotd_visuals
+		or = {
+			has_game_rule = hotd_visuals
+			has_game_rule = sword_only_visuals
+		}
 		is_available_adult = yes
 		OR = {
 			dynasty = dynasty:dynn_Targaryen
