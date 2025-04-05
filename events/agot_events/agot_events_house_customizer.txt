@@ -1711,6 +1711,10 @@ agot_house_customizer.0026 = {
 			limit = { exists = scope:old_house }
 			hidden_effect = { set_house = scope:old_house }
 		}
+		if = {
+			limit = { NOT = { has_character_flag = seed_event } has_trait = heterochromia_customizer }
+			trigger_event = agot_heterochromia_customizer.1000
+		}
 	}
 }
 
@@ -1834,6 +1838,7 @@ agot_house_customizer.0200 = {
 
 		if = { # The seed is strong
 			limit = { has_strong_seed_dynasty = yes }
+			add_character_flag = seed_event
 			trigger_event = agot_house_customizer.0026
 		}
 		remove_character_flag = relative_pop_extinct
@@ -1961,5 +1966,12 @@ agot_house_customizer.0200 = {
 		clear_variable_list = possible_characters
 		remove_character_flag = relative_pop_living
 		trigger_event = agot_house_customizer.0021
+	}
+
+	after = {
+		if = {
+			limit = { NOT = { has_character_flag = seed_event } has_trait = heterochromia_customizer }
+			trigger_event = agot_heterochromia_customizer.1000
+		}
 	}
 }
