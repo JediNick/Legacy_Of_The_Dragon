@@ -371,6 +371,18 @@ agot_house_customizer.0004 = {
 		trigger_event = agot_house_customizer.0020
 	}
 
+	#Real Mudd Dynasty
+	option = {
+		name = agot_house_customizer.0004.mudd
+		trigger = {
+			agot_is_house_extinct_history_trigger = { FOUNDER = character:Mudd_3 }
+		}
+		character:Mudd_34 = {
+			save_scope_as = hc_selection
+		}
+		trigger_event = agot_house_customizer.0020
+	}
+
 	# Back Option
 	option = {
 		name = agot_house_customizer.back_option
@@ -888,12 +900,8 @@ agot_house_customizer.0020 = {
 		name = agot_house_customizer.0020.a
 		trigger = {
 			OR = {
-				exists = scope:hc_selection.mother
-				exists = scope:hc_selection.father
-			}
-			OR = {
-				scope:hc_selection.mother = { is_adult = yes }
-				scope:hc_selection.father = { is_adult = yes }
+				scope:hc_selection.mother ?= { is_adult = yes }
+				scope:hc_selection.father ?= { is_adult = yes }
 			}
 		}
 		if = { # You have the bastard trait
