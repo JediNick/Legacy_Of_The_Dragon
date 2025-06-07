@@ -1738,7 +1738,7 @@ agot_house_customizer.0200 = {
 
 	widget = {
 		is_shown = { is_ai = no }
-		gui = "event_window_character_selection_two_options"
+		gui = "agot_event_window_widget_character_selection_two_options"
 		container = "custom_widgets_container"
 	}
 
