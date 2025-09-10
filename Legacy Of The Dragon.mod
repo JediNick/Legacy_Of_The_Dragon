@@ -8,5 +8,5 @@ tags={
 }
 name="Legacy Of The Dragon"
 picture="thumbnail.png"
-supported_version="1.19.*"
+supported_version="1.17.*"
 remote_file_id="3101422928"
